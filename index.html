@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Theo Beers">
+  <meta name="description" content="Calculate the numerical abjad value of Arabic or Persian text.">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri|Scheherazade">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="canonical" href="https://theodore-s-beers.github.io/abjadcalc/">
+
+  <title>Abjad Calculator</title>
+
+</head>
+
+<body>
+
+  <div class="container" style="margin-top:14px">
+    
+    <h2>Abjad Calculator</h2>
+  
+    <form action="">
+      <div class="form-group">
+        <label for="abjadText" style="margin-bottom:12px">In the box below, enter a word or phrase, or really anything you like, <em>in Arabic or Persian script</em>. Then hit "Enter" or click the "Go!" button, and the total <em>abjad</em> value of your input will be returned. You can carry out this operation repeatedly, with no need to refresh the page.</label>
+        <input type="text" class="form-control" id="abjadText" dir="rtl" style="text-align:left">
+        <small id="emailHelp" class="form-text text-muted">Text entered in this form will not be collected anywhere.</small>
+      </div>
+      <label>
+        <button type="button" class="btn btn-primary" id="subButton">Go!</button>
+      </label>
+    </form>
+  
+  </div>
+  
+  <div class ="container" style="padding-top:8px">
+    <p id="result">The total value of … is …</p>
+    <hr>
+  </div>
+  
+  <div class ="container">
+    <h4>Usage Notes</h4>
+    <ul>
+      <li>This follows the the common "eastern" convention. If you're working with Maghribi or otherwise nonconformist sources, then you're likely to get incorrect results. Sorry! I may try to add options at some point. (See below for more detail on the exact rules being observed.)</li>
+      <li>Feel free to include spaces between words; they won't affect the calculation.</li>
+      <li>More broadly, this program is designed to ignore any character that it doesn't recognize. If you enter text that contains one or more unrecognized characters, you'll see a brief error message, followed by the total <em>abjad</em> value of the parts that <em>were</em> counted (<em>i.e.</em>, our best guess). It may be correct nonetheless…</li>
+      <li>It's probably best not to include diacritics, or a <a href="https://en.wikipedia.org/wiki/Dagger_alif" target="_blank" rel="noopener"><em>dagger alif</em></a>, or anything else outside of the "full letters." Only the latter are counted in the <em>abjad</em> system, anyway, so why add complication?</li>
+      <li>If you're confident that you entered valid text in Arabic or Persian script, but you still received an error message, then please let me know <a href="mailto:tbeers@uchicago.edu">by email</a>. It might be a bug! (There are guaranteed to be some at this stage.)</li>
+    </ul>
+    <hr>
+  </div>
+  
+  <div class="container">
+    <h4>Specific Rules Followed</h4>
+    <ul>
+      <li>The basics of <em>abjad</em> numerals are covered in <a href="https://en.wikipedia.org/wiki/Abjad_numerals" target="_blank" rel="noopener">this Wikipedia entry</a>, and they are observed here faithfully. If one digs a bit deeper, however, questions and ambiguities may arise…</li>
+      <li>The treatment of the four "Persian letters" (<em>p</em>, <em>ch</em>, <em>zh</em>, <em>g</em>) is actually well established; it's explained in the same Wikipedia entry. You should encounter no problem using Persian text. (Urdu? Pashto? You're on your own, at least for the time being.)</li>
+      <li>This program treats the Arabic letter <a href="https://en.wiktionary.org/wiki/%D8%A9" target="_blank" rel="noopener"><em>tāʾ marbūṭah</em></a> as if it were a <em>hāʾ</em> and assigns it a value of 5. This is due to a general principle in <em>abjad</em> calculation, that we judge letters by their <em>form</em>, rather than by their pronunciation or other factors.</li>
+      <li>Similarly, <a href="https://en.wikibooks.org/wiki/Arabic/LearnRW/alif_Maksoorah" target="_blank" rel="noopener"><em>alif maqṣūrah</em></a> is considered equivalent to <em>yāʾ</em> and assigned a value of 10. (Deal with it!)</li>
+      <li>Any full-letter form of <em>hamzah</em> or <em>alif</em> will be assigned a value of 1. This includes <a href="https://en.wiktionary.org/wiki/maddah" target="_blank" rel="noopener"><em>alif maddah</em></a>, which some people have treated as a "double <em>hamzah</em>" with a value of 2. Here we should keep in mind another general principle of <em>abjad</em> numerals: each letter is counted exactly once. Just as <a href="https://en.wikipedia.org/wiki/Shadda" target="_blank" rel="noopener"><em>shaddah</em></a> is not taken into consideration, nor should <em>alif maddah</em> be granted double value.</li>
+    </ul>
+    <hr>
+  </div>
+  
+  <div class="container">
+    <p style="margin-bottom:0.5em">&copy; 2017 Theo Beers</p>
+    <p style="margin-bottom:0.5em">Visit my <a href="https://www.theobeers.com/" target="_blank" rel="noopener">personal website</a>, if you like…</p>
+    <p>I'm probably the world's worst developer. If <em>anything</em> is messed up, again, please let me know <a href="mailto:tbeers@uchicago.edu">by email</a>!</p>
+  </div>
+
+  <script src="js/index.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+</html>
