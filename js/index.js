@@ -1,3 +1,19 @@
+var subButton = document.getElementById("subButton");
+subButton.addEventListener("click", getAbjad);
+
+document.addEventListener("DOMContentLoaded", function() {
+  var go = document.getElementById("subButton");
+  var txt = document.getElementById("abjadText");
+  if (txt && go) {
+    txt.addEventListener("keypress", function(e) {
+      if (event.keyCode === 13) {
+        go.click();
+        e.preventDefault();
+      }
+    });
+  }
+});
+
 function getAbjad() {
   var babadook = document.getElementById("abjadText").value;
   var slenderman = document.getElementById("abjadText").value;
@@ -92,15 +108,3 @@ function getAbjad() {
   }
   result.textContent += " " + total + ".";
 }
-
-var subButton = document.getElementById("subButton");
-subButton.addEventListener("click", getAbjad, false);
-
-var go = document.getElementById("subButton");
-var txt = document.getElementById("abjadText");
-txt.addEventListener("keypress", function(e) {
-  if (event.keyCode === 13) {
-  	e.preventDefault();
-  	go.click();
-  }
-});
