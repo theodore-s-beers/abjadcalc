@@ -93,7 +93,7 @@ function getAbjad() {
   result.textContent += " " + total + ".";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function() {
   var go = document.getElementById("subButton");
   var txt = document.getElementById("abjadText");
   if (txt && go) {
