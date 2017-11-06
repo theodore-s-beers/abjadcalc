@@ -96,11 +96,16 @@ function getAbjad() {
 var subButton = document.getElementById("subButton");
 subButton.addEventListener("click", getAbjad);
 
-var go = document.getElementById("subButton");
-var txt = document.getElementById("abjadText");
-txt.addEventListener("keypress", function(e) {
-  if (event.keyCode === 13) {
-    go.click();
-    e.preventDefault();
+window.addEventListener("DOMContentLoaded", function() {
+  var go = document.getElementById("subButton");
+  var txt = document.getElementById("abjadText");
+  if (txt && go) {
+    txt.addEventListener("keyup", function(e) {
+      if (event.keyCode === 13) {
+        go.click();
+        e.preventDefault();
+        return false;
+      }
+    });
   }
-});
+}, false);
