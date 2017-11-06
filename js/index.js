@@ -8,15 +8,7 @@ function getAbjad() {
   var newline = "\r\n";
   babadook = babadook.replace(/\s+/g, "");
   for (i = 0; i < babadook.length; i++) {
-    if (
-      babadook.charAt(i) == "ا" ||
-      babadook.charAt(i) == "ء" ||
-      babadook.charAt(i) == "آ" ||
-      babadook.charAt(i) == "أ" ||
-      babadook.charAt(i) == "ؤ" ||
-      babadook.charAt(i) == "إ" ||
-      babadook.charAt(i) == "ئ"
-    ) {
+    if (babadook.charAt(i) == "ا" || babadook.charAt(i) == "ء" || babadook.charAt(i) == "آ" || babadook.charAt(i) == "أ" || babadook.charAt(i) == "إ") {
       total = total + 1;
     } else if (babadook.charAt(i) == "ب" || babadook.charAt(i) == "پ") {
       total = total + 2;
@@ -24,9 +16,9 @@ function getAbjad() {
       total = total + 3;
     } else if (babadook.charAt(i) == "د") {
       total = total + 4;
-    } else if (babadook.charAt(i) == "ه" || babadook.charAt(i) == "ة") {
+    } else if (babadook.charAt(i) == "ه" || babadook.charAt(i) == "ة" || babadook.charAt(i) == "ۀ") {
       total = total + 5;
-    } else if (babadook.charAt(i) == "و") {
+    } else if (babadook.charAt(i) == "و" || babadook.charAt(i) == "ؤ") {
       total = total + 6;
     } else if (babadook.charAt(i) == "ز" || babadook.charAt(i) == "ژ") {
       total = total + 7;
@@ -34,17 +26,9 @@ function getAbjad() {
       total = total + 8;
     } else if (babadook.charAt(i) == "ط") {
       total = total + 9;
-    } else if (
-      babadook.charAt(i) == "ی" ||
-      babadook.charAt(i) == "ى" ||
-      babadook.charAt(i) == "ي"
-    ) {
+    } else if (babadook.charAt(i) == "ی" || babadook.charAt(i) == "ى" || babadook.charAt(i) == "ي" || babadook.charAt(i) == "ئ") {
       total = total + 10;
-    } else if (
-      babadook.charAt(i) == "ک" ||
-      babadook.charAt(i) == "گ" ||
-      babadook.charAt(i) == "ك"
-    ) {
+    } else if (babadook.charAt(i) == "ک" || babadook.charAt(i) == "گ" || babadook.charAt(i) == "ك") {
       total = total + 20;
     } else if (babadook.charAt(i) == "ل") {
       total = total + 30;
@@ -81,12 +65,7 @@ function getAbjad() {
     } else if (babadook.charAt(i) == "غ") {
       total = total + 1000;
     } else {
-      result.textContent =
-        "At least one of the characters that you entered was not recognized and has been ignored." +
-        newline +
-        "That said, the computed value of « " +
-        slendererman +
-        " » is";
+      result.textContent = "At least one of the characters that you entered was not recognized and has been ignored." + newline + "That said, the computed value of « " + slendererman + " » is";
       total = total;
     }
   }
