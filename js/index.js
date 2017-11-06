@@ -1,4 +1,3 @@
-// the function which handles the input field logic
 function getAbjad() {
   var babadook = document.getElementById("abjadText").value;
   var slenderman = document.getElementById("abjadText").value;
@@ -94,13 +93,9 @@ function getAbjad() {
   result.textContent += " " + total + ".";
 }
 
-// use an eventlistener for the event
-var subButton = document.getElementById("subButton");
-subButton.addEventListener("click", getAbjad);
-
 document.addEventListener("DOMContentLoaded", function() {
-  var go = document.getElementById("subButton"),
-    txt = document.getElementById("abjadText");
+  var go = document.getElementById("subButton");
+  var txt = document.getElementById("abjadText");
   if (txt && go) {
     txt.addEventListener("keypress", function(e) {
       if (event.keyCode === 13) {
@@ -110,3 +105,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+var subButton = document.getElementById("subButton");
+subButton.addEventListener("click", getAbjad);
