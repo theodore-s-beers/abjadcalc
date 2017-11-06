@@ -30,7 +30,7 @@
         <small id="emailHelp" class="form-text text-muted">Text entered in this form will not be collected anywhere.</small>
       </div>
       <label>
-        <button class="btn btn-primary" id="subButton">Go!</button>
+        <button class="btn btn-primary" id="subButton" onkeyup="javascript:if (event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {document.getElementById('subButton').click();}};">Go!</button>
       </label>
     </form>
   
