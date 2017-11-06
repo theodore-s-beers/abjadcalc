@@ -26,11 +26,11 @@
     <form action="">
       <div class="form-group">
         <label for="abjadText" style="margin-bottom:12px">In the box below, enter a word or phrase, or really anything you like, <em>in Arabic or Persian script</em>. Then hit "Enter" or click the "Go!" button, and the total <em>abjad</em> value of your input will be returned. You can carry out this operation repeatedly, with no need to refresh the page.</label>
-        <input type="text" class="form-control" id="abjadText" dir="rtl" style="text-align:left">
+        <input type="text" class="form-control" id="abjadText" dir="rtl" onkeyup="javascript:if (event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {document.getElementById('subButton').click();}};" style="text-align:left">
         <small id="emailHelp" class="form-text text-muted">Text entered in this form will not be collected anywhere.</small>
       </div>
       <label>
-        <button type="button" class="btn btn-primary" id="subButton" onkeyup="javascript:if (event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {document.getElementById('subButton').click();}};">Go!</button>
+        <button type="button" class="btn btn-primary" id="subButton">Go!</button>
       </label>
     </form>
   
