@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (txt && go) {
     txt.addEventListener("keypress", function(e) {
       if (event.keyCode === 13) {
-        go.click();
-        e.preventDefault();
+        getAbjad();
       }
     });
   }
