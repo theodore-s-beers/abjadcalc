@@ -96,9 +96,11 @@ function getAbjad() {
 var subButton = document.getElementById("subButton");
 subButton.addEventListener("click", getAbjad, false);
 
-var txt = document.getElementById("abjadText")
+var go = document.getElementById("subButton");
+var txt = document.getElementById("abjadText");
 txt.addEventListener("keypress", function(e) {
-  if (e.keyCode === 13) {
-  	subButton.addEventListener("click", getAbjad, false);
+  if (event.keyCode === 13) {
+  	e.preventDefault();
+  	go.click();
   }
 });
