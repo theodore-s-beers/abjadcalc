@@ -1,1 +1,1 @@
-# abjadcalc thingy
+# abjadcalc
