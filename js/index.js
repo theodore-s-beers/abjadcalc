@@ -97,7 +97,7 @@ var subButton = document.getElementById("subButton");
 subButton.addEventListener("click", getAbjad, false);
 
 document.getElementById("abjadText")
-  .addEventListener("keyup", function(e) {
+  .addEventListener("keypress", function(e) {
   e.preventDefault();
   if (e.keyCode === 13) {
   	document.getElementById("subButton").click();
