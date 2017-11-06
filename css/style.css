@@ -1,0 +1,12 @@
+#abjadText {
+  font-family: "Scheherazade", sans-serif;
+  font-size: xx-large;
+  text-align: left;
+}
+
+#result {
+  white-space: pre;
+  font-weight: 500;
+  color: #1e8449;
+  font-size: large;
+}
