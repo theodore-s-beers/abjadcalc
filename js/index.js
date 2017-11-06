@@ -92,15 +92,3 @@ function getAbjad() {
   }
   result.textContent += " " + total + ".";
 }
-
-var subButton = document.getElementById("subButton");
-subButton.addEventListener("click", getAbjad);
-
-$(function() {
-  $("#abjadText").keypress(function(e) {
-    if (e.which == 13) {
-      getAbjad();
-      e.preventDefault();
-    }
-  });
-});
