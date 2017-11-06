@@ -1,6 +1,7 @@
 #abjadText {
   font-family: "Amiri", sans-serif;
   font-size: x-large;
+  text-align: left;
 }
 
 #result {
