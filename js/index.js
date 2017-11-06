@@ -94,18 +94,16 @@ function getAbjad() {
 }
 
 var subButton = document.getElementById("subButton");
-subButton.addEventListener("click", getAbjad);
+subButton.addEventListener("click", getAbjad, false);
 
 window.addEventListener("DOMContentLoaded", function() {
   var go = document.getElementById("subButton");
   var txt = document.getElementById("abjadText");
-  if (txt && go) {
-    txt.addEventListener("keyup", function(e) {
-      if (event.keyCode === 13) {
-        go.click();
-        e.preventDefault();
-        return false;
-      }
-    });
-  }
+  txt.addEventListener("keyup", function(e) {
+    if (event.keyCode === 13) {
+      go.click();
+      e.preventDefault();
+      return false;
+    }
+  });
 }, false);
