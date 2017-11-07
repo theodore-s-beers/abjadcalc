@@ -5,7 +5,7 @@ function getAbjad() {
   var result = document.getElementById("result");
   result.textContent = "The total value of « " + slendererman + " » is";
   var total = 0;
-  var newline = "\r\n";
+  var abjadError = document.getElementById("abjadError");
   babadook = babadook.replace(/\s+/g, "");
   for (i = 0; i < babadook.length; i++) {
     if (babadook.charAt(i) == "ا" || babadook.charAt(i) == "ء" || babadook.charAt(i) == "آ" || babadook.charAt(i) == "أ" || babadook.charAt(i) == "إ") {
@@ -67,7 +67,8 @@ function getAbjad() {
     } else if (babadook.charAt(i) == "‌") {
       total = total;
     } else {
-      result.textContent = "At least one of the characters that you entered was not recognized and has been ignored." + newline + "That said, the computed value of « " + slendererman + " » is";
+      abjadError.textContent = "At least one of the characters that you entered was not recognized and has been ignored.";
+      result.textContent = "That said, the computed value of « " + slendererman + " » is";
       total = total;
     }
   }
