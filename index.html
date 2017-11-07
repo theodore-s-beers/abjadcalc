@@ -20,7 +20,7 @@
     <h2>Abjad Calculator</h2>
     <form action="JavaScript:getAbjad();">
       <div class="form-group">
-        <label for="abjadText" style="margin-bottom:0.7em">In the box below, enter a word or phrase, or really anything you like, <em>in Arabic or Persian script</em>. Then hit "Enter" or click the "Go!" button, and the total numerical <em>abjad</em> value of your input will be returned. You can carry out this operation repeatedly, with no need to refresh the page.</label> <input class="form-control" dir="rtl" id="abjadText" type="text"> <small class="form-text text-muted" id="abjadTextHelp">Text entered in this form will not be collected anywhere.</small>
+        <label for="abjadText" style="margin-bottom:0.7em">In the box below, enter a word or phrase, or really anything you like, <em>in Arabic or Persian script</em>. Then hit "Enter" or click the "Go!" button, and the total numerical <em>abjad</em> value of your input will be returned. You can carry out this operation repeatedly, with no need to refresh the page.</label> <input autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" dir="rtl" id="abjadText" spellcheck="false" type="text"> <small class="form-text text-muted" id="abjadTextHelp">Text entered in this form will not be collected anywhere.</small>
       </div><button class="btn btn-primary" id="subButton" type="submit">Go!</button>
     </form>
   </div>
