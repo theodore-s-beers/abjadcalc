@@ -64,7 +64,7 @@ function getAbjad() {
       total = total + 900;
     } else if (babadook.charAt(i) == "غ") {
       total = total + 1000;
-    } else if (babadook.charAt(i) == "&#8204;") {
+    } else if (babadook.charAt(i) == "‌") {
       total = total;
     } else {
       result.textContent = "At least one of the characters that you entered was not recognized and has been ignored." + newline + "That said, the computed value of « " + slendererman + " » is";
