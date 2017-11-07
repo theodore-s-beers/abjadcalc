@@ -3,7 +3,7 @@ function getAbjad() {
   var slenderman = document.getElementById("abjadText").value;
   var slendererman = slenderman.trim();
   var result = document.getElementById("result");
-  result.textContent = "The total value of « " + slendererman + " » is";
+  result.innerHTML = "The total value of « " + slendererman + " » is";
   var total = 0;
   babadook = babadook.replace(/\s+/g, "");
   for (i = 0; i < babadook.length; i++) {
@@ -70,5 +70,5 @@ function getAbjad() {
       total = total;
     }
   }
-  result.textContent += " " + total + ".";
+  result.innerHTML += " " + total + ".";
 }
