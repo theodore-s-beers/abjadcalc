@@ -9,7 +9,7 @@ function getAbjad() {
     var i = 0;
     babadook = babadook.replace(/\s+/g, "");
     for (i = 0; i < babadook.length; i += 1) {
-        if (babadook.charAt(i) === "ا" || babadook.charAt(i) === "ء" || babadook.charAt(i) === "آ" || babadook.charAt(i) === "أ" || babadook.charAt(i) === "إ") {
+        if (babadook.charAt(i) === "ا" || babadook.charAt(i) === "ء" || babadook.charAt(i) === "آ" || babadook.charAt(i) === "أ" || babadook.charAt(i) === "إ" || babadook.charAt(i) === "ٱ") {
             total = total + 1;
         } else if (babadook.charAt(i) === "ب" || babadook.charAt(i) === "پ") {
             total = total + 2;
