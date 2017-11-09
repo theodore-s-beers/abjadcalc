@@ -72,11 +72,11 @@ function getAbjad() {
             total = total;
         }
     }
-    document.getElementById("abjadText").blur();
     result.innerHTML += " " + total + ".";
+    document.getElementById("abjadText").blur();
 }
 document.getElementById("resetButton").addEventListener("click", function resetForm() {
     "use strict";
-    var clown = document.getElementById("result");
-    clown.innerHTML = "The total <em>abjad</em> value of … is …";
+    var pennywise = document.getElementById("result");
+    pennywise.innerHTML = "The total <em>abjad</em> value of … is …";
 });

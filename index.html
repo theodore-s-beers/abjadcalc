@@ -22,16 +22,12 @@
                 <label for="abjadText" style="margin-bottom:0.8em;">In the box below, enter a word or phrase, or really anything you like, <em>in Arabic or Persian script</em>. Then hit "Enter" or click the "Go!" button, and the total numerical <em>abjad</em> value of your input will be returned. The "Reset" button will clear the form (though it isn't necessary between operations).</label> <input autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" dir="rtl" id="abjadText" spellcheck="false" type="text"> <small class="form-text text-muted" id="abjadTextHelp">Text submitted here will not be tracked or saved.</small>
             </div><button class="btn btn-primary" id="subButton" type="submit">Go!</button><button class="btn btn-secondary" id="resetButton" type="reset">Reset</button>
         </form>
-    </div>
-    <div class="container" style="margin-top:1em;">
-        <div class="card border-success mb-3">
+        <div class="card border-success mb-3" style="margin-top:1em;">
             <div class="card-body text-success">
                 <p class="card-text" id="result">The total <em>abjad</em> value of … is …</p>
             </div>
         </div>
         <hr>
-    </div>
-    <div class="container">
         <h4>Usage Notes</h4>
         <ul>
             <li>This follows the the common "eastern" convention. If you're working with Maghribi or otherwise nonconformist sources, then you're likely to get incorrect results. Sorry! I may try to add options at some point. (See below for more detail on the exact rules being observed.)</li>
@@ -44,8 +40,6 @@
             </li>
         </ul>
         <hr>
-    </div>
-    <div class="container">
         <h4>Specific Rules Followed</h4>
         <ul>
             <li>The basics of <em>abjad</em> numerals are covered in <a href="https://en.wikipedia.org/wiki/Abjad_numerals" rel="noopener" target="_blank">this Wikipedia entry</a>, and they are observed here faithfully. If one digs a bit deeper, however, questions and ambiguities may arise…
@@ -63,8 +57,6 @@
             </li>
         </ul>
         <hr>
-    </div>
-    <div class="container">
         <p>&copy; 2017 Theo Beers<br>
         I'm probably the world's worst web developer. If anything is messed up, again, please let me know <a href="mailto:tbeers@uchicago.edu">by email</a>!</p>
     </div>
