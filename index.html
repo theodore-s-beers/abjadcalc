@@ -19,7 +19,7 @@
         <h2>Abjad Calculator</h2>
         <form action="JavaScript:getAbjad();">
             <div class="form-group">
-                <label for="abjadText" style="margin-bottom:0.8em;">In the box below, enter a word or phrase, or really anything you like, <em>in Arabic or Persian script</em>. Then hit "Enter" or click the "Go!" button, and the total numerical <em>abjad</em> value of your input will be returned. The "Reset" button will clear the form (though it isn't necessary between operations.)</label> <input autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" dir="rtl" id="abjadText" spellcheck="false" type="text"> <small class="form-text text-muted" id="abjadTextHelp">Text entered in this form will not be collected anywhere.</small>
+                <label for="abjadText" style="margin-bottom:0.8em;">In the box below, enter a word or phrase, or really anything you like, <em>in Arabic or Persian script</em>. Then hit "Enter" or click the "Go!" button, and the total numerical <em>abjad</em> value of your input will be returned. The "Reset" button will clear the form (though it isn't necessary between operations).</label> <input autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" dir="rtl" id="abjadText" spellcheck="false" type="text"> <small class="form-text text-muted" id="abjadTextHelp">Text entered here will not be tracked or saved.</small>
             </div><button class="btn btn-primary" id="subButton" type="submit">Go!</button><button class="btn btn-secondary" id="resetButton" type="reset">Reset</button>
         </form>
     </div>
@@ -37,7 +37,7 @@
             <li>This follows the the common "eastern" convention. If you're working with Maghribi or otherwise nonconformist sources, then you're likely to get incorrect results. Sorry! I may try to add options at some point. (See below for more detail on the exact rules being observed.)</li>
             <li>Feel free to include spaces between words, or even <a href="https://en.wikipedia.org/wiki/Zero-width_non-joiner" rel="noopener" target="_blank">zero-width non-joiners</a>; they won't affect the calculation.
             </li>
-            <li>More broadly, this program is designed to ignore any character that it doesn't recognize. If you enter text that contains one or more unrecognized characters, you'll see a brief error message, followed by the total <em>abjad</em> value of the parts that <em>were</em> counted (<em>i.e.</em>, our best guess). It may be correct nonetheless…</li>
+            <li>More broadly, this program is designed to ignore any character that it doesn't recognize. If you enter text that contains one or more unrecognized characters, you'll see a brief error message, followed by the total <em>abjad</em> value of the parts that <em>were</em> counted—<em>i.e.</em>, our best guess. It may be correct nonetheless…</li>
             <li>I recommend that you not include punctuation, or diacritics, or <a href="https://en.wikipedia.org/wiki/Dagger_alif" rel="noopener" target="_blank">dagger <em>alif</em>s</a>, or anything else outside of the "base letters." Only the last category is counted in the <em>abjad</em> system, anyway, so why add complication?
             </li>
             <li>If you're confident that you entered valid text in Arabic or Persian script, but you still received an error message, please let me know <a href="mailto:tbeers@uchicago.edu">by email</a>. It might be a bug! (There are guaranteed to be some at this stage.)
