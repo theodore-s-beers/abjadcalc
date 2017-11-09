@@ -74,3 +74,8 @@ function getAbjad() {
     }
     result.innerHTML += " " + total + ".";
 }
+document.getElementById("resetButton").addEventListener("click", function resetForm() {
+    "use strict";
+    var clown = document.getElementById("result");
+    clown.innerHTML = "The total <em>abjad</em> value of … is …";
+});
