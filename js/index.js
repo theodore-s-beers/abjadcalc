@@ -72,6 +72,7 @@ function getAbjad() {
             total = total;
         }
     }
+    document.getElementById("abjadText").blur();
     result.innerHTML += " " + total + ".";
 }
 document.getElementById("resetButton").addEventListener("click", function resetForm() {
