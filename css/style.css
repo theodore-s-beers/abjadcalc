@@ -8,3 +8,6 @@
     font-size: large;
     word-wrap: break-word;
 }
+#subButton {
+    margin-right: 1em;
+}
