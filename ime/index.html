@@ -19,7 +19,7 @@
     <h2 style="margin-top:0.4em;">Abjad Calculator (Manual Input)</h2>
     <form action="JavaScript:getAbjad();">
       <div class="form-group">
-        <label for="handInput" style="margin-bottom:0.8em;">This is intended as a fallback option to the <a href="../">main tool</a>, which requires typing directly in Arabic or Persian. Use the green buttons below to add text to the box. Then click "Go!" when you're ready to calculate the <em>abjad</em> value of your input. You can also reset the form, add a space between words, or delete the last character that was entered. Further details are at the bottom of the page.</label> <input autocomplete="off" class="form-control" dir="rtl" id="handInput" spellcheck="false" type="text" value=""> <small class="form-text text-muted" id="emailHelp">Text submitted here will not be tracked or saved.</small>
+        <label for="handInput" style="margin-bottom:0.8em;">This is intended as a fallback option to the <a href="..">main tool</a>, which requires typing directly in Arabic or Persian. Use the green buttons below to add text to the box. Then click "Go!" when you're ready to calculate the <em>abjad</em> value of your input. You can also reset the form, add a space between words, or delete the last character that was entered. Further details are provided at the bottom of the page.</label> <input autocomplete="off" class="form-control" dir="rtl" id="handInput" spellcheck="false" type="text" value=""> <small class="form-text text-muted" id="emailHelp">Text submitted here will not be tracked or saved.</small>
       </div><button class="btn btn-primary" id="goBtn" type="submit">Go!</button><button class="btn btn-dark" id="resetBtn" type="button">Reset</button><button class="btn btn-info" id="spaceBtn" type="button">Add space</button><button class="btn btn-secondary" id="backBtn" type="button">⌫</button>
     </form>
     <div class="card border-success mb-3" style="margin-top:1em;">
@@ -100,7 +100,7 @@
     <hr>
     <h4>Notes</h4>
     <ul>
-      <li>The <a href="../">main page</a> contains much more information about the rules that this program follows in calculating <em>abjad</em> values.
+      <li>The <a href="..">main page</a> contains much more information about the ruleset that this program follows.
       </li>
       <li>Generally speaking, use of the "secondary" and Persian-specific letters is optional. They are provided for convenience, but Persian <em>pe</em> (پ), for example, will be treated the same as Arabic <em>bāʾ</em> (ب), and <em>tāʾ marbūṭah</em> (ة) is considered equivalent to <em>hāʾ</em> (ه). Please refer to the <a href="https://en.wikipedia.org/wiki/Abjad_numerals" rel="noopener" target="_blank">Wikipedia entry</a> on <em>abjad</em> numerals, which has tables listing (most of) the letter values.
       </li>
@@ -108,7 +108,7 @@
       </li>
     </ul>
     <hr>
-    <p>&copy; 2017 Theo Beers<br>
+    <p>&copy; 2017 T. S. Beers<br>
     I'm probably the world's worst web developer. If anything is messed up, please let me know <a href="mailto:tbeers@uchicago.edu">by email</a>!</p>
   </div>
   <script src="js/index.min.js">
