@@ -1,0 +1,28 @@
+.table.ab-jad tr td, .table.ab-jad tr th {
+    border-width: 0;
+}
+.btn.scheh {
+    font-family: "Scheherazade", serif;
+    font-size: x-large;
+    width: 1.8em;
+    line-height: 1em;
+}
+#handInput {
+    font-family: "Scheherazade", serif;
+    font-size: xx-large;
+    text-align: center;
+    height: 2.2em;
+}
+#goBtn {
+    margin-right: 1em;
+}
+#resetBtn {
+    margin-right: 1em;
+}
+#spaceBtn {
+    margin-right: 1em;
+}
+#result {
+    font-size: large;
+    word-wrap: break-word;
+}
