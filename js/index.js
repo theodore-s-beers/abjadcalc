@@ -1,8 +1,8 @@
 // Function to get abjad value
 function getAbjad() {
     "use strict";
-    var babadook = document.getElementById("handInput").value;
-    var slenderman = document.getElementById("handInput").value;
+    var babadook = document.getElementById("abjadText").value;
+    var slenderman = document.getElementById("abjadText").value;
     var slendererman = slenderman.replace(/\s+/g, " ").trim();
     var result = document.getElementById("result");
     var total = 0;
@@ -80,7 +80,7 @@ function getAbjad() {
         }
     }
     result.innerHTML += " " + total + ".";
-    document.getElementById("handInput").blur();
+    document.getElementById("abjadText").blur();
 }
 
 // Reset button
