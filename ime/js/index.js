@@ -245,19 +245,31 @@ function getAbjad() {
         } else if ("\u0646" === babadook.charAt(i)) {
             total += 50;
         } else if ("\u0633" === babadook.charAt(i)) {
-            total += 60;
+            if (document.getElementById("maghribiCheck").checked) {
+                total += 300;
+            } else {
+                total += 60;
+            }
         } else if ("\u0639" === babadook.charAt(i)) {
             total += 70;
         } else if ("\u0641" === babadook.charAt(i)) {
             total += 80;
         } else if ("\u0635" === babadook.charAt(i)) {
-            total += 90;
+            if (document.getElementById("maghribiCheck").checked) {
+                total += 60;
+            } else {
+                total += 90;
+            }
         } else if ("\u0642" === babadook.charAt(i)) {
             total += 100;
         } else if ("\u0631" === babadook.charAt(i)) {
             total += 200;
         } else if ("\u0634" === babadook.charAt(i)) {
-            total += 300;
+            if (document.getElementById("maghribiCheck").checked) {
+                total += 1000;
+            } else {
+                total += 300;
+            }
         } else if ("\u062A" === babadook.charAt(i)) {
             total += 400;
         } else if ("\u062B" === babadook.charAt(i)) {
@@ -267,11 +279,23 @@ function getAbjad() {
         } else if ("\u0630" === babadook.charAt(i)) {
             total += 700;
         } else if ("\u0636" === babadook.charAt(i)) {
-            total += 800;
+            if (document.getElementById("maghribiCheck").checked) {
+                total += 90;
+            } else {
+                total += 800;
+            }
         } else if ("\u0638" === babadook.charAt(i)) {
-            total += 900;
+            if (document.getElementById("maghribiCheck").checked) {
+                total += 800;
+            } else {
+                total += 900;
+            }
         } else if ("\u063A" === babadook.charAt(i)) {
-            total += 1e3;
+            if (document.getElementById("maghribiCheck").checked) {
+                total += 900;
+            } else {
+                total += 1000;
+            }
         } else if ("\u200C" === babadook.charAt(i)) {
             total = total;
         } else {
