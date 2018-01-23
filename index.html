@@ -36,10 +36,10 @@
         <label for="abjadText" style="margin-bottom:0.8em;">In the box below, enter a word or phrase, or really anything you like, <em>in Arabic or Persian script</em>. (If this poses a problem, see the first point under "Usage Notes.") Then hit "Enter" or click the "Go!" button, and the total <a href="https://en.wikipedia.org/wiki/Abjad_numerals" rel="noopener" target="_blank">numerical <em>abjad</em> value</a> of your input will be returned. The "Reset" button will clear the form—though it isn't necessary between operations. Use the checkboxes if you're working with the Maghribi system, or if you prefer <em>not</em> to assign value to the pseudo-letter <em>hamzah</em> in its isolated state (ء). Further details are provided beneath the results pane.</label><input autocapitalize="none" autocomplete="off" autocorrect="off" class="form-control" dir="rtl" id="abjadText" spellcheck="false" type="text"><small class="form-text text-muted" id="abjadTextHelp">Text submitted here will not be tracked or saved.</small>
       </div>
       <div class="form-check form-check-inline" style="margin-bottom:0.8em;">
-        <input class="form-check-input" id="maghribiCheck" type="checkbox"><label class="form-check-label" id="maghribiLabel">Maghribi order</label>
+        <input aria-labelledby="maghribiLabel" class="form-check-input" id="maghribiCheck" type="checkbox"><label class="form-check-label" id="maghribiLabel">Maghribi order</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" id="hamzahCheck" type="checkbox"><label class="form-check-label">Ignore lone <em>hamzah</em></label>
+        <input aria-labelledby="hamzahLabel" class="form-check-input" id="hamzahCheck" type="checkbox"><label class="form-check-label" id="hamzahLabel">Ignore lone <em>hamzah</em></label>
       </div><br>
       <button class="btn btn-primary" id="subButton" type="submit">Go!</button><button class="btn btn-secondary" id="resetButton" type="reset">Reset</button>
     </form>

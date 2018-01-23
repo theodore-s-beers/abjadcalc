@@ -36,10 +36,10 @@
         <label for="handInput" style="margin-bottom:0.8em;">This is intended as a fallback option to the <a href="../">primary tool</a>, which requires typing directly in Arabic or Persian. Use the green buttons below to add text to the box. Then click "Go!" when you're ready to calculate the <em>abjad</em> value of your input. You can also reset the form, add a space between words, or delete the last character that was entered. The checkboxes allow you to switch to the Maghribi system, or to specify that value <em>not</em> be assigned to the pseudo-letter <em>hamzah</em> in its isolated state (ء). Further details are provided at the bottom of the page.</label><input autocapitalize="none" autocomplete="off" autocorrect="off" class="form-control" dir="rtl" id="handInput" spellcheck="false" type="text" value=""><small class="form-text text-muted" id="emailHelp">Text submitted here will not be tracked or saved.</small>
       </div>
       <div class="form-check form-check-inline" style="margin-bottom:0.8em;">
-        <input class="form-check-input" id="maghribiCheck" type="checkbox"><label class="form-check-label" id="maghribiLabel">Maghribi order</label>
+        <input aria-labelledby="maghribiLabel" class="form-check-input" id="maghribiCheck" type="checkbox"><label class="form-check-label" id="maghribiLabel">Maghribi order</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" id="hamzahCheck" type="checkbox"><label class="form-check-label">Ignore lone <em>hamzah</em></label>
+        <input aria-labelledby="hamzahLabel" class="form-check-input" id="hamzahCheck" type="checkbox"><label class="form-check-label" id="hamzahLabel">Ignore lone <em>hamzah</em></label>
       </div><br>
       <button class="btn btn-primary" id="goBtn" type="submit">Go!</button><button class="btn btn-secondary" id="resetBtn" type="reset">Reset</button><button class="btn btn-info" id="spaceBtn" type="button">Add space</button><button class="btn btn-dark" id="backBtn" type="button">⌫</button>
     </form>
