@@ -1,212 +1,222 @@
+// Declare global variables
+var handInput = document.getElementById("handInput");
+var result = document.getElementById("result");
 // Primary letter buttons row 1
 document.getElementById("alifBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0627";
+  handInput.value += "\u0627";
 });
 document.getElementById("baBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0628";
+  handInput.value += "\u0628";
 });
 document.getElementById("jimBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u062C";
+  handInput.value += "\u062C";
 });
 document.getElementById("dalBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u062F";
+  handInput.value += "\u062F";
 });
 document.getElementById("haBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0647";
+  handInput.value += "\u0647";
 });
 document.getElementById("wawBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0648";
+  handInput.value += "\u0648";
 });
 document.getElementById("zaBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0632";
+  handInput.value += "\u0632";
 });
 // Primary letter buttons row 2
 document.getElementById("5aBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u062D";
+  handInput.value += "\u062D";
 });
 document.getElementById("tawBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0637";
+  handInput.value += "\u0637";
 });
 document.getElementById("yaBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u064A";
+  handInput.value += "\u064A";
 });
 document.getElementById("kafBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0643";
+  handInput.value += "\u0643";
 });
 document.getElementById("lamBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0644";
+  handInput.value += "\u0644";
 });
 document.getElementById("mimBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0645";
+  handInput.value += "\u0645";
 });
 document.getElementById("nunBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0646";
+  handInput.value += "\u0646";
 });
 // Primary letter buttons row 3
 document.getElementById("sinBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0633";
+  handInput.value += "\u0633";
 });
 document.getElementById("aynBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0639";
+  handInput.value += "\u0639";
 });
 document.getElementById("faBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0641";
+  handInput.value += "\u0641";
 });
 document.getElementById("sadBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0635";
+  handInput.value += "\u0635";
 });
 document.getElementById("qafBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0642";
+  handInput.value += "\u0642";
 });
 document.getElementById("raBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0631";
+  handInput.value += "\u0631";
 });
 document.getElementById("shinBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0634";
+  handInput.value += "\u0634";
 });
 document.getElementById("taBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u062A";
+  handInput.value += "\u062A";
 });
 // Primary letter buttons row 4
 document.getElementById("thaBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u062B";
+  handInput.value += "\u062B";
 });
 document.getElementById("khaBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u062E";
+  handInput.value += "\u062E";
 });
 document.getElementById("dhalBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0630";
+  handInput.value += "\u0630";
 });
 document.getElementById("dadBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0636";
+  handInput.value += "\u0636";
 });
 document.getElementById("zawBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0638";
+  handInput.value += "\u0638";
 });
 document.getElementById("ghaynBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u063A";
+  handInput.value += "\u063A";
 });
 // Secondary letter buttons
 document.getElementById("topHamBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0623";
+  handInput.value += "\u0623";
 });
 document.getElementById("bottomHamBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0625";
+  handInput.value += "\u0625";
 });
 document.getElementById("maddahBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0622";
+  handInput.value += "\u0622";
 });
 document.getElementById("hamzahBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0621";
+  handInput.value += "\u0621";
 });
 document.getElementById("marbutahBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0629";
+  handInput.value += "\u0629";
 });
 document.getElementById("wawHamBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0624";
+  handInput.value += "\u0624";
 });
 document.getElementById("maqsurahBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0649";
+  handInput.value += "\u0649";
 });
 document.getElementById("yaHamBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0626";
+  handInput.value += "\u0626";
 });
 // Persian letter buttons
 document.getElementById("peBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u067E";
+  handInput.value += "\u067E";
 });
 document.getElementById("cheBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0686";
+  handInput.value += "\u0686";
 });
 document.getElementById("haIzafahBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u06C0";
+  handInput.value += "\u06C0";
 });
 document.getElementById("zheBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u0698";
+  handInput.value += "\u0698";
 });
 document.getElementById("persYaBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u06CC";
+  handInput.value += "\u06CC";
 });
 document.getElementById("persKafBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u06A9";
+  handInput.value += "\u06A9";
 });
 document.getElementById("gafBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += "\u06AF";
+  handInput.value += "\u06AF";
 });
 // Control buttons
 document.getElementById("resetBtn").addEventListener("click", function f() {
   "use strict";
-  var a = document.getElementById("result");
-  a.innerHTML = "The total <em>abjad</em> value of \u2026 is \u2026";
+  result.innerHTML = "The total <em>abjad</em> value of \u2026 is \u2026";
 });
 document.getElementById("spaceBtn").addEventListener("click", function f() {
   "use strict";
-  document.getElementById("handInput").value += " ";
+  handInput.value += " ";
 });
 document.getElementById("backBtn").addEventListener("click", function f() {
   "use strict";
-  var a = document.getElementById("handInput");
-  a.value = a.value.slice(0, -1);
+  handInput = handInput.slice(0, -1);
 });
 // Function to get abjad value
 function getAbjad() {
   "use strict";
-  var babadook = document.getElementById("handInput").value;
-  var slenderman = document.getElementById("handInput").value;
-  var slendererman = slenderman.replace(/\s+/g, " ").trim();
-  var result = document.getElementById("result");
+  var babadook = handInput.value.replace(/\s+/g, "");
+  var slenderman = handInput.value.replace(/\s+/g, " ").trim();
   var total = 0;
   var i = 0;
-  result.innerHTML = "The total <em>abjad</em> value of \u00AB " + slendererman + " \u00BB is";
-  babadook = babadook.replace(/\s+/g, "");
+  var hamzahCheck = 0;
+  var maghribiCheck = 0;
+  if (document.getElementById("hamzahCheck").checked) {
+    hamzahCheck = 1;
+  } else {
+    hamzahCheck = 0;
+  }
+  if (document.getElementById("maghribiCheck").checked) {
+    maghribiCheck = 1;
+  } else {
+    maghribiCheck = 0;
+  }
+  result.innerHTML = "The total <em>abjad</em> value of \u00AB " + slenderman + " \u00BB is";
   for (i = 0; i < babadook.length; i += 1) {
     if ("\u0627" === babadook.charAt(i) || "\u0622" === babadook.charAt(i) || "\u0623" === babadook.charAt(i) || "\u0625" === babadook.charAt(i) || "\u0671" === babadook.charAt(i)) {
       total += 1;
     } else if ("\u0621" === babadook.charAt(i)) {
-      if (document.getElementById("hamzahCheck").checked) {
+      if (hamzahCheck === 1) {
         total = total;
       } else {
         total += 1;
@@ -238,7 +248,7 @@ function getAbjad() {
     } else if ("\u0646" === babadook.charAt(i)) {
       total += 50;
     } else if ("\u0633" === babadook.charAt(i)) {
-      if (document.getElementById("maghribiCheck").checked) {
+      if (maghribiCheck === 1) {
         total += 300;
       } else {
         total += 60;
@@ -248,7 +258,7 @@ function getAbjad() {
     } else if ("\u0641" === babadook.charAt(i)) {
       total += 80;
     } else if ("\u0635" === babadook.charAt(i)) {
-      if (document.getElementById("maghribiCheck").checked) {
+      if (maghribiCheck === 1) {
         total += 60;
       } else {
         total += 90;
@@ -258,7 +268,7 @@ function getAbjad() {
     } else if ("\u0631" === babadook.charAt(i)) {
       total += 200;
     } else if ("\u0634" === babadook.charAt(i)) {
-      if (document.getElementById("maghribiCheck").checked) {
+      if (maghribiCheck === 1) {
         total += 1000;
       } else {
         total += 300;
@@ -272,19 +282,19 @@ function getAbjad() {
     } else if ("\u0630" === babadook.charAt(i)) {
       total += 700;
     } else if ("\u0636" === babadook.charAt(i)) {
-      if (document.getElementById("maghribiCheck").checked) {
+      if (maghribiCheck === 1) {
         total += 90;
       } else {
         total += 800;
       }
     } else if ("\u0638" === babadook.charAt(i)) {
-      if (document.getElementById("maghribiCheck").checked) {
+      if (maghribiCheck === 1) {
         total += 800;
       } else {
         total += 900;
       }
     } else if ("\u063A" === babadook.charAt(i)) {
-      if (document.getElementById("maghribiCheck").checked) {
+      if (maghribiCheck === 1) {
         total += 900;
       } else {
         total += 1000;
@@ -292,7 +302,7 @@ function getAbjad() {
     } else if ("\u200C" === babadook.charAt(i)) {
       total = total;
     } else {
-      result.innerHTML = "At least one of the characters that you entered was not recognized and has been ignored.<br>That said, the computed <em>abjad</em> value of \u00AB " + slendererman + " \u00BB is";
+      result.innerHTML = "At least one of the characters that you entered was not recognized and has been ignored.<br>That said, the computed <em>abjad</em> value of \u00AB " + slenderman + " \u00BB is";
       total = total;
     }
   }
