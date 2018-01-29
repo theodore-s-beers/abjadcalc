@@ -1,4 +1,4 @@
-const PRECACHE = "precache-v5",
+const PRECACHE = "precache-v6",
   RUNTIME = "runtime",
   PRECACHE_URLS = ["index.html", "./", "css/style.css", "css/bootstrap.min.css", "img/icon.png", "img/icon-192.png", "https://fonts.googleapis.com/css?family=Scheherazade&amp;subset=arabic", "img/abjad-og.png", "js/index.js", "js/popper.min.js", "js/bootstrap.min.js", "js/jquery-3.2.1.slim.min.js", "ime/index.html", "ime/css/style.css", "ime/js/index.js", "table/index.html", "table/css/style.css"];
 self.addEventListener("install", a => {
