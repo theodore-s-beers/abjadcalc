@@ -1,5 +1,8 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox-sw.js');
 
+workbox.skipWaiting();
+workbox.clientsClaim();
+
 workbox.precaching.precacheAndRoute([
   {
     "url": "ime/index.html",
