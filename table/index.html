@@ -36,7 +36,7 @@
   <div class="container" style="margin-top:0.6rem;">
     <h2>Table of Letter Values</h2>
     <script>
-    "serviceWorker" in navigator && navigator.serviceWorker.register("../service-worker.js");
+    'serviceWorker'in navigator&&window.addEventListener('load',()=>{navigator.serviceWorker.register('../sw.js')});
     </script>
     <p>There are many resources online that explain the concept of Arabic <em>abjad</em> numerals and list the 28 primary letters and their associated values. I made this table in case anyone would like to double-check the rules followed by the calculation program—in particular the differences between the Mashriqi ("Eastern") and Maghribi ("Western") systems, which are highlighted in green. Further details are provided on the <a href="../">main page</a>.</p>
     <hr>
