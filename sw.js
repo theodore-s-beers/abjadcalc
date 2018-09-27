@@ -107,10 +107,3 @@ workbox.routing.registerRoute(
     ],
   }),
 );
-
-workbox.routing.registerRoute(
-  /\.(?:js|css)$/,
-  workbox.strategies.staleWhileRevalidate({
-    cacheName: 'static-resources',
-  }),
-);
