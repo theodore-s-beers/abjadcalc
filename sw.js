@@ -49,9 +49,6 @@ workbox.precaching.precacheAndRoute([{
   "url": "js/index.js",
   "revision": "eb8becd9fa362ed74c74ec45c6908d90"
 }, {
-  "url": "sw-old.js",
-  "revision": "3f0edad6a60537b1b12574e2ba9338ab"
-}, {
   "url": "table/index.html",
   "revision": "1ba6a1a271a2c1e6660fa3d860fee3c0"
 }]);
