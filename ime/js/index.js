@@ -1,6 +1,7 @@
 // Declare global variables
 var handInput = document.getElementById("handInput");
 var result = document.getElementById("result");
+
 // Primary letter buttons row 1
 document.getElementById("alifBtn").addEventListener("click", function f() {
   "use strict";
@@ -30,6 +31,7 @@ document.getElementById("zaBtn").addEventListener("click", function f() {
   "use strict";
   handInput.value += "\u0632";
 });
+
 // Primary letter buttons row 2
 document.getElementById("5aBtn").addEventListener("click", function f() {
   "use strict";
@@ -59,6 +61,7 @@ document.getElementById("nunBtn").addEventListener("click", function f() {
   "use strict";
   handInput.value += "\u0646";
 });
+
 // Primary letter buttons row 3
 document.getElementById("sinBtn").addEventListener("click", function f() {
   "use strict";
@@ -92,6 +95,7 @@ document.getElementById("taBtn").addEventListener("click", function f() {
   "use strict";
   handInput.value += "\u062A";
 });
+
 // Primary letter buttons row 4
 document.getElementById("thaBtn").addEventListener("click", function f() {
   "use strict";
@@ -117,6 +121,7 @@ document.getElementById("ghaynBtn").addEventListener("click", function f() {
   "use strict";
   handInput.value += "\u063A";
 });
+
 // Secondary letter buttons
 document.getElementById("topHamBtn").addEventListener("click", function f() {
   "use strict";
@@ -150,6 +155,7 @@ document.getElementById("yaHamBtn").addEventListener("click", function f() {
   "use strict";
   handInput.value += "\u0626";
 });
+
 // Persian letter buttons
 document.getElementById("peBtn").addEventListener("click", function f() {
   "use strict";
@@ -179,6 +185,7 @@ document.getElementById("gafBtn").addEventListener("click", function f() {
   "use strict";
   handInput.value += "\u06AF";
 });
+
 // Control buttons
 document.getElementById("resetBtn").addEventListener("click", function f() {
   "use strict";
@@ -192,6 +199,7 @@ document.getElementById("backBtn").addEventListener("click", function f() {
   "use strict";
   handInput = handInput.slice(0, -1);
 });
+
 // Function to get abjad value
 function getAbjad() {
   "use strict";

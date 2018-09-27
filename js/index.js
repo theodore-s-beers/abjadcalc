@@ -1,5 +1,6 @@
 // Declare one global variable
 var result = document.getElementById("result");
+
 // Function to get abjad value
 function getAbjad() {
   "use strict";
@@ -118,6 +119,7 @@ function getAbjad() {
   result.innerHTML += " " + total + ".";
   document.getElementById("abjadText").blur();
 }
+
 // Reset button
 document.getElementById("resetButton").addEventListener("click", function resetForm() {
   "use strict";

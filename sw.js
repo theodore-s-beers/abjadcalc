@@ -8,10 +8,10 @@ if (workbox) {
 
 workbox.precaching.precacheAndRoute([{
   "url": "ime/index.html",
-  "revision": "9a48734100659af773dbc68f66da85a0"
+  "revision": "f95237a508da807760a30461f46913a4"
 }, {
   "url": "ime/js/index.js",
-  "revision": "1d13a65cb9a7fc011d7018ac41539189"
+  "revision": "0728b99aeace30555a56c4c9b083fe07"
 }, {
   "url": "img/abjad-og.png",
   "revision": "5d2f8e2cf757fae3d1e8110ae03d06ad"
@@ -44,16 +44,16 @@ workbox.precaching.precacheAndRoute([{
   "revision": "f8601950f47572166a5eb040403da07b"
 }, {
   "url": "index.html",
-  "revision": "1539d8ae086e6b1a5b3052b73c481693"
+  "revision": "46965cb0ba101a57588be20f366c12f2"
 }, {
   "url": "js/index.js",
-  "revision": "b7295c1204b2c452351cd3f00c76b622"
+  "revision": "eb8becd9fa362ed74c74ec45c6908d90"
 }, {
-  "url": "manifest.json",
-  "revision": "795d732d0d11f8c6e32a09c9207d6de4"
+  "url": "sw-old.js",
+  "revision": "3f0edad6a60537b1b12574e2ba9338ab"
 }, {
   "url": "table/index.html",
-  "revision": "65f1a92f3810701171e8e07a318d0f55"
+  "revision": "1ba6a1a271a2c1e6660fa3d860fee3c0"
 }]);
 
 // Cache the Google Fonts stylesheets with a stale-while-revalidate strategy.
