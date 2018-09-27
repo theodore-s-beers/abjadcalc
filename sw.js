@@ -59,12 +59,12 @@ workbox.precaching.precacheAndRoute([{
   "revision": "65f1a92f3810701171e8e07a318d0f55"
 }]);
 
-// Cache the Google Fonts stylesheets with a stale while revalidate strategy.
+// Cache the Google Fonts stylesheets with a stale-while-revalidate strategy.
 workbox.routing.registerRoute(/^https:\/\/fonts\.googleapis\.com/, workbox.strategies.staleWhileRevalidate({
   cacheName: 'google-fonts-stylesheets',
 }), );
 
-// Cache the Google Fonts webfont files with a cache first strategy for 1 year.
+// Cache the Google Fonts webfont files with a cache-first strategy for one year.
 workbox.routing.registerRoute(/^https:\/\/fonts\.gstatic\.com/, workbox.strategies.cacheFirst({
   cacheName: 'google-fonts-webfonts',
   plugins: [
