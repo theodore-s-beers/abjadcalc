@@ -6,9 +6,6 @@ if (workbox) {
   console.log(`Boo! Workbox didn't load 😬`);
 }
 
-workbox.skipWaiting();
-workbox.clientsClaim();
-
 workbox.precaching.precacheAndRoute([{
   "url": "ime/index.html",
   "revision": "9a48734100659af773dbc68f66da85a0"
