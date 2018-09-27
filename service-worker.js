@@ -1,6 +1,6 @@
-const PRECACHE = "precache-v7",
+const PRECACHE = "precache-v8",
   RUNTIME = "runtime",
-  PRECACHE_URLS = ["index.html", "./", "css/style.css", "css/bootstrap.min.css", "img/icon.png", "img/icon-192.png", "https://fonts.googleapis.com/css?family=Scheherazade&amp;subset=arabic", "img/abjad-og.png", "js/index.js", "js/popper.min.js", "js/bootstrap.min.js", "js/jquery-3.2.1.slim.min.js", "ime/index.html", "ime/css/style.css", "ime/js/index.js", "table/index.html", "table/css/style.css"];
+  PRECACHE_URLS = ["index.html", "./", "img/icon.png", "img/icon-192.png", "https://fonts.googleapis.com/css?family=Scheherazade&amp;subset=arabic", "js/index.js", "ime/index.html", "ime/js/index.js", "table/index.html", "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", "https://code.jquery.com/jquery-3.3.1.slim.min.js", "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js", "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"];
 self.addEventListener("install", a => {
   a.waitUntil(caches.open(PRECACHE).then(b => b.addAll(PRECACHE_URLS)).then(self.skipWaiting()))
 }), self.addEventListener("activate", a => {
