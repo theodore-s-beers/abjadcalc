@@ -1,12 +1,22 @@
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox-sw.js');
-
-if (workbox) {
-  console.log(`Yay! Workbox is loaded 🎉`);
-} else {
-  console.log(`Boo! Workbox didn't load 😬`);
-}
-
-workbox.precaching.precacheAndRoute([{
+/**
+ * Welcome to your Workbox-powered service worker!
+ *
+ * You'll need to register this file in your web app and you should
+ * disable HTTP caching for this file too.
+ * See https://goo.gl/nhQhGp
+ *
+ * The rest of the code is auto-generated. Please don't update this file
+ * directly; instead, make changes to your Workbox build configuration
+ * and re-run your build process.
+ * See https://goo.gl/2aRDsh
+ */
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
+/**
+ * The workboxSW.precacheAndRoute() method efficiently caches and responds to
+ * requests for URLs in the manifest.
+ * See https://goo.gl/S9QRab
+ */
+self.__precacheManifest = [{
   "url": "ime/index.html",
   "revision": "f95237a508da807760a30461f46913a4"
 }, {
@@ -44,44 +54,13 @@ workbox.precaching.precacheAndRoute([{
   "revision": "f8601950f47572166a5eb040403da07b"
 }, {
   "url": "index.html",
-  "revision": "46965cb0ba101a57588be20f366c12f2"
+  "revision": "24825a730f9cadd7b7eabe9c4599a3fb"
 }, {
   "url": "js/index.js",
   "revision": "eb8becd9fa362ed74c74ec45c6908d90"
 }, {
   "url": "table/index.html",
   "revision": "1ba6a1a271a2c1e6660fa3d860fee3c0"
-}]);
-
-// Cache the Google Fonts stylesheets with a stale-while-revalidate strategy.
-workbox.routing.registerRoute(/^https:\/\/fonts\.googleapis\.com/, workbox.strategies.staleWhileRevalidate({
-  cacheName: 'google-fonts-stylesheets',
-}), );
-
-// Cache the Google Fonts webfont files with a cache-first strategy for one year.
-workbox.routing.registerRoute(/^https:\/\/fonts\.gstatic\.com/, workbox.strategies.cacheFirst({
-  cacheName: 'google-fonts-webfonts',
-  plugins: [
-    new workbox.cacheableResponse.Plugin({
-      statuses: [0, 200],
-    }),
-    new workbox.expiration.Plugin({
-      maxAgeSeconds: 60 * 60 * 24 * 365,
-      maxEntries: 30,
-    }),
-  ],
-}), );
-
-workbox.routing.registerRoute(/\.(?:png|gif|jpg|jpeg|svg)$/, workbox.strategies.cacheFirst({
-  cacheName: 'images',
-  plugins: [
-    new workbox.expiration.Plugin({
-      maxEntries: 60,
-      maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
-    }),
-  ],
-}), );
-
-workbox.routing.registerRoute(/\.(?:js|css)$/, workbox.strategies.staleWhileRevalidate({
-  cacheName: 'static-resources',
-}), );
+}].concat(self.__precacheManifest || []);
+workbox.precaching.suppressWarnings();
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
