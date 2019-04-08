@@ -1,126 +1,126 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="Theo Beers" name="author">
-  <meta content="Calculate the numerical abjad value of Arabic or Persian text." name="description">
-  <meta content="Abjad Calculator" property="og:title">
-  <meta content="website" property="og:type">
-  <meta content="https://www.abjadcalc.com/" property="og:url">
-  <meta content="https://www.abjadcalc.com/img/abjad-og.png" property="og:image">
-  <meta content="image/png" property="og:image:type">
-  <meta content="en_US" property="og:locale">
-  <meta content="Calculate the numerical abjad value of Arabic or Persian text." property="og:description">
-  <meta content="summary_large_image" name="twitter:card">
-  <meta content="Abjad Calculator" name="twitter:title">
-  <meta content="#0066ff" name="theme-color">
-  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Scheherazade&amp;subset=arabic" rel="stylesheet">
-  <style>
-  #abjadText {
-  font-family: "Scheherazade", serif;
-  font-size: xx-large;
-  text-align: center;
-  height: 2.2em;
-  }
-  #result {
-  font-size: large;
-  word-wrap: break-word;
-  }
-  #subButton {
-  margin-right: 1em;
-  }
-  </style>
-  <link href="https://www.abjadcalc.com/" rel="canonical">
-  <link href="manifest.json" rel="manifest">
-  <link href="img/icon.png" rel="icon" type="image/png">
-  <link href="img/icon-192.png" rel="apple-touch-icon" type="image/png">
-  <title>Abjad Calculator</title>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="Theo Beers" name="author">
+	<meta content="Calculate the numerical abjad value of Arabic or Persian text." name="description">
+	<meta content="Abjad Calculator" property="og:title">
+	<meta content="website" property="og:type">
+	<meta content="https://www.abjadcalc.com/" property="og:url">
+	<meta content="https://www.abjadcalc.com/img/abjad-og.png" property="og:image">
+	<meta content="image/png" property="og:image:type">
+	<meta content="en_US" property="og:locale">
+	<meta content="Calculate the numerical abjad value of Arabic or Persian text." property="og:description">
+	<meta content="summary_large_image" name="twitter:card">
+	<meta content="Abjad Calculator" name="twitter:title">
+	<meta content="#0066ff" name="theme-color">
+	<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Scheherazade&amp;subset=arabic" rel="stylesheet">
+	<style>
+		#abjadText {
+			font-family: "Scheherazade", serif;
+			font-size: xx-large;
+			text-align: center;
+			height: 2.2em;
+		}
+		#result {
+			font-size: large;
+			word-wrap: break-word;
+		}
+		#subButton {
+			margin-right: 1em;
+		}
+	</style>
+	<link href="https://www.abjadcalc.com/" rel="canonical">
+	<link href="manifest.json" rel="manifest">
+	<link href="img/icon.png" rel="icon" type="image/png">
+	<link href="img/icon-192.png" rel="apple-touch-icon" type="image/png">
+	<title>Abjad Calculator</title>
 </head>
 <body>
-  <div class="container" style="margin-top:0.6rem;">
-    <h2>Abjad Calculator</h2>
-    <script>
-    'serviceWorker'in navigator&&window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js')});
-    </script>
-    <form action="JavaScript:getAbjad();">
-      <div class="form-group">
-        <label for="abjadText" style="margin-bottom:0.8em;">In the box below, enter a word or phrase, or really anything you like, <em>in Arabic or Persian script</em>. (If this poses a problem, see the first point under "Usage Notes.") Then hit "Enter" or click the "Go!" button, and the total <a href="https://en.wikipedia.org/wiki/Abjad_numerals" rel="noopener" target="_blank">numerical <em>abjad</em> value</a> of your input will be returned. The "Reset" button will clear the form—though it isn't necessary between operations. Use the checkboxes if you're working with the Maghribi system, or if you prefer <em>not</em> to assign value to the pseudo-letter <em>hamzah</em> in its isolated state (ء). Further details are provided beneath the results pane.</label><input autocapitalize="none" autocomplete="off" autocorrect="off" class="form-control" dir="rtl" id="abjadText" spellcheck="false" type="text"><small class="form-text text-muted" id="abjadTextHelp">Text submitted here will not be tracked or saved.</small>
-      </div>
-      <div class="form-check form-check-inline" style="margin-bottom:0.8em;">
-        <input aria-labelledby="maghribiLabel" class="form-check-input" id="maghribiCheck" type="checkbox"><label class="form-check-label" id="maghribiLabel">Maghribi order</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input aria-labelledby="hamzahLabel" class="form-check-input" id="hamzahCheck" type="checkbox"><label class="form-check-label" id="hamzahLabel">Ignore lone <em>hamzah</em></label>
-      </div><br>
-      <button class="btn btn-primary" id="subButton" type="submit">Go!</button><button class="btn btn-secondary" id="resetButton" type="reset">Reset</button>
-    </form>
-    <div class="card border-success mb-3" style="margin-top:1em;">
-      <div class="card-body text-success">
-        <p class="card-text" id="result">The total <em>abjad</em> value of … is …</p>
-      </div>
-    </div>
-    <hr>
-    <div data-children=".item" id="usageAccordion">
-      <div class="item">
-        <a aria-controls="notesUsage" aria-expanded="false" data-parent="#usageAccordion" data-toggle="collapse" href="#notesUsage">
-        <h4>Usage Notes</h4></a>
-        <div class="collapse" id="notesUsage" role="tabpanel">
-          <ul>
-            <li>I would strongly encourage anyone who knows an Arabic-script language to learn how to type in it. This isn't as difficult as one might imagine—especially on mobile devices, whose support for various languages now often exceeds that of desktop operating systems—and it opens up a whole new world of resources online. However, if you would like to use this <em>abjad</em> calculator but cannot type your input directly, there are a couple of alternatives. First, Google has developed clever tools for both <a href="https://www.google.com/intl/ar/inputtools/try/" rel="noopener" target="_blank">Arabic</a> and <a href="https://www.google.com/intl/fa/inputtools/try/" rel="noopener" target="_blank">Persian</a> that allow you to enter a phonetic approximation of your intended words in Roman script, and then transliterate them with very little fuss. You could use one of these tools and copy-paste the result into the box above. The second fallback option is actually a <a href="ime/">separate version</a> of this page, in which buttons may be used to enter Arabic or Persian words one letter at a time.
-            </li>
-            <li>By default, this program will assign an <em>abjad</em> value of 1 to the isolated form of <em>hamzah</em> (ء), treating it the same as if it were placed on an <em>alif</em>. Since this is not a universally agreed-upon practice, there is a checkbox to allow for the isolated <em>hamzah</em> to be ignored in calculation. (Please refer to the following section for more information on this dilemma and others like it.)</li>
-            <li>I've set the default letter values according to the more common "Eastern" convention. There is now an option to switch to the Maghribi order using a checkbox, for those who need it. Please refer to <a href="table/">this table</a> for a reminder of the differences between the two systems. (Only you can determine which of them is required by your sources.)
-            </li>
-            <li>Feel free to include spaces between words, or even <a href="https://en.wikipedia.org/wiki/Zero-width_non-joiner" rel="noopener" target="_blank">zero-width non-joiners</a>; they won't affect the calculation.
-            </li>
-            <li>More broadly, the program is designed to ignore any character that it doesn't recognize. If you enter a string of text containing one or more unrecognized characters, you'll see a brief error message, followed by the total <em>abjad</em> value of the parts that <em>were</em> counted—<em>i.e.</em>, our best guess. It may be correct nonetheless…</li>
-            <li>I recommend that you not include punctuation, or diacritics, or <a href="https://en.wikipedia.org/wiki/Dagger_alif" rel="noopener" target="_blank">dagger <em>alif</em>s</a>, or anything else outside of the "base letters." Only the last category is counted in the <em>abjad</em> system, anyway, so why add complication?
-            </li>
-            <li>If you're confident that you entered valid text in Arabic or Persian script, but you still received an error message, please let me know <a href="mailto:tbeers@uchicago.edu">by email</a>. It might be a bug! (There are likely to be some at this stage.)
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div data-children=".item" id="rulesAccordion">
-      <div class="item">
-        <a aria-controls="notesRules" aria-expanded="false" data-parent="#rulesAccordion" data-toggle="collapse" href="#notesRules">
-        <h4>Specific Rules Followed</h4></a>
-        <div class="collapse" id="notesRules" role="tabpanel">
-          <ul>
-            <li>The fundamentals of <em>abjad</em> numerals are covered in <a href="https://en.wikipedia.org/wiki/Abjad_numerals" rel="noopener" target="_blank">this Wikipedia entry</a>, and they are observed here faithfully. (I've also posted a <a href="table/">table of letter values</a>.) If one digs a bit deeper, however, questions and ambiguities may arise…
-            </li>
-            <li>The treatment of the four "Persian letters"—<em>pe</em>, <em>che</em>, <em>zhe</em>, and <em>gāf</em>—is, in fact, well established. Please refer to the same Wikipedia entry. In general, there should be no problem using Persian text. (Urdu? Pashto? You're on your own for the time being.)</li>
-            <li>Actually, there is one potentially confusing point in Persian: the <a href="https://sites.la.utexas.edu/persian_online_resources/phonology/silent-letters-silent-and-consonantal/" rel="noopener" target="_blank">silent <em>hā’</em></a>. But the answer is to treat this letter as we would any other <em>hā’</em>. (See the following note for the reasoning behind this.) Also, if you are among the proud few who use the Unicode character <code>06C0</code> (ۀ) to represent <em>iżāfah</em> on a silent <em>hā’</em>, that will be recognized just the same.
-            </li>
-            <li>This program treats the Arabic letter <a href="https://en.wiktionary.org/wiki/%D8%A9" rel="noopener" target="_blank"><em>tā’ marbūṭah</em></a> as if it were <em>hā’</em> and assigns it a value of 5. This is due to a general principle in <em>abjad</em> calculation, that we judge letters by their <em>form</em> (<em>rasm</em>), rather than by their pronunciation or other factors.
-            </li>
-            <li>Similarly, <a href="https://en.wikibooks.org/wiki/Arabic/LearnRW/alif_Maksoorah" rel="noopener" target="_blank"><em>alif maqṣūrah</em></a> is considered equivalent to <em>yā’</em> and assigned a value of 10. (Deal with it!)
-            </li>
-            <li>The treatment of <a href="https://en.wikipedia.org/wiki/Hamza" rel="noopener" target="_blank"><em>hamzah</em></a> is most troublesome of all, since it appears in conjunction with several different letters. But we need only continue to prioritize form. <em>Hamzah</em> on <em>wāw</em> (ؤ) is given the value of <em>wāw</em> (6). <em>Hamzah</em> on <em>yā’</em> (ئ) is given the value of <em>yā’</em> (10). Any variant of <em>hamzah</em> on <em>alif</em>, unsurprisingly, receives a value of 1. Finally, as was explained in the prior section, this program <em>does</em> assign a value of 1 to the isolated form of <em>hamzah</em> (ء), which is most often found at the end of certain Arabic words. This is a debated point; a few of the guides that I consulted are adamant that <em>hamzah</em> by itself should not be counted, since the appropriate value comes from the letter on which it is seated. In the end, I took the position of the Baha'i community. It has long been symbolically important in their faith that the name Bahā’ (بهاء) has an <em>abjad</em> value of 9, which requires that the final <em>hamzah</em> be counted. Users who don't want this feature may disable it with the relevant checkbox.
-            </li>
-            <li>I should emphasize that any form of <em>alif</em> will be given a value of 1. This includes <a href="https://en.wiktionary.org/wiki/maddah" rel="noopener" target="_blank"><em>alif maddah</em></a>, which some have treated as a "double <em>hamzah alif</em>&#8202;&#8202;" with a value of 2. Here we may invoke another general principle of <em>abjad</em> numerals: each letter is counted exactly once. Just as <a href="https://en.wikipedia.org/wiki/Shadda" rel="noopener" target="_blank"><em>shaddah</em></a> is not taken into consideration, nor should <em>alif maddah</em> be granted double value.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <p>&copy; 2017&ndash;18 <a href="https://www.theobeers.com/" rel="noopener" target="_blank">T. S. Beers</a><br>
-    The files relating to this page are available <a href="https://github.com/theodore-s-beers/abjadcalc/" rel="noopener" target="_blank">on GitHub</a> under the <a href="https://en.wikipedia.org/wiki/MIT_License" rel="noopener" target="_blank">MIT License</a>.<br>
-    I'm not much of a developer. If anything is messed up, please let me know <a href="mailto:tbeers@uchicago.edu">by email</a>!</p>
-  </div>
-  <script src="js/index.js">
-  </script> 
-  <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
-  </script> 
-  <script crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
-  </script> 
-  <script crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
-  </script>
+	<div class="container" style="margin-top:0.6rem;">
+		<h2>Abjad Calculator</h2>
+		<script>
+			"serviceWorker"in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("service-worker.js")});
+		</script>
+		<form action="JavaScript:getAbjad();">
+			<div class="form-group">
+				<label for="abjadText" style="margin-bottom:0.8em;">In the box below, enter a word or phrase, or really anything you like, <em>in Arabic or Persian script</em>. (If this poses a problem, see the first point under "Usage Notes.") Then hit "Enter" or click the "Go!" button, and the total <a href="https://en.wikipedia.org/wiki/Abjad_numerals" rel="noopener" target="_blank">numerical <em>abjad</em> value</a> of your input will be returned. The "Reset" button will clear the form—though it isn't necessary between operations. Use the checkboxes if you're working with the Maghribi system, or if you prefer <em>not</em> to assign value to the pseudo-letter <em>hamzah</em> in its isolated state (ء). Further details are provided beneath the results pane.</label><input autocapitalize="none" autocomplete="off" autocorrect="off" class="form-control" dir="rtl" id="abjadText" spellcheck="false" type="text"><small class="form-text text-muted" id="abjadTextHelp">Text submitted here will not be tracked or saved.</small>
+			</div>
+			<div class="form-check form-check-inline" style="margin-bottom:0.8em;">
+				<input aria-labelledby="maghribiLabel" class="form-check-input" id="maghribiCheck" type="checkbox"><label class="form-check-label" id="maghribiLabel">Maghribi order</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input aria-labelledby="hamzahLabel" class="form-check-input" id="hamzahCheck" type="checkbox"><label class="form-check-label" id="hamzahLabel">Ignore lone <em>hamzah</em></label>
+			</div><br>
+			<button class="btn btn-primary" id="subButton" type="submit">Go!</button><button class="btn btn-secondary" id="resetButton" type="reset">Reset</button>
+		</form>
+		<div class="card border-success mb-3" style="margin-top:1em;">
+			<div class="card-body text-success">
+				<p class="card-text" id="result">The total <em>abjad</em> value of … is …</p>
+			</div>
+		</div>
+		<hr>
+		<div data-children=".item" id="usageAccordion">
+			<div class="item">
+				<a aria-controls="notesUsage" aria-expanded="false" data-parent="#usageAccordion" data-toggle="collapse" href="#notesUsage">
+				<h4>Usage Notes</h4></a>
+				<div class="collapse" id="notesUsage" role="tabpanel">
+					<ul>
+						<li>I would strongly encourage anyone who knows an Arabic-script language to learn how to type in it. This isn't as difficult as one might imagine—especially on mobile devices, whose support for various languages is now often more seamless than that of desktop operating systems—and it opens up a whole new world of resources online. However, if you would like to use this <em>abjad</em> calculator but cannot type your input directly, there are a couple of alternatives. First, Google has developed clever tools for both <a href="https://www.google.com/intl/ar/inputtools/try/" rel="noopener" target="_blank">Arabic</a> and <a href="https://www.google.com/intl/fa/inputtools/try/" rel="noopener" target="_blank">Persian</a> that allow you to enter a phonetic approximation of your intended words in Roman script, and then transliterate them with very little fuss. You could use one of these tools and copy-paste the result into the box above. The second fallback option is actually a <a href="ime/">separate version</a> of this page, in which buttons may be used to enter Arabic or Persian words one letter at a time.
+						</li>
+						<li>By default, this program will assign an <em>abjad</em> value of 1 to the isolated form of <em>hamzah</em> (ء), treating it the same as if it were placed on an <em>alif</em>. Since this is not a universally agreed-upon practice, there is a checkbox to allow for the isolated <em>hamzah</em> to be ignored in calculation. (Please refer to the following section for more information on this dilemma and others like it.)</li>
+						<li>I've set the default letter values according to the more common "Eastern" convention. There is now an option to switch to the Maghribi order using a checkbox, for those who need it. Please refer to <a href="table/">this table</a> for a reminder of the differences between the two systems. (Only you can determine which of them is required by your sources.)
+						</li>
+						<li>Feel free to include spaces between words, or even <a href="https://en.wikipedia.org/wiki/Zero-width_non-joiner" rel="noopener" target="_blank">zero-width non-joiners</a>; they won't affect the calculation.
+						</li>
+						<li>More broadly, the program is designed to ignore any character that it doesn't recognize. If you enter a string of text containing one or more unrecognized characters, you'll see a brief error message, followed by the total <em>abjad</em> value of the parts that <em>were</em> counted—<em>i.e.</em>, our best guess. It may be correct nonetheless…</li>
+						<li>I recommend that you not include punctuation, or diacritics, or <a href="https://en.wikipedia.org/wiki/Dagger_alif" rel="noopener" target="_blank">dagger <em>alif</em>s</a>, or anything else outside of the "base letters." Only the last category is counted in the <em>abjad</em> system, anyway, so why add complication?
+						</li>
+						<li>If you're confident that you entered valid text in Arabic or Persian script, but you still received an error message, please let me know <a href="mailto:tbeers@uchicago.edu">by email</a>. It might be a bug! (There are likely to be some at this stage.)
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div data-children=".item" id="rulesAccordion">
+			<div class="item">
+				<a aria-controls="notesRules" aria-expanded="false" data-parent="#rulesAccordion" data-toggle="collapse" href="#notesRules">
+				<h4>Specific Rules Followed</h4></a>
+				<div class="collapse" id="notesRules" role="tabpanel">
+					<ul>
+						<li>The fundamentals of <em>abjad</em> numerals are covered in <a href="https://en.wikipedia.org/wiki/Abjad_numerals" rel="noopener" target="_blank">this Wikipedia entry</a>, and they are observed here faithfully. (I've also posted a <a href="table/">table of letter values</a>.) If one digs a bit deeper, however, questions and ambiguities may arise…
+						</li>
+						<li>The treatment of the four "Persian letters"—<em>pe</em>, <em>che</em>, <em>zhe</em>, and <em>gāf</em>—is, in fact, well established. Please refer to the same Wikipedia entry. In general, there should be no problem using Persian text. (Urdu? Pashto? You're on your own for the time being.)</li>
+						<li>Actually, there is one potentially confusing point in Persian: the <a href="https://sites.la.utexas.edu/persian_online_resources/phonology/silent-letters-silent-and-consonantal/" rel="noopener" target="_blank">silent <em>hā’</em></a>. But the answer is to treat this letter as we would any other <em>hā’</em>. (See the following note for the reasoning behind this.) Also, if you are among the proud few who use the Unicode character <code>06C0</code> (ۀ) to represent <em>iżāfah</em> on a silent <em>hā’</em>, that will be recognized just the same.
+						</li>
+						<li>This program treats the Arabic letter <a href="https://en.wiktionary.org/wiki/%D8%A9" rel="noopener" target="_blank"><em>tā’ marbūṭah</em></a> as if it were <em>hā’</em> and assigns it a value of 5. This is due to a general principle in <em>abjad</em> calculation, that we judge letters by their <em>form</em> (<em>rasm</em>), rather than by their pronunciation or other factors.
+						</li>
+						<li>Similarly, <a href="https://en.wikibooks.org/wiki/Arabic/LearnRW/alif_Maksoorah" rel="noopener" target="_blank"><em>alif maqṣūrah</em></a> is considered equivalent to <em>yā’</em> and assigned a value of 10. (Deal with it!)
+						</li>
+						<li>The treatment of <a href="https://en.wikipedia.org/wiki/Hamza" rel="noopener" target="_blank"><em>hamzah</em></a> is most troublesome of all, since it appears in conjunction with several different letters. But we need only continue to prioritize form. <em>Hamzah</em> on <em>wāw</em> (ؤ) is given the value of <em>wāw</em> (6). <em>Hamzah</em> on <em>yā’</em> (ئ) is given the value of <em>yā’</em> (10). Any variant of <em>hamzah</em> on <em>alif</em>, unsurprisingly, receives a value of 1. Finally, as was explained in the prior section, this program <em>does</em> assign a value of 1 to the isolated form of <em>hamzah</em> (ء), which is most often found at the end of certain Arabic words. This is a debated point; a few of the guides that I consulted are adamant that <em>hamzah</em> by itself should not be counted, since the appropriate value comes from the letter on which it is seated. In the end, I took the position of the Baha'i community. It has long been symbolically important in their faith that the name Bahā’ (بهاء) has an <em>abjad</em> value of 9, which requires that the final <em>hamzah</em> be counted. Users who don't want this feature may disable it with the relevant checkbox.
+						</li>
+						<li>I should emphasize that any form of <em>alif</em> will be given a value of 1. This includes <a href="https://en.wiktionary.org/wiki/maddah" rel="noopener" target="_blank"><em>alif maddah</em></a>, which some have treated as a "double <em>hamzah alif</em>&#8202;&#8202;" with a value of 2. Here we may invoke another general principle of <em>abjad</em> numerals: each letter is counted exactly once. Just as <a href="https://en.wikipedia.org/wiki/Shadda" rel="noopener" target="_blank"><em>shaddah</em></a> is not taken into consideration, nor should <em>alif maddah</em> be granted double value.
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<p>&copy; 2017&ndash;19 <a href="https://www.theobeers.com/" rel="noopener" target="_blank">T. S. Beers</a><br>
+		The files relating to this page are available <a href="https://github.com/theodore-s-beers/abjadcalc/" rel="noopener" target="_blank">on GitHub</a> under the <a href="https://en.wikipedia.org/wiki/MIT_License" rel="noopener" target="_blank">MIT License</a>.<br>
+		I'm not much of a developer. If anything is messed up, please let me know <a href="mailto:tbeers@uchicago.edu">by email</a>!</p>
+	</div>
+	<script src="js/index.js">
+	</script> 
+	<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+	</script> 
+	<script crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+	</script> 
+	<script crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+	</script>
 </body>
 </html>
