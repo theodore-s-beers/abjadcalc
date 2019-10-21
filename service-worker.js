@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.2.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
@@ -27,11 +27,11 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "ime/index.html",
-    "revision": "72a697e236907134ccafebf3b4dafe3d"
+    "revision": "cf70e119e0ddac1598ed882f9d97266c"
   },
   {
     "url": "ime/js/index.js",
-    "revision": "30661b9833ffd2004482b58a0335bbc5"
+    "revision": "5e37c73ca0c799de6653370aac012cf1"
   },
   {
     "url": "img/abjad-og.png",
@@ -75,19 +75,19 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "3bc2c3ea5cad3dea4f519d958518d227"
+    "revision": "658aed77eaec72e0134be91fb8a84eb3"
   },
   {
     "url": "js/index.js",
-    "revision": "bfbe320d9ce847a33c3d781a325f6ab3"
+    "revision": "184b5c56ce7a24a99ec747a55c5a3ed4"
   },
   {
     "url": "manifest.json",
-    "revision": "795d732d0d11f8c6e32a09c9207d6de4"
+    "revision": "792142f4c72a88e015d83c0a3ec80848"
   },
   {
     "url": "table/index.html",
-    "revision": "1e5d9ed8890d5fa6387a02c20dd63b6f"
+    "revision": "ff60974cfe819bea41f63c54cc5662c6"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

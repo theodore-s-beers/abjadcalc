@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="Theo Beers" name="author">
-	<meta content="An alternate tool to calculate the numerical abjad value of Arabic or Persian text, using a virtual keyboard for input." name="description">
+	<meta
+		content="An alternate tool to calculate the numerical abjad value of Arabic or Persian text, using a virtual keyboard for input."
+		name="description">
 	<meta content="Abjad Calculator (Manual Input)" property="og:title">
 	<meta content="website" property="og:type">
 	<meta content="https://www.abjadcalc.com/ime/" property="og:url">
 	<meta content="https://www.abjadcalc.com/img/abjad-og.png" property="og:image">
 	<meta content="image/png" property="og:image:type">
 	<meta content="en_US" property="og:locale">
-	<meta content="An alternate tool to calculate the numerical abjad value of Arabic or Persian text, using a virtual keyboard for input." property="og:description">
+	<meta
+		content="An alternate tool to calculate the numerical abjad value of Arabic or Persian text, using a virtual keyboard for input."
+		property="og:description">
 	<meta content="summary_large_image" name="twitter:card">
 	<meta content="Abjad Calculator (Manual Input)" name="twitter:title">
 	<meta content="#0066ff" name="theme-color">
-	<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Scheherazade&amp;subset=arabic" rel="stylesheet">
+	<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Scheherazade&display=swap&subset=arabic" rel="stylesheet">
 	<style>
-		.table.ab-jad tr td, .table.ab-jad tr th {
+		.table.ab-jad tr td,
+		.table.ab-jad tr th {
 			border-width: 0;
 		}
+
 		.btn.scheh {
 			font-family: "Scheherazade", serif;
 			font-size: x-large;
 			width: 1.8em;
 			line-height: 1em;
 		}
-		#handInput {
+
+		#hand_input {
 			font-family: "Scheherazade", serif;
 			font-size: xx-large;
 			text-align: center;
 			height: 2.2em;
 		}
-		#goBtn {
+
+		#go_btn {
 			margin-right: 1em;
 		}
-		#resetBtn {
+
+		#reset_btn {
 			margin-right: 1em;
 		}
-		#spaceBtn {
+
+		#space_btn {
 			margin-right: 1em;
 		}
+
 		#result {
 			font-size: large;
 			word-wrap: break-word;
@@ -54,23 +67,37 @@
 	<link href="../img/icon-192.png" rel="apple-touch-icon" type="image/png">
 	<title>Abjad Calculator (Manual Input)</title>
 </head>
+
 <body>
 	<div class="container" style="margin-top:0.6rem;">
 		<h2>Abjad Calculator (Manual Input)</h2>
 		<script>
-			"serviceWorker"in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("../service-worker.js")});
+			"serviceWorker" in navigator && window.addEventListener("load", () => { navigator.serviceWorker.register("../service-worker.js") });
 		</script>
-		<form action="JavaScript:getAbjad();">
+		<form action="JavaScript:get_abjad();">
 			<div class="form-group">
-				<label for="handInput" style="margin-bottom:0.8em;">This is intended as a fallback option to the <a href="../">primary tool</a>, which requires typing directly in Arabic or Persian. Use the green buttons below to add text to the box. Then click "Go!" when you're ready to calculate the <em>abjad</em> value of your input. You can also reset the form, add a space between words, or delete the last character that was entered. The checkboxes allow you to switch to the Maghribi system, or to specify that value <em>not</em> be assigned to the pseudo-letter <em>hamzah</em> in its isolated state (ء). Further details are provided at the bottom of the page.</label><input autocapitalize="none" autocomplete="off" autocorrect="off" class="form-control" dir="rtl" id="handInput" spellcheck="false" type="text" value=""><small class="form-text text-muted" id="emailHelp">Text submitted here will not be tracked or saved.</small>
+				<label for="hand_input" style="margin-bottom:0.8em;">This is intended as a fallback option to the <a
+						href="../">primary tool</a>, which requires typing directly in Arabic or Persian. Use the green
+					buttons below to add text to the box. Then click "Go!" when you're ready to calculate the
+					<em>abjad</em> value of your input. You can also reset the form, add a space between words, or
+					delete the last character that was entered. The checkboxes allow you to switch to the Maghribi
+					system, or to specify that value <em>not</em> be assigned to the pseudo-letter <em>hamzah</em> in
+					its isolated state (ء). Further details are provided at the bottom of the page.</label><input
+					autocapitalize="none" autocomplete="off" autocorrect="off" class="form-control" dir="rtl"
+					id="hand_input" spellcheck="false" type="text" value=""><small class="form-text text-muted"
+					id="email_help">Text submitted here will not be tracked or saved.</small>
 			</div>
 			<div class="form-check form-check-inline" style="margin-bottom:0.8em;">
-				<input aria-labelledby="maghribiLabel" class="form-check-input" id="maghribiCheck" type="checkbox"><label class="form-check-label" id="maghribiLabel">Maghribi order</label>
+				<input aria-labelledby="maghribiLabel" class="form-check-input" id="maghribi_check"
+					type="checkbox"><label class="form-check-label" id="maghribi_label">Maghribi order</label>
 			</div>
 			<div class="form-check form-check-inline">
-				<input aria-labelledby="hamzahLabel" class="form-check-input" id="hamzahCheck" type="checkbox"><label class="form-check-label" id="hamzahLabel">Ignore lone <em>hamzah</em></label>
+				<input aria-labelledby="hamzahLabel" class="form-check-input" id="hamzah_check" type="checkbox"><label
+					class="form-check-label" id="hamzah_label">Ignore lone <em>hamzah</em></label>
 			</div><br>
-			<button class="btn btn-primary" id="goBtn" type="submit">Go!</button><button class="btn btn-secondary" id="resetBtn" type="reset">Reset</button><button class="btn btn-info" id="spaceBtn" type="button">Add space</button><button class="btn btn-dark" id="backBtn" type="button">⌫</button>
+			<button class="btn btn-primary" id="go_btn" type="submit">Go!</button><button class="btn btn-secondary"
+				id="reset_btn" type="reset">Reset</button><button class="btn btn-info" id="space_btn" type="button">Add
+				space</button><button class="btn btn-dark" id="back_btn" type="button">⌫</button>
 		</form>
 		<div class="card border-success mb-3" style="margin-top:1em;">
 			<div class="card-body text-success">
@@ -82,84 +109,99 @@
 		<table class="table table-sm table-responsive ab-jad">
 			<tr>
 				<td></td>
-				<td><button class="btn btn-success scheh" id="zaBtn" type="button">ز</button></td>
-				<td><button class="btn btn-success scheh" id="wawBtn" type="button">و</button></td>
-				<td><button class="btn btn-success scheh" id="haBtn" type="button">ه</button></td>
-				<td><button class="btn btn-success scheh" id="dalBtn" type="button">د</button></td>
-				<td><button class="btn btn-success scheh" id="jimBtn" type="button">ج</button></td>
-				<td><button class="btn btn-success scheh" id="baBtn" type="button">ب</button></td>
-				<td><button class="btn btn-success scheh" id="alifBtn" type="button">ا</button></td>
+				<td><button class="btn btn-success scheh" id="za_btn" type="button">ز</button></td>
+				<td><button class="btn btn-success scheh" id="waw_btn" type="button">و</button></td>
+				<td><button class="btn btn-success scheh" id="ha_btn" type="button">ه</button></td>
+				<td><button class="btn btn-success scheh" id="dal_btn" type="button">د</button></td>
+				<td><button class="btn btn-success scheh" id="jim_btn" type="button">ج</button></td>
+				<td><button class="btn btn-success scheh" id="ba_btn" type="button">ب</button></td>
+				<td><button class="btn btn-success scheh" id="alif_btn" type="button">ا</button></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><button class="btn btn-success scheh" id="nunBtn" type="button">ن</button></td>
-				<td><button class="btn btn-success scheh" id="mimBtn" type="button">م</button></td>
-				<td><button class="btn btn-success scheh" id="lamBtn" type="button">ل</button></td>
-				<td><button class="btn btn-success scheh" id="kafBtn" type="button">ك</button></td>
-				<td><button class="btn btn-success scheh" id="yaBtn" type="button">ي</button></td>
-				<td><button class="btn btn-success scheh" id="tawBtn" type="button">ط</button></td>
-				<td><button class="btn btn-success scheh" id="5aBtn" type="button">ح</button></td>
+				<td><button class="btn btn-success scheh" id="nun_btn" type="button">ن</button></td>
+				<td><button class="btn btn-success scheh" id="mim_btn" type="button">م</button></td>
+				<td><button class="btn btn-success scheh" id="lam_btn" type="button">ل</button></td>
+				<td><button class="btn btn-success scheh" id="kaf_btn" type="button">ك</button></td>
+				<td><button class="btn btn-success scheh" id="ya_btn" type="button">ي</button></td>
+				<td><button class="btn btn-success scheh" id="taw_btn" type="button">ط</button></td>
+				<td><button class="btn btn-success scheh" id="5a_btn" type="button">ح</button></td>
 			</tr>
 			<tr>
-				<td><button class="btn btn-success scheh" id="taBtn" type="button">ت</button></td>
-				<td><button class="btn btn-success scheh" id="shinBtn" type="button">ش</button></td>
-				<td><button class="btn btn-success scheh" id="raBtn" type="button">ر</button></td>
-				<td><button class="btn btn-success scheh" id="qafBtn" type="button">ق</button></td>
-				<td><button class="btn btn-success scheh" id="sadBtn" type="button">ص</button></td>
-				<td><button class="btn btn-success scheh" id="faBtn" type="button">ف</button></td>
-				<td><button class="btn btn-success scheh" id="aynBtn" type="button">ع</button></td>
-				<td><button class="btn btn-success scheh" id="sinBtn" type="button">س</button></td>
+				<td><button class="btn btn-success scheh" id="ta_btn" type="button">ت</button></td>
+				<td><button class="btn btn-success scheh" id="shin_btn" type="button">ش</button></td>
+				<td><button class="btn btn-success scheh" id="ra_btn" type="button">ر</button></td>
+				<td><button class="btn btn-success scheh" id="qaf_btn" type="button">ق</button></td>
+				<td><button class="btn btn-success scheh" id="sad_btn" type="button">ص</button></td>
+				<td><button class="btn btn-success scheh" id="fa_btn" type="button">ف</button></td>
+				<td><button class="btn btn-success scheh" id="ayn_btn" type="button">ع</button></td>
+				<td><button class="btn btn-success scheh" id="sin_btn" type="button">س</button></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td></td>
-				<td><button class="btn btn-success scheh" id="ghaynBtn" type="button">غ</button></td>
-				<td><button class="btn btn-success scheh" id="zawBtn" type="button">ظ</button></td>
-				<td><button class="btn btn-success scheh" id="dadBtn" type="button">ض</button></td>
-				<td><button class="btn btn-success scheh" id="dhalBtn" type="button">ذ</button></td>
-				<td><button class="btn btn-success scheh" id="khaBtn" type="button">خ</button></td>
-				<td><button class="btn btn-success scheh" id="thaBtn" type="button">ث</button></td>
+				<td><button class="btn btn-success scheh" id="ghayn_btn" type="button">غ</button></td>
+				<td><button class="btn btn-success scheh" id="zaw_btn" type="button">ظ</button></td>
+				<td><button class="btn btn-success scheh" id="dad_btn" type="button">ض</button></td>
+				<td><button class="btn btn-success scheh" id="dhal_btn" type="button">ذ</button></td>
+				<td><button class="btn btn-success scheh" id="kha_btn" type="button">خ</button></td>
+				<td><button class="btn btn-success scheh" id="tha_btn" type="button">ث</button></td>
 			</tr>
 		</table>
 		<p>Arabic secondary letters:</p>
 		<table class="table table-sm table-responsive ab-jad">
 			<tr>
-				<td><button class="btn btn-success scheh" id="yaHamBtn" type="button">ئ</button></td>
-				<td><button class="btn btn-success scheh" id="maqsurahBtn" type="button">ى</button></td>
-				<td><button class="btn btn-success scheh" id="wawHamBtn" type="button">ؤ</button></td>
-				<td><button class="btn btn-success scheh" id="marbutahBtn" type="button">ة</button></td>
-				<td><button class="btn btn-success scheh" id="hamzahBtn" type="button">ء</button></td>
-				<td><button class="btn btn-success scheh" id="maddahBtn" type="button">آ</button></td>
-				<td><button class="btn btn-success scheh" id="bottomHamBtn" type="button">إ</button></td>
-				<td><button class="btn btn-success scheh" id="topHamBtn" type="button">أ</button></td>
+				<td><button class="btn btn-success scheh" id="ya_ham_btn" type="button">ئ</button></td>
+				<td><button class="btn btn-success scheh" id="maqsurah_btn" type="button">ى</button></td>
+				<td><button class="btn btn-success scheh" id="waw_ham_btn" type="button">ؤ</button></td>
+				<td><button class="btn btn-success scheh" id="marbutah_btn" type="button">ة</button></td>
+				<td><button class="btn btn-success scheh" id="hamzah_btn" type="button">ء</button></td>
+				<td><button class="btn btn-success scheh" id="maddah_btn" type="button">آ</button></td>
+				<td><button class="btn btn-success scheh" id="bottom_ham_btn" type="button">إ</button></td>
+				<td><button class="btn btn-success scheh" id="top_ham_btn" type="button">أ</button></td>
 			</tr>
 		</table>
 		<p>Persian-specific letters:</p>
 		<table class="table table-sm table-responsive ab-jad">
 			<tr>
 				<td><button class="btn btn-success scheh invisible" type="button">X</button></td>
-				<td><button class="btn btn-success scheh" id="gafBtn" type="button">گ</button></td>
-				<td><button class="btn btn-success scheh" id="persKafBtn" type="button">ک</button></td>
-				<td><button class="btn btn-success scheh" id="persYaBtn" type="button">ی</button></td>
-				<td><button class="btn btn-success scheh" id="zheBtn" type="button">ژ</button></td>
-				<td><button class="btn btn-success scheh" id="haIzafahBtn" type="button">ۀ</button></td>
-				<td><button class="btn btn-success scheh" id="cheBtn" type="button">چ</button></td>
-				<td><button class="btn btn-success scheh" id="peBtn" type="button">پ</button></td>
+				<td><button class="btn btn-success scheh" id="gaf_btn" type="button">گ</button></td>
+				<td><button class="btn btn-success scheh" id="pers_kaf_btn" type="button">ک</button></td>
+				<td><button class="btn btn-success scheh" id="pers_ya_btn" type="button">ی</button></td>
+				<td><button class="btn btn-success scheh" id="zhe_btn" type="button">ژ</button></td>
+				<td><button class="btn btn-success scheh" id="ha_izafah_btn" type="button">ۀ</button></td>
+				<td><button class="btn btn-success scheh" id="che_btn" type="button">چ</button></td>
+				<td><button class="btn btn-success scheh" id="pe_btn" type="button">پ</button></td>
 			</tr>
 		</table>
 		<hr>
-		<div data-children=".item" id="notesAccordion">
+		<div data-children=".item" id="notes_accordion">
 			<div class="item">
-				<a aria-controls="notes" aria-expanded="false" data-parent="#notesAccordion" data-toggle="collapse" href="#notes">
-				<h4>Usage Notes</h4></a>
+				<a aria-controls="notes" aria-expanded="false" data-parent="#notes_accordion" data-toggle="collapse"
+					href="#notes">
+					<h4>Usage Notes</h4>
+				</a>
 				<div class="collapse" id="notes" role="tabpanel">
 					<ul>
-						<li>If you're viewing this on a mobile device, you may find that the text entry buttons are easier to work with in landscape orientation.</li>
-						<li>The <a href="../">main page</a> contains much more information about the ruleset that the program follows.
+						<li>If you're viewing this on a mobile device, you may find that the text entry buttons are
+							easier to work with in landscape orientation.</li>
+						<li>The <a href="../">main page</a> contains much more information about the ruleset that the
+							program follows.
 						</li>
-						<li>Generally speaking, use of the "secondary" and Persian-specific letters is optional. They are provided for convenience, but Persian <em>pe</em> (پ), for example, will be treated the same as Arabic <em>bā’</em> (ب); <em>tā’ marbūṭah</em> (ة) is considered equivalent to <em>hā’</em> (ه); and so forth. Please refer to the <a href="https://en.wikipedia.org/wiki/Abjad_numerals" rel="noopener" target="_blank">Wikipedia entry</a> on <em>abjad</em> numerals, which lists (most of) the letter values. I've also posted a <a href="../table/">table</a> highlighting the differences between the Mashriqi and Maghribi systems.
+						<li>Generally speaking, use of the "secondary" and Persian-specific letters is optional. They
+							are provided for convenience, but Persian <em>pe</em> (پ), for example, will be treated the
+							same as Arabic <em>bā’</em> (ب); <em>tā’ marbūṭah</em> (ة) is considered equivalent to
+							<em>hā’</em> (ه); and so forth. Please refer to the <a
+								href="https://en.wikipedia.org/wiki/Abjad_numerals" rel="noopener"
+								target="_blank">Wikipedia entry</a> on <em>abjad</em> numerals, which lists (most of)
+							the letter values. I've also posted a <a href="../table/">table</a> highlighting the
+							differences between the Mashriqi and Maghribi systems.
 						</li>
-						<li>You may notice that two of the buttons above are practically indistinguishable. One of them is for Arabic <a href="https://en.wikibooks.org/wiki/Arabic/LearnRW/alif_Maksoorah" rel="noopener" target="_blank"><em>alif maqṣūrah</em></a> (ى), and the other is for Persian <em>ye</em> (ی). Trust me, they're different letters! Both will receive the same <em>abjad</em> value as Arabic <em>yā’</em> (ي), in any case.
+						<li>You may notice that two of the buttons above are practically indistinguishable. One of them
+							is for Arabic <a href="https://en.wikibooks.org/wiki/Arabic/LearnRW/alif_Maksoorah"
+								rel="noopener" target="_blank"><em>alif maqṣūrah</em></a> (ى), and the other is for
+							Persian <em>ye</em> (ی). Trust me, they're different characters! Both will receive the same
+							<em>abjad</em> value as Arabic <em>yā’</em> (ي), in any case.
 						</li>
 					</ul>
 				</div>
@@ -167,16 +209,23 @@
 		</div>
 		<hr>
 		<p>&copy; 2017&ndash;19 <a href="https://www.theobeers.com/" rel="noopener" target="_blank">T. S. Beers</a><br>
-		The files relating to this page are available <a href="https://github.com/theodore-s-beers/abjadcalc/" rel="noopener" target="_blank">on GitHub</a> under the <a href="https://en.wikipedia.org/wiki/MIT_License" rel="noopener" target="_blank">MIT License</a>.<br>
-		I'm not much of a developer. If anything is messed up, please let me know <a href="mailto:tbeers@uchicago.edu">by email</a>!</p>
+			The files relating to this page are available <a href="https://github.com/theodore-s-beers/abjadcalc/"
+				rel="noopener" target="_blank">on GitHub</a> under the <a
+				href="https://en.wikipedia.org/wiki/MIT_License" rel="noopener" target="_blank">MIT License</a>.<br>
+			I'm not much of a developer. If anything is messed up, please let me know <a
+				href="mailto:tbeers@uchicago.edu">by email</a>!</p>
 	</div>
 	<script src="js/index.js">
-	</script> 
-	<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
-	</script> 
-	<script crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
-	</script> 
-	<script crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
 	</script>
+	<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+		</script>
+	<script crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+		</script>
+	<script crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+		</script>
 </body>
+
 </html>
