@@ -31,7 +31,7 @@ self.__precacheManifest = [
   },
   {
     "url": "ime/index.html",
-    "revision": "cf70e119e0ddac1598ed882f9d97266c"
+    "revision": "0d34af2d7fffa2c2cc1bfe96f8eb4c65"
   },
   {
     "url": "ime/js/index.js",
@@ -79,7 +79,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "658aed77eaec72e0134be91fb8a84eb3"
+    "revision": "276a20ecb1bd24c793ba1ee0922c146b"
   },
   {
     "url": "js/index.js",
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "table/index.html",
-    "revision": "ff60974cfe819bea41f63c54cc5662c6"
+    "revision": "d58d1e0d13ddac3b66c9703c58f4bace"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
