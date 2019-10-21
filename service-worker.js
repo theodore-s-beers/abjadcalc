@@ -31,7 +31,7 @@ self.__precacheManifest = [
   },
   {
     "url": "ime/index.html",
-    "revision": "0d34af2d7fffa2c2cc1bfe96f8eb4c65"
+    "revision": "e46115e4d77da2e21bb98e376e1b9ef8"
   },
   {
     "url": "ime/js/index.js",
@@ -79,7 +79,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "276a20ecb1bd24c793ba1ee0922c146b"
+    "revision": "ba9d6a762c536a519acdbe4cdedcd94c"
   },
   {
     "url": "js/index.js",
