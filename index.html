@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
     />
     <meta content="Theo Beers" name="author" />
     <meta
@@ -41,19 +41,16 @@
       body {
         font-family: "Noto Serif", serif;
       }
-
       #abjad_text {
-        font-family: "Scheherazade", serif;
+        font-family: Scheherazade, serif;
         font-size: xx-large;
         text-align: center;
         height: 2.2em;
       }
-
       #result {
         font-size: large;
         word-wrap: break-word;
       }
-
       #submit_button {
         margin-right: 1em;
       }
@@ -64,9 +61,8 @@
     <link href="img/icon-192.png" rel="apple-touch-icon" type="image/png" />
     <title>Abjad Calculator</title>
   </head>
-
   <body>
-    <div class="container" style="margin-top:0.6rem;">
+    <div class="container" style="margin-top:.6rem">
       <h2>Abjad Calculator</h2>
       <script>
         "serviceWorker" in navigator &&
@@ -76,7 +72,7 @@
       </script>
       <form action="JavaScript:get_abjad();">
         <div class="form-group">
-          <label for="abjad_text" style="margin-bottom:0.8em;"
+          <label for="abjad_text" style="margin-bottom:.8em"
             >In the box below, enter a word or phrase, or really anything you
             like, <em>in Arabic or Persian script</em>. (If this poses a
             problem, see the first point under “Usage Notes.”) Then hit “Enter”
@@ -100,13 +96,14 @@
             class="form-control"
             dir="rtl"
             id="abjad_text"
+            maxlength="64"
             spellcheck="false"
             type="text"
           /><small class="form-text text-muted" id="abjad_text_help"
             >Text submitted here will not be tracked or saved.</small
           >
         </div>
-        <div class="form-check form-check-inline" style="margin-bottom:0.8em;">
+        <div class="form-check form-check-inline" style="margin-bottom:.8em">
           <input
             aria-labelledby="maghribi_label"
             class="form-check-input"
@@ -116,7 +113,7 @@
             >Maghribi order</label
           >
         </div>
-        <div class="form-check form-check-inline" style="margin-bottom:0.8em;">
+        <div class="form-check form-check-inline" style="margin-bottom:.8em">
           <input
             aria-labelledby="hamzah_label"
             class="form-check-input"
@@ -126,14 +123,13 @@
             >Ignore lone <em>hamzah</em></label
           >
         </div>
-        <br />
-        <button class="btn btn-primary" id="submit_button" type="submit">
+        <br /><button class="btn btn-primary" id="submit_button" type="submit">
           Go!</button
         ><button class="btn btn-secondary" id="reset_button" type="reset">
           Reset
         </button>
       </form>
-      <div class="card border-success mb-3" style="margin-top:1em;">
+      <div class="card border-success mb-3" style="margin-top:1em">
         <div class="card-body text-success">
           <p class="card-text" id="result">
             The total <em>abjad</em> value of … is …
@@ -149,9 +145,8 @@
             data-parent="#usage_accordion"
             data-toggle="collapse"
             href="#notes_usage"
+            ><h4>Usage Notes</h4></a
           >
-            <h4>Usage Notes</h4>
-          </a>
           <div class="collapse" id="notes_usage" role="tabpanel">
             <ul>
               <li>
@@ -161,10 +156,9 @@
                 whose support for various languages is now often more seamless
                 than that of desktop operating systems&#8202;—&#8202;and it
                 opens up a whole new world of resources online. However, if you
-                would like to use this
-                <em>abjad</em> calculator but cannot type your input directly,
-                there are a couple of alternatives. First, Google has developed
-                clever tools for both
+                would like to use this <em>abjad</em> calculator but cannot type
+                your input directly, there are a couple of alternatives. First,
+                Google has developed clever tools for both
                 <a
                   href="https://www.google.com/intl/ar/inputtools/try/"
                   rel="noopener"
@@ -251,9 +245,8 @@
             data-parent="#rules_accordion"
             data-toggle="collapse"
             href="#notes_rules"
+            ><h4>Specific Rules Followed</h4></a
           >
-            <h4>Specific Rules Followed</h4>
-          </a>
           <div class="collapse" id="notes_rules" role="tabpanel">
             <ul>
               <li>
@@ -269,11 +262,11 @@
               </li>
               <li>
                 The treatment of the four “Persian
-                letters”&#8202;—&#8202;<em>pe</em>,
-                <em>che</em>, <em>zhe</em>, and <em>gāf</em>&#8202;—&#8202;is,
-                in fact, well established. Please refer to the same Wikipedia
-                entry. In general, there should be no problem using Persian
-                text. (Urdu? Pashto? You’re on your own for the time being.)
+                letters”&#8202;—&#8202;<em>pe</em>, <em>che</em>, <em>zhe</em>,
+                and <em>gāf</em>&#8202;—&#8202;is, in fact, well established.
+                Please refer to the same Wikipedia entry. In general, there
+                should be no problem using Persian text. (Urdu? Pashto? You’re
+                on your own for the time being.)
               </li>
               <li>
                 Actually, there is one potentially confusing point in Persian:
@@ -371,8 +364,7 @@
         &copy; 2017–19
         <a href="https://www.theobeers.com/" rel="noopener" target="_blank"
           >T. S. Beers</a
-        ><br />
-        The files relating to this page are available
+        ><br />The files relating to this page are available
         <a
           href="https://github.com/theodore-s-beers/abjadcalc/"
           rel="noopener"
@@ -385,23 +377,22 @@
           rel="noopener"
           target="_blank"
           >MIT License</a
-        >.<br />
-        I’m not much of a developer. If anything is messed up, please let me
-        know <a href="mailto:tbeers@uchicago.edu">by email</a>!
+        >.<br />I’m not much of a developer. If anything is messed up, please
+        let me know <a href="mailto:tbeers@uchicago.edu">by email</a>!
       </p>
     </div>
-    <script src="js/index.js"></script>
-    <script
+    <script src="js/index.js"></script
+    ><script
       crossorigin="anonymous"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    ></script>
-    <script
+    ></script
+    ><script
       crossorigin="anonymous"
       integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    ></script>
-    <script
+    ></script
+    ><script
       crossorigin="anonymous"
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
