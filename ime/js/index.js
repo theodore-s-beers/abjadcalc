@@ -201,7 +201,7 @@ document.getElementById("space_btn").addEventListener("click", function f() {
 });
 document.getElementById("back_btn").addEventListener("click", function f() {
   "use strict";
-  hand_input = hand_input.slice(0, -1);
+  hand_input.value = hand_input.value.slice(0, -1);
 });
 
 // Function to get abjad value

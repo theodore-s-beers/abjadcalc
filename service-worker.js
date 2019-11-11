@@ -35,7 +35,7 @@ self.__precacheManifest = [
   },
   {
     "url": "ime/js/index.js",
-    "revision": "ec534caff28e4d0ba07c7f33f5edbe2e"
+    "revision": "d70413801564c851ba6e4142c2c238f7"
   },
   {
     "url": "img/abjad-og.png",
