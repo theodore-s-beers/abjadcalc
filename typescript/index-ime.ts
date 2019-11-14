@@ -1,8 +1,8 @@
 "use strict";
 
 // Define consts used in multiple functions
-var hand_input = document.getElementById("hand_input");
-var result = document.getElementById("result");
+const hand_input = document.getElementById("hand_input") as HTMLInputElement;
+const result = document.getElementById("result");
 
 // Primary letter buttons row 1
 document.getElementById("alif_btn").addEventListener("click", function() {
@@ -159,16 +159,20 @@ document.getElementById("back_btn").addEventListener("click", function() {
 // Function to get abjad value
 function get_abjad() {
   // Take the user's input and set two new versions of it: one has all whitespace stripped for calculating the abjad value; the other is cleaned up for display to the user
-  var input_for_calc = hand_input.value.replace(/\s+/g, "");
-  var input_for_display = hand_input.value.replace(/\s+/g, " ").trim();
+  const input_for_calc = hand_input.value.replace(/\s+/g, "");
+  const input_for_display = hand_input.value.replace(/\s+/g, " ").trim();
 
   // See whether the user has checked the optional checkboxes in the form
-  var hamzah_checkbox = document.getElementById("hamzah_check");
-  var maghribi_checkbox = document.getElementById("maghribi_check");
+  const hamzah_checkbox = document.getElementById(
+    "hamzah_check"
+  ) as HTMLInputElement;
+  const maghribi_checkbox = document.getElementById(
+    "maghribi_check"
+  ) as HTMLInputElement;
 
   // Define a total to keep track of the abjad value, and an iterator
-  var total = 0;
-  var i = 0;
+  let total = 0;
+  let i = 0;
 
   // Set up the text of the result pane, which will need only to have the total added to it
   result.innerHTML =

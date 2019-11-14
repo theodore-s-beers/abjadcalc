@@ -31,11 +31,11 @@ self.__precacheManifest = [
   },
   {
     "url": "ime/index.html",
-    "revision": "4590085ea3461ee8bf366b22db30f7ef"
+    "revision": "2de1abd80538bb4881570d2ebd667f39"
   },
   {
     "url": "ime/js/index.js",
-    "revision": "d70413801564c851ba6e4142c2c238f7"
+    "revision": "2166c343fd7a8e975d89e04ec09ef170"
   },
   {
     "url": "img/abjad-og.png",
@@ -79,11 +79,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "2c1cdb2dfcb2c6b15783e07b45cebac2"
+    "revision": "b31546c4dadc59ceb0fcf531a00b5f56"
   },
   {
     "url": "js/index.js",
-    "revision": "a7de1e61eb1d40159bd9e219ee9f626f"
+    "revision": "8b79f0f04c5cd1b5725b913b33d958a9"
   },
   {
     "url": "manifest.json",

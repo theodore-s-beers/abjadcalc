@@ -1,24 +1,28 @@
 "use strict";
 
 // Define a const for the result pane
-var result = document.getElementById("result");
+const result = document.getElementById("result");
 
 // Main function
 function get_abjad() {
   // Take the user's input
-  var get_input = document.getElementById("abjad_text");
+  const get_input = document.getElementById("abjad_text") as HTMLInputElement;
 
   // Set two new versions of that input: one has all whitespace stripped for calculating the abjad value; the other is cleaned up for display to the user
-  var input_for_calc = get_input.value.replace(/\s+/g, "");
-  var input_for_display = get_input.value.replace(/\s+/g, " ").trim();
+  const input_for_calc = get_input.value.replace(/\s+/g, "");
+  const input_for_display = get_input.value.replace(/\s+/g, " ").trim();
 
   // See whether the user has checked the optional checkboxes in the form
-  var hamzah_checkbox = document.getElementById("hamzah_check");
-  var maghribi_checkbox = document.getElementById("maghribi_check");
+  const hamzah_checkbox = document.getElementById(
+    "hamzah_check"
+  ) as HTMLInputElement;
+  const maghribi_checkbox = document.getElementById(
+    "maghribi_check"
+  ) as HTMLInputElement;
 
   // Define a total to keep track of the abjad value, and an iterator
-  var total = 0;
-  var i = 0;
+  let total = 0;
+  let i = 0;
 
   // Set up the text of the result pane, which will need only to have the total added to it
   result.innerHTML =
