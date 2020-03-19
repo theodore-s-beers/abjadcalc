@@ -58,10 +58,12 @@
     <div class="container" style="margin-top:1rem">
       <h2>Table of Letter Values</h2>
       <script>
-        "serviceWorker" in navigator &&
+        // Register service worker
+        if ("serviceWorker" in navigator) {
           window.addEventListener("load", () => {
             navigator.serviceWorker.register("../service-worker.js");
           });
+        }
       </script>
       <p>
         There are many resources online that explain the concept of Arabic
