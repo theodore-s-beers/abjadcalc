@@ -5,154 +5,156 @@ const handInput = document.getElementById("hand_input");
 const result = document.getElementById("result");
 
 // Primary letter buttons row 1
-document.getElementById("alif_btn").addEventListener("click", function() {
+document.getElementById("alif_btn").addEventListener("click", function () {
   handInput.value += "\u0627";
 });
-document.getElementById("ba_btn").addEventListener("click", function() {
+document.getElementById("ba_btn").addEventListener("click", function () {
   handInput.value += "\u0628";
 });
-document.getElementById("jim_btn").addEventListener("click", function() {
+document.getElementById("jim_btn").addEventListener("click", function () {
   handInput.value += "\u062C";
 });
-document.getElementById("dal_btn").addEventListener("click", function() {
+document.getElementById("dal_btn").addEventListener("click", function () {
   handInput.value += "\u062F";
 });
-document.getElementById("ha_btn").addEventListener("click", function() {
+document.getElementById("ha_btn").addEventListener("click", function () {
   handInput.value += "\u0647";
 });
-document.getElementById("waw_btn").addEventListener("click", function() {
+document.getElementById("waw_btn").addEventListener("click", function () {
   handInput.value += "\u0648";
 });
-document.getElementById("za_btn").addEventListener("click", function() {
+document.getElementById("za_btn").addEventListener("click", function () {
   handInput.value += "\u0632";
 });
 
 // Primary letter buttons row 2
-document.getElementById("5a_btn").addEventListener("click", function() {
+document.getElementById("5a_btn").addEventListener("click", function () {
   handInput.value += "\u062D";
 });
-document.getElementById("taw_btn").addEventListener("click", function() {
+document.getElementById("taw_btn").addEventListener("click", function () {
   handInput.value += "\u0637";
 });
-document.getElementById("ya_btn").addEventListener("click", function() {
+document.getElementById("ya_btn").addEventListener("click", function () {
   handInput.value += "\u064A";
 });
-document.getElementById("kaf_btn").addEventListener("click", function() {
+document.getElementById("kaf_btn").addEventListener("click", function () {
   handInput.value += "\u0643";
 });
-document.getElementById("lam_btn").addEventListener("click", function() {
+document.getElementById("lam_btn").addEventListener("click", function () {
   handInput.value += "\u0644";
 });
-document.getElementById("mim_btn").addEventListener("click", function() {
+document.getElementById("mim_btn").addEventListener("click", function () {
   handInput.value += "\u0645";
 });
-document.getElementById("nun_btn").addEventListener("click", function() {
+document.getElementById("nun_btn").addEventListener("click", function () {
   handInput.value += "\u0646";
 });
 
 // Primary letter buttons row 3
-document.getElementById("sin_btn").addEventListener("click", function() {
+document.getElementById("sin_btn").addEventListener("click", function () {
   handInput.value += "\u0633";
 });
-document.getElementById("ayn_btn").addEventListener("click", function() {
+document.getElementById("ayn_btn").addEventListener("click", function () {
   handInput.value += "\u0639";
 });
-document.getElementById("fa_btn").addEventListener("click", function() {
+document.getElementById("fa_btn").addEventListener("click", function () {
   handInput.value += "\u0641";
 });
-document.getElementById("sad_btn").addEventListener("click", function() {
+document.getElementById("sad_btn").addEventListener("click", function () {
   handInput.value += "\u0635";
 });
-document.getElementById("qaf_btn").addEventListener("click", function() {
+document.getElementById("qaf_btn").addEventListener("click", function () {
   handInput.value += "\u0642";
 });
-document.getElementById("ra_btn").addEventListener("click", function() {
+document.getElementById("ra_btn").addEventListener("click", function () {
   handInput.value += "\u0631";
 });
-document.getElementById("shin_btn").addEventListener("click", function() {
+document.getElementById("shin_btn").addEventListener("click", function () {
   handInput.value += "\u0634";
 });
-document.getElementById("ta_btn").addEventListener("click", function() {
+document.getElementById("ta_btn").addEventListener("click", function () {
   handInput.value += "\u062A";
 });
 
 // Primary letter buttons row 4
-document.getElementById("tha_btn").addEventListener("click", function() {
+document.getElementById("tha_btn").addEventListener("click", function () {
   handInput.value += "\u062B";
 });
-document.getElementById("kha_btn").addEventListener("click", function() {
+document.getElementById("kha_btn").addEventListener("click", function () {
   handInput.value += "\u062E";
 });
-document.getElementById("dhal_btn").addEventListener("click", function() {
+document.getElementById("dhal_btn").addEventListener("click", function () {
   handInput.value += "\u0630";
 });
-document.getElementById("dad_btn").addEventListener("click", function() {
+document.getElementById("dad_btn").addEventListener("click", function () {
   handInput.value += "\u0636";
 });
-document.getElementById("zaw_btn").addEventListener("click", function() {
+document.getElementById("zaw_btn").addEventListener("click", function () {
   handInput.value += "\u0638";
 });
-document.getElementById("ghayn_btn").addEventListener("click", function() {
+document.getElementById("ghayn_btn").addEventListener("click", function () {
   handInput.value += "\u063A";
 });
 
 // Secondary letter buttons
-document.getElementById("top_ham_btn").addEventListener("click", function() {
+document.getElementById("top_ham_btn").addEventListener("click", function () {
   handInput.value += "\u0623";
 });
-document.getElementById("bottom_ham_btn").addEventListener("click", function() {
-  handInput.value += "\u0625";
-});
-document.getElementById("maddah_btn").addEventListener("click", function() {
+document
+  .getElementById("bottom_ham_btn")
+  .addEventListener("click", function () {
+    handInput.value += "\u0625";
+  });
+document.getElementById("maddah_btn").addEventListener("click", function () {
   handInput.value += "\u0622";
 });
-document.getElementById("hamzah_btn").addEventListener("click", function() {
+document.getElementById("hamzah_btn").addEventListener("click", function () {
   handInput.value += "\u0621";
 });
-document.getElementById("marbutah_btn").addEventListener("click", function() {
+document.getElementById("marbutah_btn").addEventListener("click", function () {
   handInput.value += "\u0629";
 });
-document.getElementById("waw_ham_btn").addEventListener("click", function() {
+document.getElementById("waw_ham_btn").addEventListener("click", function () {
   handInput.value += "\u0624";
 });
-document.getElementById("maqsurah_btn").addEventListener("click", function() {
+document.getElementById("maqsurah_btn").addEventListener("click", function () {
   handInput.value += "\u0649";
 });
-document.getElementById("ya_ham_btn").addEventListener("click", function() {
+document.getElementById("ya_ham_btn").addEventListener("click", function () {
   handInput.value += "\u0626";
 });
 
 // Persian letter buttons
-document.getElementById("pe_btn").addEventListener("click", function() {
+document.getElementById("pe_btn").addEventListener("click", function () {
   handInput.value += "\u067E";
 });
-document.getElementById("che_btn").addEventListener("click", function() {
+document.getElementById("che_btn").addEventListener("click", function () {
   handInput.value += "\u0686";
 });
-document.getElementById("ha_izafah_btn").addEventListener("click", function() {
+document.getElementById("ha_izafah_btn").addEventListener("click", function () {
   handInput.value += "\u06C0";
 });
-document.getElementById("zhe_btn").addEventListener("click", function() {
+document.getElementById("zhe_btn").addEventListener("click", function () {
   handInput.value += "\u0698";
 });
-document.getElementById("pers_ya_btn").addEventListener("click", function() {
+document.getElementById("pers_ya_btn").addEventListener("click", function () {
   handInput.value += "\u06CC";
 });
-document.getElementById("pers_kaf_btn").addEventListener("click", function() {
+document.getElementById("pers_kaf_btn").addEventListener("click", function () {
   handInput.value += "\u06A9";
 });
-document.getElementById("gaf_btn").addEventListener("click", function() {
+document.getElementById("gaf_btn").addEventListener("click", function () {
   handInput.value += "\u06AF";
 });
 
 // Control buttons
-document.getElementById("reset_btn").addEventListener("click", function() {
+document.getElementById("reset_btn").addEventListener("click", function () {
   result.innerHTML = "The total <em>abjad</em> value of \u2026 is \u2026";
 });
-document.getElementById("space_btn").addEventListener("click", function() {
+document.getElementById("space_btn").addEventListener("click", function () {
   handInput.value += " ";
 });
-document.getElementById("back_btn").addEventListener("click", function() {
+document.getElementById("back_btn").addEventListener("click", function () {
   handInput.value = handInput.value.slice(0, -1);
 });
 

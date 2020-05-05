@@ -169,6 +169,6 @@ function getAbjad() {
 }
 
 // When the reset button is clicked, restore the text of the result pane to its default
-document.getElementById("reset_button").addEventListener("click", function() {
+document.getElementById("reset_button").addEventListener("click", function () {
   result.innerHTML = "The total <em>abjad</em> value of \u2026 is \u2026";
 });

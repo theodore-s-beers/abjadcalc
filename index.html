@@ -27,12 +27,7 @@
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="Abjad Calculator" name="twitter:title" />
     <meta content="#0066ff" name="theme-color" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i|Scheherazade&display=swap"
       rel="stylesheet"
@@ -67,7 +62,7 @@
     <title>Abjad Calculator</title>
   </head>
   <body>
-    <div class="container" style="margin-top:1rem">
+    <div class="container" style="margin-top: 0.6rem;">
       <h2>Abjad Calculator</h2>
       <script>
         // Register service worker
@@ -79,7 +74,7 @@
       </script>
       <form action="JavaScript:getAbjad();">
         <div class="form-group">
-          <label for="abjad_text" style="margin-bottom:.8em"
+          <label for="abjad_text" style="margin-bottom: 0.8em;"
             >In the box below, enter a word or phrase, or really anything you
             like, <em>in Arabic or Persian script</em>. (If this poses a
             problem, see the first point under “Usage Notes.”) Then hit “Enter”
@@ -110,7 +105,7 @@
             >Text submitted here will not be tracked or saved.</small
           >
         </div>
-        <div class="form-check form-check-inline" style="margin-bottom:.8em">
+        <div class="form-check form-check-inline" style="margin-bottom: 0.8em;">
           <input
             aria-labelledby="maghribi_label"
             class="form-check-input"
@@ -120,7 +115,7 @@
             >Maghribi order</label
           >
         </div>
-        <div class="form-check form-check-inline" style="margin-bottom:.8em">
+        <div class="form-check form-check-inline" style="margin-bottom: 0.8em;">
           <input
             aria-labelledby="hamzah_label"
             class="form-check-input"
@@ -136,7 +131,7 @@
           Reset
         </button>
       </form>
-      <div class="card border-success mb-3" style="margin-top:1em">
+      <div class="card border-success mb-3" style="margin-top: 1em;">
         <div class="card-body text-success">
           <p class="card-text" id="result">
             The total <em>abjad</em> value of … is …
@@ -388,21 +383,9 @@
         let me know <a href="mailto:tbeers@uchicago.edu">by email</a>!
       </p>
     </div>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
