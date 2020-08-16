@@ -22,7 +22,7 @@ function getAbjad() {
 
   // Set up the text of the result pane, which will need only to have the total added to it
   result.innerHTML =
-    "The total <em>abjad</em> value of <span class='replay_input' lang='ar'>\u00AB" +
+    "The total <em>abjad</em> value of <span class='replay_input' dir='rtl' lang='ar'>\u00AB" +
     inputForDisplay +
     "\u00BB</span> is";
 
