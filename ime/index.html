@@ -36,10 +36,6 @@
       body {
         font-family: "Noto Serif", serif;
       }
-      .table.ab-jad tr td,
-      .table.ab-jad tr th {
-        border-width: 0;
-      }
       .btn.scheh {
         font-family: Scheherazade, serif;
         font-size: x-large;
@@ -51,26 +47,33 @@
           "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
           "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
       }
-      #hand_input {
-        font-family: Scheherazade, serif;
-        font-size: xx-large;
-        text-align: center;
+      .table.ab-jad tr td,
+      .table.ab-jad tr th {
+        border-width: 0;
+      }
+      #back_btn {
+        margin-bottom: 1em;
       }
       #go_btn {
         margin-right: 1em;
         margin-bottom: 1em;
       }
-      #reset_btn {
-        margin-right: 1em;
-        margin-bottom: 1em;
+      #hand_input {
+        font-family: Scheherazade, serif;
+        font-size: xx-large;
+        text-align: center;
       }
-      #space_btn {
+      #reset_btn {
         margin-right: 1em;
         margin-bottom: 1em;
       }
       #result {
         font-size: large;
         word-wrap: break-word;
+      }
+      #space_btn {
+        margin-right: 1em;
+        margin-bottom: 1em;
       }
     </style>
     <link href="https://www.abjadcalc.com/ime/" rel="canonical" />
@@ -91,7 +94,7 @@
         }
       </script>
       <form action="JavaScript:getAbjad();">
-        <div class="form-group">
+        <div class="form-group" style="margin-bottom: 0.8em;">
           <label for="hand_input" style="margin-bottom: 0.8em;"
             >This is intended as a fallback option to the
             <a href="../">primary tool</a>, which requires typing directly in
@@ -144,12 +147,7 @@
           Reset</button
         ><button class="btn btn-info" id="space_btn" type="button">
           Add space</button
-        ><button
-          class="btn btn-dark"
-          id="back_btn"
-          type="button"
-          style="margin-bottom: 1em;"
-        >
+        ><button class="btn btn-dark" id="back_btn" type="button">
           ⌫
         </button>
       </form>
