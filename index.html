@@ -386,5 +386,17 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
+    <script>
+      function submitOnEnter(event) {
+        if (event.which === 13 && !event.shiftKey) {
+          getAbjad();
+          event.preventDefault();
+        }
+      }
+
+      document
+        .getElementById("abjad_text")
+        .addEventListener("keypress", submitOnEnter);
+    </script>
   </body>
 </html>
