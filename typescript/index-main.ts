@@ -26,7 +26,7 @@ function getAbjad() {
 
   // Set up the text of the result pane, which will need only to have the total added to it
   result.innerHTML =
-    "The total <em>abjad</em> value of <span class='replay_input'>\u00AB" +
+    "The total <em>abjad</em> value of <span class='replay_input' lang='ar'>\u00AB" +
     inputForDisplay +
     "\u00BB</span> is";
 
@@ -154,7 +154,7 @@ function getAbjad() {
     } else {
       // If the character wasn't recognized, add an error message
       result.innerHTML =
-        "At least one of the characters that you entered was not recognized and has been ignored.<br>That said, the computed <em>abjad</em> value of <span class='replay_input'>\u00AB" +
+        "At least one of the characters that you entered was not recognized and has been ignored.<br>That said, the computed <em>abjad</em> value of <span class='replay_input' lang='ar'>\u00AB" +
         inputForDisplay +
         "\u00BB</span> is";
       total = total;
