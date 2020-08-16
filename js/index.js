@@ -150,7 +150,7 @@ function getAbjad() {
     } else {
       // If the character wasn't recognized, add an error message
       result.innerHTML =
-        "At least one of the characters that you entered was not recognized and has been ignored.<br>That said, the computed <em>abjad</em> value of <span class='replay_input' dir='rtl' lang='ar'>\u00AB" +
+        "At least one of the characters entered was not recognized and has been ignored.<br>That said, the computed <em>abjad</em> value of <span class='replay_input' dir='rtl' lang='ar'>\u00AB" +
         inputForDisplay +
         "\u00BB</span> is";
       total = total;
