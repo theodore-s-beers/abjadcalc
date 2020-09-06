@@ -83,7 +83,7 @@
     <title>Abjad Calculator (Manual Input)</title>
   </head>
   <body>
-    <div class="container" style="margin-top: 0.6rem;">
+    <div class="container" style="margin-top: 0.6rem">
       <h2>Abjad Calculator (Manual Input)</h2>
       <script>
         // Register service worker
@@ -94,8 +94,8 @@
         }
       </script>
       <form action="JavaScript:getAbjad();">
-        <div class="form-group" style="margin-bottom: 0.8em;">
-          <label for="hand_input" style="margin-bottom: 0.8em;"
+        <div class="form-group" style="margin-bottom: 0.8em">
+          <label for="hand_input" style="margin-bottom: 0.8em"
             >This is intended as a fallback option to the
             <a href="../">primary tool</a>, which requires typing directly in
             Arabic or Persian. Use the green buttons below to add text to the
@@ -121,7 +121,7 @@
             >Text submitted here will not be tracked or saved.</small
           >
         </div>
-        <div class="form-check form-check-inline" style="margin-bottom: 0.8em;">
+        <div class="form-check form-check-inline" style="margin-bottom: 0.8em">
           <input
             aria-labelledby="maghribi_label"
             class="form-check-input"
@@ -131,7 +131,7 @@
             >Maghribi order</label
           >
         </div>
-        <div class="form-check form-check-inline" style="margin-bottom: 0.8em;">
+        <div class="form-check form-check-inline" style="margin-bottom: 0.8em">
           <input
             aria-labelledby="hamzah_label"
             class="form-check-input"
@@ -522,7 +522,7 @@
     <script src="js/index.js"></script>
     <script>
       function submitOnEnter(event) {
-        if (event.which === 13 && !event.shiftKey) {
+        if (event.key === "Enter" && !event.shiftKey) {
           getAbjad();
           event.preventDefault();
         }
@@ -530,7 +530,7 @@
 
       document
         .getElementById("hand_input")
-        .addEventListener("keypress", submitOnEnter);
+        .addEventListener("keydown", submitOnEnter);
     </script>
   </body>
 </html>
