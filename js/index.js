@@ -2,7 +2,7 @@
 // Define a const for the result pane
 const result = document.getElementById('result')
 // Main function
-function getAbjad () {
+function getAbjad () { // eslint-disable-line no-unused-vars
   // Take the user's input
   const getInput = document.getElementById('abjad-text')
   // Set two new versions of that input: one has all whitespace stripped for calculating the abjad value; the other is cleaned up for display to the user

@@ -150,7 +150,7 @@ document.getElementById('back-btn').addEventListener('click', function () {
   handInput.value = handInput.value.slice(0, -1)
 })
 // Function to get abjad value
-function getAbjad () {
+function getAbjad () { // eslint-disable-line no-unused-vars
   // Take the user's input and set two new versions of it: one has all whitespace stripped for calculating the abjad value; the other is cleaned up for display to the user
   const inputForCalc = handInput.value.replace(/\s+/g, '')
   const inputForDisplay = handInput.value.replace(/\s+/g, ' ').trim()
