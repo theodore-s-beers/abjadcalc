@@ -6,7 +6,7 @@ const result = document.getElementById("result");
 // Main function
 function getAbjad() {
   // Take the user's input
-  const getInput = document.getElementById("abjad_text") as HTMLInputElement;
+  const getInput = document.getElementById("abjad-text") as HTMLInputElement;
 
   // Set two new versions of that input: one has all whitespace stripped for calculating the abjad value; the other is cleaned up for display to the user
   const inputForCalc = getInput.value.replace(/\s+/g, "");
@@ -14,10 +14,10 @@ function getAbjad() {
 
   // See whether the user has checked the optional checkboxes in the form
   const hamzahCheckbox = document.getElementById(
-    "hamzah_check"
+    "hamzah-check"
   ) as HTMLInputElement;
   const maghribiCheckbox = document.getElementById(
-    "maghribi_check"
+    "maghribi-check"
   ) as HTMLInputElement;
 
   // Define a total to keep track of the abjad value, and an iterator
@@ -26,7 +26,7 @@ function getAbjad() {
 
   // Set up the text of the result pane, which will need only to have the total added to it
   result.innerHTML =
-    "The total <em>abjad</em> value of <span class='replay_input' dir='rtl' lang='ar'>\u00AB" +
+    "The total <em>abjad</em> value of <span class='replay-input' dir='rtl' lang='ar'>\u00AB" +
     inputForDisplay +
     "\u00BB</span> is";
 
@@ -154,7 +154,7 @@ function getAbjad() {
     } else {
       // If the character wasn't recognized, add an error message
       result.innerHTML =
-        "At least one of the characters entered was not recognized and has been ignored.<br>That said, the computed <em>abjad</em> value of <span class='replay_input' dir='rtl' lang='ar'>\u00AB" +
+        "At least one of the characters entered was not recognized and has been ignored.<br>That said, the computed <em>abjad</em> value of <span class='replay-input' dir='rtl' lang='ar'>\u00AB" +
         inputForDisplay +
         "\u00BB</span> is";
       total = total;
@@ -165,10 +165,10 @@ function getAbjad() {
   result.innerHTML += " " + total + ".";
 
   // Remove focus from the text entry field upon form submission
-  document.getElementById("abjad_text").blur();
+  document.getElementById("abjad-text").blur();
 }
 
 // When the reset button is clicked, restore the text of the result pane to its default
-document.getElementById("reset_button").addEventListener("click", function () {
+document.getElementById("reset-button").addEventListener("click", function () {
   result.innerHTML = "The total <em>abjad</em> value of \u2026 is \u2026";
 });
