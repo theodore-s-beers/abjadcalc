@@ -48,7 +48,7 @@
         width: 1.8em;
         line-height: 1em;
       }
-      .replay_input {
+      .replay-input {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
           "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -57,19 +57,19 @@
       .table.ab-jad tr th {
         border-width: 0;
       }
-      #back_btn {
+      #back-btn {
         margin-bottom: 1em;
       }
-      #go_btn {
+      #go-btn {
         margin-right: 1em;
         margin-bottom: 1em;
       }
-      #hand_input {
+      #hand-input {
         font-family: Scheherazade, serif;
         font-size: xx-large;
         text-align: center;
       }
-      #reset_btn {
+      #reset-btn {
         margin-right: 1em;
         margin-bottom: 1em;
       }
@@ -77,7 +77,7 @@
         font-size: large;
         word-wrap: break-word;
       }
-      #space_btn {
+      #space-btn {
         margin-right: 1em;
         margin-bottom: 1em;
       }
@@ -101,7 +101,7 @@
       </script>
       <form action="JavaScript:getAbjad();">
         <div class="form-group" style="margin-bottom: 0.8em">
-          <label for="hand_input" style="margin-bottom: 0.8em"
+          <label for="hand-input" style="margin-bottom: 0.8em"
             >This is intended as a fallback option to the
             <a href="../">primary tool</a>, which requires typing directly in
             Arabic or Persian. Use the green buttons below to add text to the
@@ -118,7 +118,7 @@
             autocorrect="off"
             class="form-control"
             dir="rtl"
-            id="hand_input"
+            id="hand-input"
             rows="1"
             spellcheck="false"
             value=""
@@ -129,31 +129,31 @@
         </div>
         <div class="form-check form-check-inline" style="margin-bottom: 0.8em">
           <input
-            aria-labelledby="maghribi_label"
+            aria-labelledby="maghribi-label"
             class="form-check-input"
-            id="maghribi_check"
+            id="maghribi-check"
             type="checkbox"
-          /><label class="form-check-label" id="maghribi_label"
+          /><label class="form-check-label" id="maghribi-label"
             >Maghribi order</label
           >
         </div>
         <div class="form-check form-check-inline" style="margin-bottom: 0.8em">
           <input
-            aria-labelledby="hamzah_label"
+            aria-labelledby="hamzah-label"
             class="form-check-input"
-            id="hamzah_check"
+            id="hamzah-check"
             type="checkbox"
-          /><label class="form-check-label" id="hamzah_label"
+          /><label class="form-check-label" id="hamzah-label"
             >Ignore lone <em>hamzah</em></label
           >
         </div>
-        <br /><button class="btn btn-primary" id="go_btn" type="submit">
+        <br /><button class="btn btn-primary" id="go-btn" type="submit">
           Go!</button
-        ><button class="btn btn-secondary" id="reset_btn" type="reset">
+        ><button class="btn btn-secondary" id="reset-btn" type="reset">
           Reset</button
-        ><button class="btn btn-info" id="space_btn" type="button">
+        ><button class="btn btn-info" id="space-btn" type="button">
           Add space</button
-        ><button class="btn btn-dark" id="back_btn" type="button">⌫</button>
+        ><button class="btn btn-dark" id="back-btn" type="button">⌫</button>
       </form>
       <div class="card border-success mb-3">
         <div class="card-body text-success">
@@ -171,37 +171,37 @@
         <tr>
           <td></td>
           <td>
-            <button class="btn btn-success scheh" id="za_btn" type="button">
+            <button class="btn btn-success scheh" id="za-btn" type="button">
               ز
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="waw_btn" type="button">
+            <button class="btn btn-success scheh" id="waw-btn" type="button">
               و
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="ha_btn" type="button">
+            <button class="btn btn-success scheh" id="ha-btn" type="button">
               ه
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="dal_btn" type="button">
+            <button class="btn btn-success scheh" id="dal-btn" type="button">
               د
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="jim_btn" type="button">
+            <button class="btn btn-success scheh" id="jim-btn" type="button">
               ج
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="ba_btn" type="button">
+            <button class="btn btn-success scheh" id="ba-btn" type="button">
               ب
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="alif_btn" type="button">
+            <button class="btn btn-success scheh" id="alif-btn" type="button">
               ا
             </button>
           </td>
@@ -209,79 +209,79 @@
         <tr>
           <td></td>
           <td>
-            <button class="btn btn-success scheh" id="nun_btn" type="button">
+            <button class="btn btn-success scheh" id="nun-btn" type="button">
               ن
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="mim_btn" type="button">
+            <button class="btn btn-success scheh" id="mim-btn" type="button">
               م
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="lam_btn" type="button">
+            <button class="btn btn-success scheh" id="lam-btn" type="button">
               ل
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="kaf_btn" type="button">
+            <button class="btn btn-success scheh" id="kaf-btn" type="button">
               ك
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="ya_btn" type="button">
+            <button class="btn btn-success scheh" id="ya-btn" type="button">
               ي
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="taw_btn" type="button">
+            <button class="btn btn-success scheh" id="taw-btn" type="button">
               ط
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="5a_btn" type="button">
+            <button class="btn btn-success scheh" id="5a-btn" type="button">
               ح
             </button>
           </td>
         </tr>
         <tr>
           <td>
-            <button class="btn btn-success scheh" id="ta_btn" type="button">
+            <button class="btn btn-success scheh" id="ta-btn" type="button">
               ت
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="shin_btn" type="button">
+            <button class="btn btn-success scheh" id="shin-btn" type="button">
               ش
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="ra_btn" type="button">
+            <button class="btn btn-success scheh" id="ra-btn" type="button">
               ر
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="qaf_btn" type="button">
+            <button class="btn btn-success scheh" id="qaf-btn" type="button">
               ق
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="sad_btn" type="button">
+            <button class="btn btn-success scheh" id="sad-btn" type="button">
               ص
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="fa_btn" type="button">
+            <button class="btn btn-success scheh" id="fa-btn" type="button">
               ف
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="ayn_btn" type="button">
+            <button class="btn btn-success scheh" id="ayn-btn" type="button">
               ع
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="sin_btn" type="button">
+            <button class="btn btn-success scheh" id="sin-btn" type="button">
               س
             </button>
           </td>
@@ -290,32 +290,32 @@
           <td></td>
           <td></td>
           <td>
-            <button class="btn btn-success scheh" id="ghayn_btn" type="button">
+            <button class="btn btn-success scheh" id="ghayn-btn" type="button">
               غ
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="zaw_btn" type="button">
+            <button class="btn btn-success scheh" id="zaw-btn" type="button">
               ظ
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="dad_btn" type="button">
+            <button class="btn btn-success scheh" id="dad-btn" type="button">
               ض
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="dhal_btn" type="button">
+            <button class="btn btn-success scheh" id="dhal-btn" type="button">
               ذ
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="kha_btn" type="button">
+            <button class="btn btn-success scheh" id="kha-btn" type="button">
               خ
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="tha_btn" type="button">
+            <button class="btn btn-success scheh" id="tha-btn" type="button">
               ث
             </button>
           </td>
@@ -325,14 +325,14 @@
       <table class="table table-sm table-responsive ab-jad">
         <tr>
           <td>
-            <button class="btn btn-success scheh" id="ya_ham_btn" type="button">
+            <button class="btn btn-success scheh" id="ya-ham-btn" type="button">
               ئ
             </button>
           </td>
           <td>
             <button
               class="btn btn-success scheh"
-              id="maqsurah_btn"
+              id="maqsurah-btn"
               type="button"
             >
               ى
@@ -341,7 +341,7 @@
           <td>
             <button
               class="btn btn-success scheh"
-              id="waw_ham_btn"
+              id="waw-ham-btn"
               type="button"
             >
               ؤ
@@ -350,26 +350,26 @@
           <td>
             <button
               class="btn btn-success scheh"
-              id="marbutah_btn"
+              id="marbutah-btn"
               type="button"
             >
               ة
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="hamzah_btn" type="button">
+            <button class="btn btn-success scheh" id="hamzah-btn" type="button">
               ء
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="maddah_btn" type="button">
+            <button class="btn btn-success scheh" id="maddah-btn" type="button">
               آ
             </button>
           </td>
           <td>
             <button
               class="btn btn-success scheh"
-              id="bottom_ham_btn"
+              id="bottom-ham-btn"
               type="button"
             >
               إ
@@ -378,7 +378,7 @@
           <td>
             <button
               class="btn btn-success scheh"
-              id="top_ham_btn"
+              id="top-ham-btn"
               type="button"
             >
               أ
@@ -395,14 +395,14 @@
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="gaf_btn" type="button">
+            <button class="btn btn-success scheh" id="gaf-btn" type="button">
               گ
             </button>
           </td>
           <td>
             <button
               class="btn btn-success scheh"
-              id="pers_kaf_btn"
+              id="pers-kaf-btn"
               type="button"
             >
               ک
@@ -411,45 +411,45 @@
           <td>
             <button
               class="btn btn-success scheh"
-              id="pers_ya_btn"
+              id="pers-ya-btn"
               type="button"
             >
               ی
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="zhe_btn" type="button">
+            <button class="btn btn-success scheh" id="zhe-btn" type="button">
               ژ
             </button>
           </td>
           <td>
             <button
               class="btn btn-success scheh"
-              id="ha_izafah_btn"
+              id="ha-izafah-btn"
               type="button"
             >
               ۀ
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="che_btn" type="button">
+            <button class="btn btn-success scheh" id="che-btn" type="button">
               چ
             </button>
           </td>
           <td>
-            <button class="btn btn-success scheh" id="pe_btn" type="button">
+            <button class="btn btn-success scheh" id="pe-btn" type="button">
               پ
             </button>
           </td>
         </tr>
       </table>
       <hr />
-      <div data-children=".item" id="notes_accordion">
+      <div data-children=".item" id="notes-accordion">
         <div class="item">
           <a
             aria-controls="notes"
             aria-expanded="false"
-            data-parent="#notes_accordion"
+            data-parent="#notes-accordion"
             data-toggle="collapse"
             href="#notes"
             ><h2>Usage Notes</h2></a
@@ -535,7 +535,7 @@
       }
 
       document
-        .getElementById("hand_input")
+        .getElementById("hand-input")
         .addEventListener("keydown", submitOnEnter);
     </script>
   </body>

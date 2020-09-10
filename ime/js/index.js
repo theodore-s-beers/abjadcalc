@@ -1,183 +1,170 @@
 "use strict";
-
 // Define consts used in multiple functions
-const handInput = document.getElementById("hand_input");
+const handInput = document.getElementById("hand-input");
 const result = document.getElementById("result");
-
 // Primary letter buttons row 1
-document.getElementById("alif_btn").addEventListener("click", function () {
+document.getElementById("alif-btn").addEventListener("click", function () {
   handInput.value += "\u0627";
 });
-document.getElementById("ba_btn").addEventListener("click", function () {
+document.getElementById("ba-btn").addEventListener("click", function () {
   handInput.value += "\u0628";
 });
-document.getElementById("jim_btn").addEventListener("click", function () {
+document.getElementById("jim-btn").addEventListener("click", function () {
   handInput.value += "\u062C";
 });
-document.getElementById("dal_btn").addEventListener("click", function () {
+document.getElementById("dal-btn").addEventListener("click", function () {
   handInput.value += "\u062F";
 });
-document.getElementById("ha_btn").addEventListener("click", function () {
+document.getElementById("ha-btn").addEventListener("click", function () {
   handInput.value += "\u0647";
 });
-document.getElementById("waw_btn").addEventListener("click", function () {
+document.getElementById("waw-btn").addEventListener("click", function () {
   handInput.value += "\u0648";
 });
-document.getElementById("za_btn").addEventListener("click", function () {
+document.getElementById("za-btn").addEventListener("click", function () {
   handInput.value += "\u0632";
 });
-
 // Primary letter buttons row 2
-document.getElementById("5a_btn").addEventListener("click", function () {
+document.getElementById("5a-btn").addEventListener("click", function () {
   handInput.value += "\u062D";
 });
-document.getElementById("taw_btn").addEventListener("click", function () {
+document.getElementById("taw-btn").addEventListener("click", function () {
   handInput.value += "\u0637";
 });
-document.getElementById("ya_btn").addEventListener("click", function () {
+document.getElementById("ya-btn").addEventListener("click", function () {
   handInput.value += "\u064A";
 });
-document.getElementById("kaf_btn").addEventListener("click", function () {
+document.getElementById("kaf-btn").addEventListener("click", function () {
   handInput.value += "\u0643";
 });
-document.getElementById("lam_btn").addEventListener("click", function () {
+document.getElementById("lam-btn").addEventListener("click", function () {
   handInput.value += "\u0644";
 });
-document.getElementById("mim_btn").addEventListener("click", function () {
+document.getElementById("mim-btn").addEventListener("click", function () {
   handInput.value += "\u0645";
 });
-document.getElementById("nun_btn").addEventListener("click", function () {
+document.getElementById("nun-btn").addEventListener("click", function () {
   handInput.value += "\u0646";
 });
-
 // Primary letter buttons row 3
-document.getElementById("sin_btn").addEventListener("click", function () {
+document.getElementById("sin-btn").addEventListener("click", function () {
   handInput.value += "\u0633";
 });
-document.getElementById("ayn_btn").addEventListener("click", function () {
+document.getElementById("ayn-btn").addEventListener("click", function () {
   handInput.value += "\u0639";
 });
-document.getElementById("fa_btn").addEventListener("click", function () {
+document.getElementById("fa-btn").addEventListener("click", function () {
   handInput.value += "\u0641";
 });
-document.getElementById("sad_btn").addEventListener("click", function () {
+document.getElementById("sad-btn").addEventListener("click", function () {
   handInput.value += "\u0635";
 });
-document.getElementById("qaf_btn").addEventListener("click", function () {
+document.getElementById("qaf-btn").addEventListener("click", function () {
   handInput.value += "\u0642";
 });
-document.getElementById("ra_btn").addEventListener("click", function () {
+document.getElementById("ra-btn").addEventListener("click", function () {
   handInput.value += "\u0631";
 });
-document.getElementById("shin_btn").addEventListener("click", function () {
+document.getElementById("shin-btn").addEventListener("click", function () {
   handInput.value += "\u0634";
 });
-document.getElementById("ta_btn").addEventListener("click", function () {
+document.getElementById("ta-btn").addEventListener("click", function () {
   handInput.value += "\u062A";
 });
-
 // Primary letter buttons row 4
-document.getElementById("tha_btn").addEventListener("click", function () {
+document.getElementById("tha-btn").addEventListener("click", function () {
   handInput.value += "\u062B";
 });
-document.getElementById("kha_btn").addEventListener("click", function () {
+document.getElementById("kha-btn").addEventListener("click", function () {
   handInput.value += "\u062E";
 });
-document.getElementById("dhal_btn").addEventListener("click", function () {
+document.getElementById("dhal-btn").addEventListener("click", function () {
   handInput.value += "\u0630";
 });
-document.getElementById("dad_btn").addEventListener("click", function () {
+document.getElementById("dad-btn").addEventListener("click", function () {
   handInput.value += "\u0636";
 });
-document.getElementById("zaw_btn").addEventListener("click", function () {
+document.getElementById("zaw-btn").addEventListener("click", function () {
   handInput.value += "\u0638";
 });
-document.getElementById("ghayn_btn").addEventListener("click", function () {
+document.getElementById("ghayn-btn").addEventListener("click", function () {
   handInput.value += "\u063A";
 });
-
 // Secondary letter buttons
-document.getElementById("top_ham_btn").addEventListener("click", function () {
+document.getElementById("top-ham-btn").addEventListener("click", function () {
   handInput.value += "\u0623";
 });
 document
-  .getElementById("bottom_ham_btn")
+  .getElementById("bottom-ham-btn")
   .addEventListener("click", function () {
     handInput.value += "\u0625";
   });
-document.getElementById("maddah_btn").addEventListener("click", function () {
+document.getElementById("maddah-btn").addEventListener("click", function () {
   handInput.value += "\u0622";
 });
-document.getElementById("hamzah_btn").addEventListener("click", function () {
+document.getElementById("hamzah-btn").addEventListener("click", function () {
   handInput.value += "\u0621";
 });
-document.getElementById("marbutah_btn").addEventListener("click", function () {
+document.getElementById("marbutah-btn").addEventListener("click", function () {
   handInput.value += "\u0629";
 });
-document.getElementById("waw_ham_btn").addEventListener("click", function () {
+document.getElementById("waw-ham-btn").addEventListener("click", function () {
   handInput.value += "\u0624";
 });
-document.getElementById("maqsurah_btn").addEventListener("click", function () {
+document.getElementById("maqsurah-btn").addEventListener("click", function () {
   handInput.value += "\u0649";
 });
-document.getElementById("ya_ham_btn").addEventListener("click", function () {
+document.getElementById("ya-ham-btn").addEventListener("click", function () {
   handInput.value += "\u0626";
 });
-
 // Persian letter buttons
-document.getElementById("pe_btn").addEventListener("click", function () {
+document.getElementById("pe-btn").addEventListener("click", function () {
   handInput.value += "\u067E";
 });
-document.getElementById("che_btn").addEventListener("click", function () {
+document.getElementById("che-btn").addEventListener("click", function () {
   handInput.value += "\u0686";
 });
-document.getElementById("ha_izafah_btn").addEventListener("click", function () {
+document.getElementById("ha-izafah-btn").addEventListener("click", function () {
   handInput.value += "\u06C0";
 });
-document.getElementById("zhe_btn").addEventListener("click", function () {
+document.getElementById("zhe-btn").addEventListener("click", function () {
   handInput.value += "\u0698";
 });
-document.getElementById("pers_ya_btn").addEventListener("click", function () {
+document.getElementById("pers-ya-btn").addEventListener("click", function () {
   handInput.value += "\u06CC";
 });
-document.getElementById("pers_kaf_btn").addEventListener("click", function () {
+document.getElementById("pers-kaf-btn").addEventListener("click", function () {
   handInput.value += "\u06A9";
 });
-document.getElementById("gaf_btn").addEventListener("click", function () {
+document.getElementById("gaf-btn").addEventListener("click", function () {
   handInput.value += "\u06AF";
 });
-
 // Control buttons
-document.getElementById("reset_btn").addEventListener("click", function () {
+document.getElementById("reset-btn").addEventListener("click", function () {
   result.innerHTML = "The total <em>abjad</em> value of \u2026 is \u2026";
 });
-document.getElementById("space_btn").addEventListener("click", function () {
+document.getElementById("space-btn").addEventListener("click", function () {
   handInput.value += " ";
 });
-document.getElementById("back_btn").addEventListener("click", function () {
+document.getElementById("back-btn").addEventListener("click", function () {
   handInput.value = handInput.value.slice(0, -1);
 });
-
 // Function to get abjad value
 function getAbjad() {
   // Take the user's input and set two new versions of it: one has all whitespace stripped for calculating the abjad value; the other is cleaned up for display to the user
   const inputForCalc = handInput.value.replace(/\s+/g, "");
   const inputForDisplay = handInput.value.replace(/\s+/g, " ").trim();
-
   // See whether the user has checked the optional checkboxes in the form
-  const hamzahCheckbox = document.getElementById("hamzah_check");
-  const maghribiCheckbox = document.getElementById("maghribi_check");
-
+  const hamzahCheckbox = document.getElementById("hamzah-check");
+  const maghribiCheckbox = document.getElementById("maghribi-check");
   // Define a total to keep track of the abjad value, and an iterator
   let total = 0;
   let i = 0;
-
   // Set up the text of the result pane, which will need only to have the total added to it
   result.innerHTML =
-    "The total <em>abjad</em> value of <span class='replay_input' dir='rtl' lang='ar'>\u00AB" +
+    "The total <em>abjad</em> value of <span class='replay-input' dir='rtl' lang='ar'>\u00AB" +
     inputForDisplay +
     "\u00BB</span> is";
-
   // Here we go! This runs through the cleaned input, one character at a time, checking for matches with Arabic-script letters and adding the relevant abjad values to the total
   for (i = 0; i < inputForCalc.length; i += 1) {
     if (
@@ -302,16 +289,14 @@ function getAbjad() {
     } else {
       // If the character wasn't recognized, add an error message
       result.innerHTML =
-        "At least one of the characters entered was not recognized and has been ignored.<br>That said, the computed <em>abjad</em> value of <span class='replay_input' dir='rtl' lang='ar'>\u00AB" +
+        "At least one of the characters entered was not recognized and has been ignored.<br>That said, the computed <em>abjad</em> value of <span class='replay-input' dir='rtl' lang='ar'>\u00AB" +
         inputForDisplay +
         "\u00BB</span> is";
       total = total;
     }
   }
-
   // Add the final total to the text of the result pane
   result.innerHTML += " " + total + ".";
-
   // Remove focus from the text entry field upon form submission
-  document.getElementById("hand_input").blur();
+  document.getElementById("hand-input").blur();
 }
