@@ -18,7 +18,6 @@
       content="https://www.abjadcalc.com/img/abjad-og.jpg"
       property="og:image"
     />
-    <meta content="image/png" property="og:image:type" />
     <meta content="en_US" property="og:locale" />
     <meta
       content="Calculate the numerical abjad value of Arabic or Persian text."
@@ -29,23 +28,19 @@
     <meta content="#0066ff" name="theme-color" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&family=Scheherazade&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap"
       rel="stylesheet"
     />
     <style>
-      body {
-        font-family: "Noto Serif", serif;
-      }
       h1 {
-        font-size: xx-large;
+        font-size: 210%;
       }
       h2 {
-        font-size: x-large;
+        font-size: 160%;
       }
-      .replay-input {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      li,
+      p {
+        hyphens: auto;
       }
       #abjad-text {
         font-family: Scheherazade, serif;
@@ -58,6 +53,10 @@
       }
       #submit-button {
         margin-right: 1em;
+      }
+      #top-label {
+        margin-bottom: 0.8em;
+        hyphens: auto;
       }
     </style>
     <link href="https://www.abjadcalc.com/" rel="canonical" />
@@ -79,7 +78,7 @@
       </script>
       <form action="JavaScript:getAbjad();">
         <div class="form-group" style="margin-bottom: 0.8em">
-          <label for="abjad-text" style="margin-bottom: 0.8em"
+          <label id="top-label" for="abjad-text"
             >In the box below, enter a word or phrase, or really anything you
             like, <em>in Arabic or Persian script</em>. (If this poses a
             problem, see the first point under “Usage Notes.”) Then hit “Enter”
@@ -91,9 +90,9 @@
               >numerical <em>abjad</em> value</a
             >
             of your input will be returned. The “Reset” button will clear the
-            form&#8202;—&#8202;though it isn’t necessary between operations. Use
-            the checkboxes if you’re working with the Maghribi system, or if you
-            prefer <em>not</em> to assign value to the pseudo-letter
+            form&#x200A;—&#x200A;though it isn’t necessary between operations.
+            Use the checkboxes if you’re working with the Maghribi system, or if
+            you prefer <em>not</em> to assign value to the pseudo-letter
             <em>hamzah</em> in its isolated state (ء). Further details are
             provided beneath the results pane.</label
           ><textarea
@@ -159,9 +158,9 @@
               <li>
                 I would strongly encourage anyone who knows an Arabic-script
                 language to learn how to type in it. This isn’t as difficult as
-                one might imagine&#8202;—&#8202;especially on mobile devices,
+                one might imagine&#x200A;—&#x200A;especially on mobile devices,
                 whose support for various languages is now often more seamless
-                than that of desktop operating systems&#8202;—&#8202;and it
+                than that of desktop operating systems&#x200A;—&#x200A;and it
                 opens up a whole new world of resources online. However, if you
                 would like to use this <em>abjad</em> calculator but cannot type
                 your input directly, there are a couple of alternatives. First,
@@ -219,7 +218,7 @@
                 containing one or more unrecognized characters, you’ll see a
                 brief error message, followed by the total <em>abjad</em> value
                 of the parts that
-                <em>were</em> counted&#8202;—&#8202;<em>i.e.</em>, our best
+                <em>were</em> counted&#x200A;—&#x200A;<em>i.e.</em>, our best
                 guess. It may be correct nonetheless…
               </li>
               <li>
@@ -269,11 +268,11 @@
               </li>
               <li>
                 The treatment of the four “Persian
-                letters”&#8202;—&#8202;<em>pe</em>, <em>che</em>, <em>zhe</em>,
-                and <em>gāf</em>&#8202;—&#8202;is, in fact, well established.
-                Please refer to the same Wikipedia entry. In general, there
-                should be no problem using Persian text. (Urdu? Pashto? You’re
-                on your own for the time being.)
+                letters”&#x200A;—&#x200A;<em>pe</em>, <em>che</em>,
+                <em>zhe</em>, and <em>gāf</em>&#x200A;—&#x200A;is, in fact, well
+                established. Please refer to the same Wikipedia entry. In
+                general, there should be no problem using Persian text. (Urdu?
+                Pashto? You’re on your own for the time being.)
               </li>
               <li>
                 Actually, there is one potentially confusing point in Persian:
@@ -350,7 +349,7 @@
                   target="_blank"
                   ><em>alif maddah</em></a
                 >, which some have treated as a “double
-                <em>hamzah alif</em>&thinsp;” with a value of 2. Here we may
+                <em>hamzah alif</em>&#x200A;” with a value of 2. Here we may
                 invoke another general principle of <em>abjad</em> numerals:
                 each letter is counted exactly once. Just as
                 <a
