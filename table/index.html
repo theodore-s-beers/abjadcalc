@@ -29,7 +29,7 @@
     <meta content="#0066ff" name="theme-color" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i|Scheherazade&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&family=Scheherazade&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -59,7 +59,7 @@
         // Register service worker
         if ("serviceWorker" in navigator) {
           window.addEventListener("load", () => {
-            navigator.serviceWorker.register("../service-worker.js");
+            navigator.serviceWorker.register("../sw.js");
           });
         }
       </script>
