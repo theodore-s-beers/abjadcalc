@@ -402,6 +402,13 @@
       document
         .getElementById("abjad-text")
         .addEventListener("keydown", submitOnEnter);
+
+      document
+        .getElementById("reset-button")
+        .addEventListener("click", function () {
+          document.getElementById("result").innerHTML =
+            "The total <em>abjad</em> value of \u2026 is \u2026";
+        });
     </script>
   </body>
 </html>

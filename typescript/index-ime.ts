@@ -1,170 +1,306 @@
-'use strict'
-
-// Define consts used in multiple functions
-const handInput = document.getElementById('hand-input') as HTMLInputElement
-const result = document.getElementById('result')
+// Define a variable used throughout
+const handInput = document.getElementById('hand-input') as HTMLInputElement;
 
 // Primary letter buttons row 1
-document.getElementById('alif-btn').addEventListener('click', function () {
-  handInput.value += '\u0627'
-})
-document.getElementById('ba-btn').addEventListener('click', function () {
-  handInput.value += '\u0628'
-})
-document.getElementById('jim-btn').addEventListener('click', function () {
-  handInput.value += '\u062C'
-})
-document.getElementById('dal-btn').addEventListener('click', function () {
-  handInput.value += '\u062F'
-})
-document.getElementById('ha-btn').addEventListener('click', function () {
-  handInput.value += '\u0647'
-})
-document.getElementById('waw-btn').addEventListener('click', function () {
-  handInput.value += '\u0648'
-})
-document.getElementById('za-btn').addEventListener('click', function () {
-  handInput.value += '\u0632'
-})
+(document.getElementById('alif-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0627')
+  }
+);
+(document.getElementById('ba-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0628')
+  }
+);
+(document.getElementById('jim-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u062C')
+  }
+);
+(document.getElementById('dal-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u062F')
+  }
+);
+(document.getElementById('ha-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0647')
+  }
+);
+(document.getElementById('waw-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0648')
+  }
+);
+(document.getElementById('za-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0632')
+  }
+);
 
 // Primary letter buttons row 2
-document.getElementById('5a-btn').addEventListener('click', function () {
-  handInput.value += '\u062D'
-})
-document.getElementById('taw-btn').addEventListener('click', function () {
-  handInput.value += '\u0637'
-})
-document.getElementById('ya-btn').addEventListener('click', function () {
-  handInput.value += '\u064A'
-})
-document.getElementById('kaf-btn').addEventListener('click', function () {
-  handInput.value += '\u0643'
-})
-document.getElementById('lam-btn').addEventListener('click', function () {
-  handInput.value += '\u0644'
-})
-document.getElementById('mim-btn').addEventListener('click', function () {
-  handInput.value += '\u0645'
-})
-document.getElementById('nun-btn').addEventListener('click', function () {
-  handInput.value += '\u0646'
-})
+(document.getElementById('5a-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u062D')
+  }
+);
+(document.getElementById('taw-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0637')
+  }
+);
+(document.getElementById('ya-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u064A')
+  }
+);
+(document.getElementById('kaf-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0643')
+  }
+);
+(document.getElementById('lam-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0644')
+  }
+);
+(document.getElementById('mim-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0645')
+  }
+);
+(document.getElementById('nun-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0646')
+  }
+);
 
 // Primary letter buttons row 3
-document.getElementById('sin-btn').addEventListener('click', function () {
-  handInput.value += '\u0633'
-})
-document.getElementById('ayn-btn').addEventListener('click', function () {
-  handInput.value += '\u0639'
-})
-document.getElementById('fa-btn').addEventListener('click', function () {
-  handInput.value += '\u0641'
-})
-document.getElementById('sad-btn').addEventListener('click', function () {
-  handInput.value += '\u0635'
-})
-document.getElementById('qaf-btn').addEventListener('click', function () {
-  handInput.value += '\u0642'
-})
-document.getElementById('ra-btn').addEventListener('click', function () {
-  handInput.value += '\u0631'
-})
-document.getElementById('shin-btn').addEventListener('click', function () {
-  handInput.value += '\u0634'
-})
-document.getElementById('ta-btn').addEventListener('click', function () {
-  handInput.value += '\u062A'
-})
+(document.getElementById('sin-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0633')
+  }
+);
+(document.getElementById('ayn-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0639')
+  }
+);
+(document.getElementById('fa-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0641')
+  }
+);
+(document.getElementById('sad-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0635')
+  }
+);
+(document.getElementById('qaf-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0642')
+  }
+);
+(document.getElementById('ra-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0631')
+  }
+);
+(document.getElementById('shin-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0634')
+  }
+);
+(document.getElementById('ta-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u062A')
+  }
+);
 
 // Primary letter buttons row 4
-document.getElementById('tha-btn').addEventListener('click', function () {
-  handInput.value += '\u062B'
-})
-document.getElementById('kha-btn').addEventListener('click', function () {
-  handInput.value += '\u062E'
-})
-document.getElementById('dhal-btn').addEventListener('click', function () {
-  handInput.value += '\u0630'
-})
-document.getElementById('dad-btn').addEventListener('click', function () {
-  handInput.value += '\u0636'
-})
-document.getElementById('zaw-btn').addEventListener('click', function () {
-  handInput.value += '\u0638'
-})
-document.getElementById('ghayn-btn').addEventListener('click', function () {
-  handInput.value += '\u063A'
-})
+(document.getElementById('tha-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u062B')
+  }
+);
+(document.getElementById('kha-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u062E')
+  }
+);
+(document.getElementById('dhal-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0630')
+  }
+);
+(document.getElementById('dad-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0636')
+  }
+);
+(document.getElementById('zaw-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0638')
+  }
+);
+(document.getElementById('ghayn-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u063A')
+  }
+);
 
 // Secondary letter buttons
-document.getElementById('top-ham-btn').addEventListener('click', function () {
-  handInput.value += '\u0623'
-})
-document
-  .getElementById('bottom-ham-btn')
-  .addEventListener('click', function () {
-    handInput.value += '\u0625'
-  })
-document.getElementById('maddah-btn').addEventListener('click', function () {
-  handInput.value += '\u0622'
-})
-document.getElementById('hamzah-btn').addEventListener('click', function () {
-  handInput.value += '\u0621'
-})
-document.getElementById('marbutah-btn').addEventListener('click', function () {
-  handInput.value += '\u0629'
-})
-document.getElementById('waw-ham-btn').addEventListener('click', function () {
-  handInput.value += '\u0624'
-})
-document.getElementById('maqsurah-btn').addEventListener('click', function () {
-  handInput.value += '\u0649'
-})
-document.getElementById('ya-ham-btn').addEventListener('click', function () {
-  handInput.value += '\u0626'
-})
+(document.getElementById('top-ham-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0623')
+  }
+);
+(document.getElementById(
+  'bottom-ham-btn'
+) as HTMLInputElement).addEventListener('click', function () {
+  handInput.value = handInput.value.concat('\u0625')
+});
+(document.getElementById('maddah-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0622')
+  }
+);
+(document.getElementById('hamzah-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0621')
+  }
+);
+(document.getElementById('marbutah-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0629')
+  }
+);
+(document.getElementById('waw-ham-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0624')
+  }
+);
+(document.getElementById('maqsurah-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0649')
+  }
+);
+(document.getElementById('ya-ham-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0626')
+  }
+);
 
 // Persian letter buttons
-document.getElementById('pe-btn').addEventListener('click', function () {
-  handInput.value += '\u067E'
-})
-document.getElementById('che-btn').addEventListener('click', function () {
-  handInput.value += '\u0686'
-})
-document.getElementById('ha-izafah-btn').addEventListener('click', function () {
-  handInput.value += '\u06C0'
-})
-document.getElementById('zhe-btn').addEventListener('click', function () {
-  handInput.value += '\u0698'
-})
-document.getElementById('pers-ya-btn').addEventListener('click', function () {
-  handInput.value += '\u06CC'
-})
-document.getElementById('pers-kaf-btn').addEventListener('click', function () {
-  handInput.value += '\u06A9'
-})
-document.getElementById('gaf-btn').addEventListener('click', function () {
-  handInput.value += '\u06AF'
-})
+(document.getElementById('pe-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u067E')
+  }
+);
+(document.getElementById('che-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0686')
+  }
+);
+(document.getElementById('ha-izafah-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u06C0')
+  }
+);
+(document.getElementById('zhe-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u0698')
+  }
+);
+(document.getElementById('pers-ya-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u06CC')
+  }
+);
+(document.getElementById('pers-kaf-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u06A9')
+  }
+);
+(document.getElementById('gaf-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat('\u06AF')
+  }
+);
 
 // Control buttons
-document.getElementById('reset-btn').addEventListener('click', function () {
-  result.innerHTML = 'The total <em>abjad</em> value of \u2026 is \u2026'
-})
-document.getElementById('space-btn').addEventListener('click', function () {
-  handInput.value += ' '
-})
-document.getElementById('back-btn').addEventListener('click', function () {
-  handInput.value = handInput.value.slice(0, -1)
-})
+(document.getElementById('reset-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    (document.getElementById('result') as HTMLElement).innerHTML =
+      'The total <em>abjad</em> value of \u2026 is \u2026'
+  }
+);
+(document.getElementById('space-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.concat(' ')
+  }
+);
+(document.getElementById('back-btn') as HTMLInputElement).addEventListener(
+  'click',
+  function () {
+    handInput.value = handInput.value.slice(0, -1)
+  }
+)
 
 // Function to get abjad value
-function getAbjad (): void {
-  // Take the user's input and set two new versions of it: one has all whitespace stripped for calculating the abjad value; the other is cleaned up for display to the user
+// eslint-disable-next-line
+function getAbjadIME(): void {
+  // Take input and set two new versions of it
+  // One has all whitespace stripped for calculating abjad value
+  // The other is cleaned up for re-display
   const inputForCalc = handInput.value.replace(/\s+/g, '')
-  const inputForDisplay = handInput.value.replace(/\s+/g, ' ').trim()
+  const inputForDisplay: string = handInput.value.replace(/\s+/g, ' ').trim()
 
-  // See whether the user has checked the optional checkboxes in the form
+  // Define variables for option checkboxes
   const hamzahCheckbox = document.getElementById(
     'hamzah-check'
   ) as HTMLInputElement
@@ -176,13 +312,18 @@ function getAbjad (): void {
   let total = 0
   let i = 0
 
-  // Set up the text of the result pane, which will need only to have the total added to it
+  // Define variable for result pane
+  const result = document.getElementById('result') as HTMLElement
+
+  // Prepare the text of the result pane
   result.innerHTML =
     "The total <em>abjad</em> value of <span class='replay-input' dir='rtl' lang='ar'>\u00AB" +
     inputForDisplay +
     '\u00BB</span> is'
 
-  // Here we go! This runs through the cleaned input, one character at a time, checking for matches with Arabic-script letters and adding the relevant abjad values to the total
+  // Here we go! Run through the cleaned input, one character at a time
+  // Check for matches with Arabic-script letters
+  // Add relevant abjad values to the total
   for (i = 0; i < inputForCalc.length; i += 1) {
     if (
       inputForCalc.charAt(i) === '\u0627' ||
@@ -316,6 +457,6 @@ function getAbjad (): void {
   // Add the final total to the text of the result pane
   result.innerHTML += ' ' + total.toString() + '.'
 
-  // Remove focus from the text entry field upon form submission
-  document.getElementById('hand-input').blur()
+  // Remove focus from input field
+  handInput.blur()
 }

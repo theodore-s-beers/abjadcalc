@@ -98,7 +98,7 @@
           });
         }
       </script>
-      <form action="JavaScript:getAbjad();">
+      <form action="JavaScript:getAbjadIME();">
         <div class="form-group" style="margin-bottom: 0.8em">
           <label id="top-label" for="hand-input"
             >This is intended as a fallback option to the
@@ -528,7 +528,7 @@
     <script>
       function submitOnEnter(event) {
         if (event.key === "Enter" && !event.shiftKey) {
-          getAbjad();
+          getAbjadIME();
           event.preventDefault();
         }
       }
