@@ -1,18 +1,15 @@
-'use strict'
-
-// Define a const for the result pane
-const result = document.getElementById('result')
-
-// Main function
-function getAbjad (): void {
-  // Take the user's input
+// eslint-disable-next-line
+function getAbjad(): void {
+  // Define variable for input field
   const getInput = document.getElementById('abjad-text') as HTMLInputElement
 
-  // Set two new versions of that input: one has all whitespace stripped for calculating the abjad value; the other is cleaned up for display to the user
+  // Set two new versions of input text
+  // One has all whitespace stripped for calculating abjad value
+  // The other is cleaned up for re-display
   const inputForCalc = getInput.value.replace(/\s+/g, '')
   const inputForDisplay = getInput.value.replace(/\s+/g, ' ').trim()
 
-  // See whether the user has checked the optional checkboxes in the form
+  // Define variables for option checkboxes
   const hamzahCheckbox = document.getElementById(
     'hamzah-check'
   ) as HTMLInputElement
@@ -24,13 +21,18 @@ function getAbjad (): void {
   let total = 0
   let i = 0
 
-  // Set up the text of the result pane, which will need only to have the total added to it
+  // Define variable for result pane
+  const result = document.getElementById('result') as HTMLElement
+
+  // Prepare the text of the result pane
   result.innerHTML =
     "The total <em>abjad</em> value of <span class='replay-input' dir='rtl' lang='ar'>\u00AB" +
     inputForDisplay +
     '\u00BB</span> is'
 
-  // Here we go! This runs through the cleaned input, one character at a time, checking for matches with Arabic-script letters and adding the relevant abjad values to the total
+  // Here we go! Run through the cleaned input, one character at a time
+  // Check for matches with Arabic-script letters
+  // Add relevant abjad values to the total
   for (i = 0; i < inputForCalc.length; i += 1) {
     if (
       inputForCalc.charAt(i) === '\u0627' ||
@@ -164,11 +166,6 @@ function getAbjad (): void {
   // Add the final total to the text of the result pane
   result.innerHTML += ' ' + total.toString() + '.'
 
-  // Remove focus from the text entry field upon form submission
-  document.getElementById('abjad-text').blur()
+  // Remove focus from input field
+  getInput.blur()
 }
-
-// When the reset button is clicked, restore the text of the result pane to its default
-document.getElementById('reset-button').addEventListener('click', function () {
-  result.innerHTML = 'The total <em>abjad</em> value of \u2026 is \u2026'
-})
