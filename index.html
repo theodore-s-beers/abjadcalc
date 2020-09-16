@@ -81,20 +81,18 @@
           <label id="top-label" for="abjad-text"
             >In the box below, enter a word or phrase, or really anything you
             like, <em>in Arabic or Persian script</em>. (If this poses a
-            problem, see the first point under “Usage Notes.”) Then hit “Enter”
-            or click the “Go!” button, and the total
+            problem, see the “Usage Notes.”) Then hit “Enter” or click the “Go!”
+            button, and the total
             <a
               href="https://en.wikipedia.org/wiki/Abjad_numerals"
               rel="noopener"
               target="_blank"
               >numerical <em>abjad</em> value</a
             >
-            of your input will be returned. The “Reset” button will clear the
-            form&#x200A;—&#x200A;though it isn’t necessary between operations.
-            Use the checkboxes if you’re working with the Maghribi system, or if
-            you prefer <em>not</em> to assign value to the pseudo-letter
-            <em>hamzah</em> in its isolated state (ء). Further details are
-            provided beneath the results pane.</label
+            of your input will be returned. Use the optional checkboxes if
+            you’re working with the Maghribi system, or if you prefer
+            <em>not</em> to assign value to the pseudo-letter <em>hamzah</em> in
+            its isolated state (ء).</label
           ><textarea
             autocapitalize="none"
             autocomplete="off"
@@ -106,7 +104,7 @@
             spellcheck="false"
           ></textarea
           ><small class="form-text text-muted"
-            >Text submitted here will not be tracked or saved.</small
+            >Text submitted here is not logged in any way.</small
           >
         </div>
         <div class="form-check form-check-inline" style="margin-bottom: 0.8em">
@@ -179,7 +177,7 @@
                   >Persian</a
                 >
                 that allow you to enter a phonetic approximation of your
-                intended words in Roman script, and then transliterate them with
+                intended words in Latin script, and then transliterate them with
                 little fuss. You could use one of these tools and copy-paste the
                 result into the box above. The second fallback option is
                 actually a <a href="ime/">separate version</a> of this page, in
@@ -201,7 +199,7 @@
                 Maghribi order using a checkbox, for those who need it. Please
                 refer to <a href="table/">this table</a> for a reminder of the
                 differences between the two systems. (Only you can determine
-                which of them is required by your sources.)
+                which of them is applicable to your sources.)
               </li>
               <li>
                 Feel free to include spaces between words, or even
@@ -215,14 +213,14 @@
               <li>
                 More broadly, the program is designed to ignore any character
                 that it doesn’t recognize. If you enter a string of text
-                containing one or more unrecognized characters, you’ll see a
-                brief error message, followed by the total <em>abjad</em> value
-                of the parts that
-                <em>were</em> counted&#x200A;—&#x200A;<em>i.e.</em>, our best
-                guess. It may be correct nonetheless…
+                containing one or more extraneous characters, you’ll see a brief
+                error message, followed by the total <em>abjad</em> value of the
+                parts that <em>were</em> counted&#x200A;—&#x200A;<em>i.e.</em>,
+                our best guess. It may still be correct…
               </li>
               <li>
-                I recommend that you not include punctuation, or diacritics, or
+                I recommend that you not include punctuation, or diacritical
+                marks, or
                 <a
                   href="https://en.wikipedia.org/wiki/Dagger_alif"
                   rel="noopener"
@@ -234,9 +232,9 @@
               </li>
               <li>
                 If you’re confident that you entered valid text in Arabic or
-                Persian script, but you still received an error message, please
-                let me know <a href="mailto:tbeers@uchicago.edu">by email</a>.
-                It might be a bug! (There are likely to be a few at this stage.)
+                Persian script, but you received an error message, please let me
+                know <a href="mailto:tbeers@uchicago.edu">by email</a>. It might
+                be a bug!
               </li>
             </ul>
           </div>
@@ -256,38 +254,40 @@
           <div class="collapse" id="notes-rules" role="tabpanel">
             <ul>
               <li>
-                The fundamentals of <em>abjad</em> numerals are covered in
+                The fundamentals of <em>abjad</em> numerals are covered in the
+                relevant
                 <a
                   href="https://en.wikipedia.org/wiki/Abjad_numerals"
                   rel="noopener"
                   target="_blank"
-                  >this Wikipedia entry</a
+                  >Wikipedia entry</a
                 >, and they are observed here faithfully. (I’ve also posted a
-                <a href="table/">table of letter values</a>.) If one digs a bit
-                deeper, however, questions and ambiguities may arise…
+                <a href="table/">table of letter values</a> for good measure.)
+                If one digs a bit deeper, however, questions and ambiguities
+                begin to arise…
               </li>
               <li>
                 The treatment of the four “Persian
                 letters”&#x200A;—&#x200A;<em>pe</em>, <em>che</em>,
-                <em>zhe</em>, and <em>gāf</em>&#x200A;—&#x200A;is, in fact, well
-                established. Please refer to the same Wikipedia entry. In
-                general, there should be no problem using Persian text. (Urdu?
-                Pashto? You’re on your own for the time being.)
+                <em>zhe</em>, and <em>gāf</em>&#x200A;—&#x200A;is in fact
+                relatively straightforward. Please refer to the same Wikipedia
+                entry. In general, there should be no problem using Persian
+                text. (Urdu? Pashto? I’m afraid those alphabets are not yet
+                fully integrated.)
               </li>
               <li>
-                Actually, there is one potentially confusing point in Persian:
+                There is, however, one potentially confusing point in Persian:
                 the
                 <a
                   href="https://sites.la.utexas.edu/persian_online_resources/phonology/silent-letters-silent-and-consonantal/"
                   rel="noopener"
                   target="_blank"
                   >silent <em>hā’</em></a
-                >. But the answer is to treat this letter as we would any other
-                <em>hā’</em>. (See the following note for the reasoning behind
-                this.) Also, if you are among the stubborn few who use the
-                Unicode character <code>06C0</code> (ۀ) to represent
-                <em>iżāfah</em> on a silent <em>hā’</em>, that will be
-                recognized just the same.
+                >. The answer is to treat this letter as we would any other
+                <em>hā’</em>. (See the following note for the reasoning here.)
+                Also, if you are among the stubborn few who use the Unicode
+                character <code>06C0</code> (ۀ) to represent <em>iżāfah</em> on
+                a silent <em>hā’</em>, that will be recognized just the same.
               </li>
               <li>
                 This program treats the Arabic letter
@@ -311,7 +311,7 @@
                   ><em>alif maqṣūrah</em></a
                 >
                 is considered equivalent to <em>yā’</em> and assigned a value of
-                10. (Deal with it!)
+                10.
               </li>
               <li>
                 The treatment of
@@ -327,22 +327,22 @@
                 the value of <em>wāw</em> (6). <em>Hamzah</em> on
                 <em>yā’</em> (ئ) is given the value of <em>yā’</em> (10). Any
                 variant of <em>hamzah</em> on <em>alif</em>, unsurprisingly,
-                receives a value of 1. Finally, as was explained in the prior
-                section, this program <em>does</em> assign a value of 1 to the
-                isolated form of <em>hamzah</em> (ء), which is most often found
-                at the end of certain Arabic words. This is a debated point; a
-                few of the guides that I consulted are adamant that
+                receives a value of 1. Finally, as has been explained above,
+                this program <em>does</em> assign a value of 1 to the isolated
+                form of <em>hamzah</em> (ء), which is most often found at the
+                end of certain Arabic words. This is a contested point; a few of
+                the guides that I consulted state explicitly that
                 <em>hamzah</em> by itself should not be counted, since the
-                appropriate value comes from the letter on which it is seated.
-                In the end, I took the position of the Baha’i community. It has
-                long been symbolically important in their faith that the name
-                Bahā’ (بهاء) has an <em>abjad</em> value of 9, which requires
-                that the final <em>hamzah</em> be counted. Users who don’t want
-                this feature may disable it with the relevant checkbox.
+                appropriate value would come from the letter on which it is
+                seated. In the end, I followed position of the Baha’i community.
+                It has long been symbolically important in their faith that the
+                name Bahā’ (بهاء) has an <em>abjad</em> value of 9, which
+                requires that the final <em>hamzah</em> be counted. Users who
+                don’t want this feature can disable it.
               </li>
               <li>
-                I should emphasize that any form of <em>alif</em> will be given
-                a value of 1. This includes
+                It bears emphasis that any form of <em>alif</em> will be given a
+                value of 1. This includes
                 <a
                   href="https://en.wiktionary.org/wiki/maddah"
                   rel="noopener"
@@ -351,15 +351,15 @@
                 >, which some have treated as a “double
                 <em>hamzah alif</em>&#x200A;” with a value of 2. Here we may
                 invoke another general principle of <em>abjad</em> numerals:
-                each letter is counted exactly once. Just as
+                each letter is counted once. Just as
                 <a
                   href="https://en.wikipedia.org/wiki/Shadda"
                   rel="noopener"
                   target="_blank"
                   ><em>shaddah</em></a
                 >
-                is not taken into consideration, nor should
-                <em>alif maddah</em> be granted double value.
+                is (typically) not taken into consideration, nor should
+                <em>alif maddah</em> receive double value.
               </li>
             </ul>
           </div>
@@ -370,7 +370,7 @@
         &copy; 2017–20
         <a href="https://www.theobeers.com/" rel="noopener" target="_blank"
           >T. S. Beers</a
-        ><br />The files relating to this page are available
+        ><br />The source files for this page are available
         <a
           href="https://github.com/theodore-s-beers/abjadcalc/"
           rel="noopener"
