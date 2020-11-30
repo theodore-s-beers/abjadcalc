@@ -5,7 +5,7 @@
   "display": "standalone",
   "background_color": "#9933cc",
   "theme_color": "#0066ff",
-  "description": "Calculate the numerical abjad value of Arabic or Persian text.",
+  "description": "Calculate the numerical abjad value of Arabic or Persian text",
   "icons": [
     {
       "src": "img/app-icon-48.png",

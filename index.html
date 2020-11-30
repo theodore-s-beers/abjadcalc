@@ -8,7 +8,7 @@
     />
     <meta content="Theo Beers" name="author" />
     <meta
-      content="Calculate the numerical abjad value of Arabic or Persian text."
+      content="Calculate the numerical abjad value of Arabic or Persian text"
       name="description"
     />
     <meta content="Abjad Calculator" property="og:title" />
@@ -20,7 +20,7 @@
     />
     <meta content="en_US" property="og:locale" />
     <meta
-      content="Calculate the numerical abjad value of Arabic or Persian text."
+      content="Calculate the numerical abjad value of Arabic or Persian text"
       property="og:description"
     />
     <meta content="summary_large_image" name="twitter:card" />
@@ -50,9 +50,6 @@
       #result {
         font-size: large;
         word-wrap: break-word;
-      }
-      #submit-button {
-        margin-right: 1em;
       }
       #top-label {
         margin-bottom: 0.8em;
@@ -127,7 +124,11 @@
             >Ignore lone <em>hamzah</em></label
           >
         </div>
-        <br /><button class="btn btn-primary" id="submit-button" type="submit">
+        <br /><button
+          class="btn btn-primary mr-3"
+          id="submit-button"
+          type="submit"
+        >
           Go!</button
         ><button class="btn btn-secondary" id="reset-button" type="reset">
           Reset
@@ -152,8 +153,8 @@
             ><h2>Usage Notes</h2></a
           >
           <div class="collapse" id="notes-usage" role="tabpanel">
-            <ul>
-              <li>
+            <ul class="list-group">
+              <li class="list-group-item">
                 I would strongly encourage anyone who knows an Arabic-script
                 language to learn how to type in it. This isn’t as difficult as
                 one might imagine&#x200A;—&#x200A;especially on mobile devices,
@@ -184,7 +185,7 @@
                 which buttons may be used to enter Arabic or Persian words one
                 letter at a time.
               </li>
-              <li>
+              <li class="list-group-item">
                 By default, this program will assign an <em>abjad</em> value of
                 1 to the isolated form of <em>hamzah</em> (ء), treating it the
                 same as if it were placed on an <em>alif</em>. Since this is not
@@ -193,7 +194,7 @@
                 (Please refer to the following section for more information on
                 this dilemma and others like it.)
               </li>
-              <li>
+              <li class="list-group-item">
                 I’ve set the default letter values according to the more common
                 “Eastern” convention. There is now an option to switch to the
                 Maghribi order using a checkbox, for those who need it. Please
@@ -201,7 +202,7 @@
                 differences between the two systems. (Only you can determine
                 which of them is applicable to your sources.)
               </li>
-              <li>
+              <li class="list-group-item">
                 Feel free to include spaces between words, or even
                 <a
                   href="https://en.wikipedia.org/wiki/Zero-width_non-joiner"
@@ -210,7 +211,7 @@
                   >zero-width non-joiners</a
                 >; they won’t affect the calculation.
               </li>
-              <li>
+              <li class="list-group-item">
                 More broadly, the program is designed to ignore any character
                 that it doesn’t recognize. If you enter a string of text
                 containing one or more extraneous characters, you’ll see a brief
@@ -218,7 +219,7 @@
                 parts that <em>were</em> counted&#x200A;—&#x200A;<em>i.e.</em>,
                 our best guess. It may still be correct…
               </li>
-              <li>
+              <li class="list-group-item">
                 I recommend that you not include punctuation, or diacritical
                 marks, or
                 <a
@@ -230,7 +231,7 @@
                 category is counted in the <em>abjad</em> system, anyway, so why
                 add complication?
               </li>
-              <li>
+              <li class="list-group-item">
                 If you’re confident that you entered valid text in Arabic or
                 Persian script, but you received an error message, please let me
                 know <a href="mailto:tbeers@uchicago.edu">by email</a>. It might
@@ -252,8 +253,8 @@
             ><h2>Specific Rules Followed</h2></a
           >
           <div class="collapse" id="notes-rules" role="tabpanel">
-            <ul>
-              <li>
+            <ul class="list-group">
+              <li class="list-group-item">
                 The fundamentals of <em>abjad</em> numerals are covered in the
                 relevant
                 <a
@@ -266,7 +267,7 @@
                 If one digs a bit deeper, however, questions and ambiguities
                 begin to arise…
               </li>
-              <li>
+              <li class="list-group-item">
                 The treatment of the four “Persian
                 letters”&#x200A;—&#x200A;<em>pe</em>, <em>che</em>,
                 <em>zhe</em>, and <em>gāf</em>&#x200A;—&#x200A;is in fact
@@ -275,7 +276,7 @@
                 text. (Urdu? Pashto? I’m afraid those alphabets are not yet
                 fully integrated.)
               </li>
-              <li>
+              <li class="list-group-item">
                 There is, however, one potentially confusing point in Persian:
                 the
                 <a
@@ -289,7 +290,7 @@
                 character <code>06C0</code> (ۀ) to represent <em>iżāfah</em> on
                 a silent <em>hā’</em>, that will be recognized just the same.
               </li>
-              <li>
+              <li class="list-group-item">
                 This program treats the Arabic letter
                 <a
                   href="https://en.wiktionary.org/wiki/%D8%A9"
@@ -302,7 +303,7 @@
                 we judge letters by their <em>form</em> (<em>rasm</em>), rather
                 than by their pronunciation or other factors.
               </li>
-              <li>
+              <li class="list-group-item">
                 Similarly,
                 <a
                   href="https://en.wikibooks.org/wiki/Arabic/LearnRW/alif_Maksoorah"
@@ -313,7 +314,7 @@
                 is considered equivalent to <em>yā’</em> and assigned a value of
                 10.
               </li>
-              <li>
+              <li class="list-group-item">
                 The treatment of
                 <a
                   href="https://en.wikipedia.org/wiki/Hamza"
@@ -340,7 +341,7 @@
                 requires that the final <em>hamzah</em> be counted. Users who
                 don’t want this feature can disable it.
               </li>
-              <li>
+              <li class="list-group-item">
                 It bears emphasis that any form of <em>alif</em> will be given a
                 value of 1. This includes
                 <a

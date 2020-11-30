@@ -8,7 +8,7 @@
     />
     <meta content="Theo Beers" name="author" />
     <meta
-      content="An alternate tool to calculate the numerical abjad value of Arabic or Persian text, using a virtual keyboard for input."
+      content="An alternate tool to calculate the numerical abjad value of Arabic or Persian text, using a virtual keyboard for input"
       name="description"
     />
     <meta content="Abjad Calculator (Manual Input)" property="og:title" />
@@ -20,7 +20,7 @@
     />
     <meta content="en_US" property="og:locale" />
     <meta
-      content="An alternate tool to calculate the numerical abjad value of Arabic or Persian text, using a virtual keyboard for input."
+      content="An alternate tool to calculate the numerical abjad value of Arabic or Persian text, using a virtual keyboard for input"
       property="og:description"
     />
     <meta content="summary_large_image" name="twitter:card" />
@@ -52,29 +52,14 @@
       .table.ab-jad tr th {
         border-width: 0;
       }
-      #back-btn {
-        margin-bottom: 1em;
-      }
-      #go-btn {
-        margin-right: 1em;
-        margin-bottom: 1em;
-      }
       #hand-input {
         font-family: Scheherazade, serif;
         font-size: xx-large;
         text-align: center;
       }
-      #reset-btn {
-        margin-right: 1em;
-        margin-bottom: 1em;
-      }
       #result {
         font-size: large;
         word-wrap: break-word;
-      }
-      #space-btn {
-        margin-right: 1em;
-        margin-bottom: 1em;
       }
       #top-label {
         margin-bottom: 0.8em;
@@ -146,13 +131,23 @@
             >Ignore lone <em>hamzah</em></label
           >
         </div>
-        <br /><button class="btn btn-primary" id="go-btn" type="submit">
+        <br /><button
+          class="btn btn-primary mr-3 mb-3"
+          id="go-btn"
+          type="submit"
+        >
           Go!</button
-        ><button class="btn btn-secondary" id="reset-btn" type="reset">
+        ><button
+          class="btn btn-secondary mr-3 mb-3"
+          id="reset-btn"
+          type="reset"
+        >
           Reset</button
-        ><button class="btn btn-info" id="space-btn" type="button">
+        ><button class="btn btn-info mr-3 mb-3" id="space-btn" type="button">
           Add space</button
-        ><button class="btn btn-dark" id="back-btn" type="button">⌫</button>
+        ><button class="btn btn-dark mb-3" id="back-btn" type="button">
+          ⌫
+        </button>
       </form>
       <div class="card border-success mb-3">
         <div class="card-body text-success">
@@ -454,17 +449,17 @@
             ><h2>Usage Notes</h2></a
           >
           <div class="collapse" id="notes" role="tabpanel">
-            <ul>
-              <li>
+            <ul class="list-group">
+              <li class="list-group-item">
                 If you’re viewing this on a mobile device, you may find that the
                 text entry buttons are easier to work with in landscape
                 orientation.
               </li>
-              <li>
+              <li class="list-group-item">
                 The <a href="../">main page</a> contains much more information
                 about the ruleset that the program follows.
               </li>
-              <li>
+              <li class="list-group-item">
                 Generally speaking, use of the “secondary” and Persian-specific
                 letters is optional. They are provided for convenience, but
                 Persian <em>pe</em> (پ), for example, will be treated the same
@@ -482,7 +477,7 @@
                 <a href="../table/">table</a> highlighting the differences
                 between the Mashriqi and Maghribi systems.
               </li>
-              <li>
+              <li class="list-group-item">
                 You may notice that two of the buttons above are practically
                 indistinguishable. One of them is for Arabic
                 <a
