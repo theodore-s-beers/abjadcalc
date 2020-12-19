@@ -33,6 +33,12 @@
     />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <style>
+      :root {
+        --fixed-blue: #0071eb;
+      }
+      a {
+        color: var(--fixed-blue);
+      }
       h1 {
         font-size: 210%;
       }
@@ -43,6 +49,14 @@
       p {
         hyphens: auto;
       }
+      .btn-info {
+        background-color: #24828f;
+        border-color: #24828f;
+      }
+      .btn-primary {
+        background-color: var(--fixed-blue);
+        border-color: var(--fixed-blue);
+      }
       .btn.scheh {
         font-family: Scheherazade, serif;
         font-size: x-large;
@@ -52,6 +66,9 @@
       .table.ab-jad tr td,
       .table.ab-jad tr th {
         border-width: 0;
+      }
+      .text-success {
+        color: #278637 !important;
       }
       #hand-input {
         font-family: Scheherazade, serif;
