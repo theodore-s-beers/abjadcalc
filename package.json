@@ -1,0 +1,31 @@
+{
+  "name": "abjadcalc",
+  "version": "0.1.0",
+  "description": "Calculate the numerical abjad value of Arabic or Persian text",
+  "homepage": "https://github.com/theodore-s-beers/abjadcalc#readme",
+  "bugs": {
+    "url": "https://github.com/theodore-s-beers/abjadcalc/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theodore-s-beers/abjadcalc.git"
+  },
+  "license": "MIT",
+  "author": "Theo Beers",
+  "main": "index.html",
+  "scripts": {
+    "compile-ime": "tsc -t 'ESNext' ./typescript/index-ime.ts",
+    "compile-main": "tsc -t 'ESNext' ./typescript/index-main.ts",
+    "prettify-js": "find . -name 'index*.js' ! -path './node_modules/*' -exec prettier --write {} ';'",
+    "prettify-ts": "find . -name '*.ts' ! -path './node_modules/*' -exec prettier --write {} ';'",
+    "standardize-js": "find . -name 'index*.js' ! -path './node_modules/*' -exec standard --fix {} ';'",
+    "standardize-ts": "find . -name '*.ts' ! -path './node_modules/*' -exec ts-standard --fix {} ';'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "standard": "^16.0.3",
+    "ts-standard": "^10.0.0",
+    "typescript": "^4.1.3"
+  }
+}
