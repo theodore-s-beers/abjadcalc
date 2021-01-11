@@ -32,14 +32,11 @@
       rel="stylesheet"
     />
     <style>
-      :root {
-        --fixed-blue: #0071eb;
-      }
       a {
-        color: var(--fixed-blue);
+        text-decoration: none;
       }
-      code {
-        color: #da2f76;
+      a:hover {
+        text-decoration: underline;
       }
       h1 {
         font-size: 210%;
@@ -51,12 +48,8 @@
       p {
         hyphens: auto;
       }
-      .btn-primary {
-        background-color: var(--fixed-blue);
-        border-color: var(--fixed-blue);
-      }
-      .text-success {
-        color: #278637 !important;
+      .container {
+        max-width: 1100px;
       }
       #abjad-text {
         font-family: Scheherazade, serif;
@@ -68,7 +61,6 @@
         word-wrap: break-word;
       }
       #top-label {
-        margin-bottom: 0.8em;
         hyphens: auto;
       }
     </style>
@@ -90,8 +82,8 @@
         }
       </script>
       <form action="JavaScript:getAbjad();">
-        <div class="form-group" style="margin-bottom: 0.8em">
-          <label id="top-label" for="abjad-text"
+        <div class="form-group mb-2">
+          <label class="form-label mb-3" id="top-label" for="abjad-text"
             >In the box below, enter a word or phrase, or really anything you
             like, <em>in Arabic or Persian script</em>. (If this poses a
             problem, see the “Usage Notes.”) Then hit “Enter” or click the “Go!”
@@ -120,7 +112,7 @@
             >Text submitted here is not logged in any way.</small
           >
         </div>
-        <div class="form-check form-check-inline" style="margin-bottom: 0.8em">
+        <div class="form-check form-check-inline mb-3">
           <input
             aria-labelledby="maghribi-label"
             class="form-check-input"
@@ -130,7 +122,7 @@
             >Maghribi order</label
           >
         </div>
-        <div class="form-check form-check-inline" style="margin-bottom: 0.8em">
+        <div class="form-check form-check-inline mb-3">
           <input
             aria-labelledby="hamzah-label"
             class="form-check-input"
@@ -141,16 +133,17 @@
           >
         </div>
         <br /><button
-          class="btn btn-primary mr-3"
+          class="btn btn-primary"
           id="submit-button"
           type="submit"
+          style="margin-right: 1em"
         >
           Go!</button
         ><button class="btn btn-secondary" id="reset-button" type="reset">
           Reset
         </button>
       </form>
-      <div class="card border-success mb-3" style="margin-top: 1em">
+      <div class="card border-success mt-3 mb-3">
         <div class="card-body text-success">
           <p class="card-text" id="result">
             The total <em>abjad</em> value of … is …
@@ -158,17 +151,19 @@
         </div>
       </div>
       <hr />
-      <div data-children=".item" id="usage-accordion">
-        <div class="item">
-          <a
-            aria-controls="notes-usage"
-            aria-expanded="false"
-            data-parent="#usage-accordion"
-            data-toggle="collapse"
-            href="#notes-usage"
-            ><h2>Usage Notes</h2></a
-          >
-          <div class="collapse" id="notes-usage" role="tabpanel">
+      <div class="accordion" id="usage-accordion">
+        <div class="accordion-item">
+          <h2>
+            <a
+              aria-controls="notes-usage"
+              aria-expanded="false"
+              data-bs-parent="#usage-accordion"
+              data-bs-toggle="collapse"
+              href="#notes-usage"
+              >Usage Notes</a
+            >
+          </h2>
+          <div class="collapse" id="notes-usage">
             <ul class="list-group">
               <li class="list-group-item">
                 I would strongly encourage anyone who knows an Arabic-script
@@ -258,17 +253,19 @@
         </div>
       </div>
       <hr />
-      <div data-children=".item" id="rules-accordion">
-        <div class="item">
-          <a
-            aria-controls="notes-rules"
-            aria-expanded="false"
-            data-parent="#rules-accordion"
-            data-toggle="collapse"
-            href="#notes-rules"
-            ><h2>Specific Rules Followed</h2></a
-          >
-          <div class="collapse" id="notes-rules" role="tabpanel">
+      <div class="accordion" id="rules-accordion">
+        <div class="accordion-item">
+          <h2>
+            <a
+              aria-controls="notes-rules"
+              aria-expanded="false"
+              data-bs-parent="#rules-accordion"
+              data-bs-toggle="collapse"
+              href="#notes-rules"
+              >Specific Rules Followed</a
+            >
+          </h2>
+          <div class="collapse" id="notes-rules">
             <ul class="list-group">
               <li class="list-group-item">
                 The fundamentals of <em>abjad</em> numerals are covered in the
@@ -384,7 +381,7 @@
       </div>
       <hr />
       <p>
-        &copy; 2017–20
+        &copy; 2017–21
         <a href="https://www.theobeers.com/" rel="noopener" target="_blank"
           >T. S. Beers</a
         ><br />The source files for this page are available
@@ -404,9 +401,7 @@
         let me know <a href="mailto:tbeers@uchicago.edu">by email</a>!
       </p>
     </div>
-    <script src="js/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
     <script>
       function submitOnEnter(event) {
