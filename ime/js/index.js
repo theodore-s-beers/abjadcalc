@@ -149,8 +149,7 @@ document.getElementById('back-btn').addEventListener('click', function () {
   handInput.value = handInput.value.slice(0, -1)
 })
 // Function to get abjad value
-// eslint-disable-next-line
-function getAbjadIME() {
+function getAbjadIME () {
   // Take input and set two new versions of it
   // One has all whitespace stripped for calculating abjad value
   // The other is cleaned up for re-display
@@ -306,3 +305,15 @@ function getAbjadIME() {
   // Remove focus from input field
   handInput.blur()
 }
+//
+// NEW MISCELLANY
+//
+function submitOnEnterIME (event) {
+  if (event.key === 'Enter' && !event.shiftKey) {
+    getAbjadIME()
+    event.preventDefault()
+  }
+}
+handInput.addEventListener('keydown', submitOnEnterIME)
+const goButton = document.getElementById('go-btn')
+goButton.addEventListener('click', getAbjadIME)

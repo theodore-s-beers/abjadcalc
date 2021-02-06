@@ -31,39 +31,7 @@
       href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap"
       rel="stylesheet"
     />
-    <style>
-      a {
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      h1 {
-        font-size: 210%;
-      }
-      h2 {
-        font-size: 160%;
-      }
-      li,
-      p {
-        hyphens: auto;
-      }
-      .container {
-        max-width: 1100px;
-      }
-      #abjad-text {
-        font-family: Scheherazade, serif;
-        font-size: xx-large;
-        text-align: center;
-      }
-      #result {
-        font-size: large;
-        word-wrap: break-word;
-      }
-      #top-label {
-        hyphens: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="css/styles-main.css" />
     <link href="https://www.abjadcalc.com/" rel="canonical" />
     <link href="manifest.json" rel="manifest" />
     <link href="img/icon.png" rel="icon" type="image/png" />
@@ -71,17 +39,10 @@
     <title>Abjad Calculator</title>
   </head>
   <body>
-    <div class="container" style="margin-top: 0.6rem">
+    <div class="container">
       <h1>Abjad Calculator</h1>
-      <script>
-        // Register service worker
-        if ("serviceWorker" in navigator) {
-          window.addEventListener("load", () => {
-            navigator.serviceWorker.register("sw.js");
-          });
-        }
-      </script>
-      <form action="JavaScript:getAbjad();">
+      <script src="js/registerSW.js"></script>
+      <form>
         <div class="form-group mb-2">
           <label class="form-label mb-3" id="top-label" for="abjad-text"
             >In the box below, enter a word or phrase, or anything you like,
@@ -132,12 +93,7 @@
             >Ignore lone <em>hamzah</em></label
           >
         </div>
-        <br /><button
-          class="btn btn-primary"
-          id="submit-button"
-          type="submit"
-          style="margin-right: 1em"
-        >
+        <br /><button class="btn btn-primary" id="submit-button" type="button">
           Go!</button
         ><button class="btn btn-secondary" id="reset-button" type="reset">
           Reset
@@ -403,24 +359,5 @@
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
-    <script>
-      function submitOnEnter(event) {
-        if (event.key === "Enter" && !event.shiftKey) {
-          getAbjad();
-          event.preventDefault();
-        }
-      }
-
-      document
-        .getElementById("abjad-text")
-        .addEventListener("keydown", submitOnEnter);
-
-      document
-        .getElementById("reset-button")
-        .addEventListener("click", function () {
-          document.getElementById("result").innerHTML =
-            "The total <em>abjad</em> value of … is …";
-        });
-    </script>
   </body>
 </html>

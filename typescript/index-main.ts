@@ -1,13 +1,15 @@
-// eslint-disable-next-line
-function getAbjad(): void {
-  // Define variable for input field
-  const getInput = document.getElementById('abjad-text') as HTMLInputElement
+// Define variable for input field
+const getInput = document.getElementById('abjad-text') as HTMLInputElement
 
+// Define variable for result pane
+const result = document.getElementById('result') as HTMLElement
+
+function getAbjad (): void {
   // Set two new versions of input text
   // One has all whitespace stripped for calculating abjad value
   // The other is cleaned up for re-display
   const inputForCalc = getInput.value.replace(/\s+/g, '')
-  const inputForDisplay = getInput.value.replace(/\s+/g, ' ').trim()
+  const inputForDisplay: string = getInput.value.replace(/\s+/g, ' ').trim()
 
   // Define variables for option checkboxes
   const hamzahCheckbox = document.getElementById(
@@ -20,9 +22,6 @@ function getAbjad(): void {
   // Define a total to keep track of the abjad value, and an iterator
   let total = 0
   let i = 0
-
-  // Define variable for result pane
-  const result = document.getElementById('result') as HTMLElement
 
   // Prepare the text of the result pane
   result.innerHTML =
@@ -169,3 +168,26 @@ function getAbjad(): void {
   // Remove focus from input field
   getInput.blur()
 }
+
+//
+// NEW MISCELLANY
+//
+
+function submitOnEnter (event: KeyboardEvent): void {
+  if (event.key === 'Enter' && !event.shiftKey) {
+    getAbjad()
+    event.preventDefault()
+  }
+}
+
+getInput.addEventListener('keydown', submitOnEnter)
+
+const submitButton = document.getElementById(
+  'submit-button'
+) as HTMLInputElement
+submitButton.addEventListener('click', getAbjad)
+
+const resetButton = document.getElementById('reset-button') as HTMLInputElement
+resetButton.addEventListener('click', function () {
+  result.innerHTML = 'The total <em>abjad</em> value of … is …'
+})

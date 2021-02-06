@@ -32,29 +32,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <style>
-      a {
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      h1 {
-        font-size: 210%;
-      }
-      p {
-        hyphens: auto;
-      }
-      .container {
-        max-width: 1100px;
-      }
-      .hawwaz {
-        font-family: Scheherazade, serif;
-        font-size: 1.6em;
-        text-align: center;
-        line-height: 1em;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/styles-table.css" />
     <link href="https://www.abjadcalc.com/table/" rel="canonical" />
     <link href="../manifest.json" rel="manifest" />
     <link href="../img/icon.png" rel="icon" type="image/png" />
@@ -62,16 +40,9 @@
     <title>Table of Letter Values</title>
   </head>
   <body>
-    <div class="container" style="margin-top: 0.6rem">
+    <div class="container">
       <h1>Table of Letter Values</h1>
-      <script>
-        // Register service worker
-        if ("serviceWorker" in navigator) {
-          window.addEventListener("load", () => {
-            navigator.serviceWorker.register("../sw.js");
-          });
-        }
-      </script>
+      <script src="js/registerSW.js"></script>
       <p>
         There are many resources online that explain the concept of Arabic
         <em>abjad</em> numerals and list the 28 primary letters and their
@@ -83,7 +54,7 @@
         <a href="../">main page</a>.
       </p>
       <hr />
-      <table class="table table-bordered" style="max-width: 24rem">
+      <table class="table table-bordered">
         <thead>
           <tr class="table-primary">
             <th scope="col">Value</th>

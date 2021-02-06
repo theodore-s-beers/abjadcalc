@@ -1,0 +1,35 @@
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1 {
+  font-size: 210%;
+}
+h2 {
+  font-size: 160%;
+}
+li,
+p {
+  hyphens: auto;
+}
+.container {
+  margin-top: 0.6rem;
+  max-width: 1100px;
+}
+#abjad-text {
+  font-family: Scheherazade, serif;
+  font-size: xx-large;
+  text-align: center;
+}
+#result {
+  font-size: large;
+  word-wrap: break-word;
+}
+#submit-button {
+  margin-right: 1em;
+}
+#top-label {
+  hyphens: auto;
+}

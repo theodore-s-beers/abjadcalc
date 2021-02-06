@@ -1,7 +1,8 @@
-// eslint-disable-next-line
-function getAbjad() {
-  // Define variable for input field
-  const getInput = document.getElementById('abjad-text')
+// Define variable for input field
+const getInput = document.getElementById('abjad-text')
+// Define variable for result pane
+const result = document.getElementById('result')
+function getAbjad () {
   // Set two new versions of input text
   // One has all whitespace stripped for calculating abjad value
   // The other is cleaned up for re-display
@@ -13,8 +14,6 @@ function getAbjad() {
   // Define a total to keep track of the abjad value, and an iterator
   let total = 0
   let i = 0
-  // Define variable for result pane
-  const result = document.getElementById('result')
   // Prepare the text of the result pane
   result.innerHTML =
     "The total <em>abjad</em> value of <span class='replay-input' dir='rtl' lang='ar'>«" +
@@ -157,3 +156,19 @@ function getAbjad() {
   // Remove focus from input field
   getInput.blur()
 }
+//
+// NEW MISCELLANY
+//
+function submitOnEnter (event) {
+  if (event.key === 'Enter' && !event.shiftKey) {
+    getAbjad()
+    event.preventDefault()
+  }
+}
+getInput.addEventListener('keydown', submitOnEnter)
+const submitButton = document.getElementById('submit-button')
+submitButton.addEventListener('click', getAbjad)
+const resetButton = document.getElementById('reset-button')
+resetButton.addEventListener('click', function () {
+  result.innerHTML = 'The total <em>abjad</em> value of … is …'
+})

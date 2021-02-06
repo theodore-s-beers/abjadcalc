@@ -292,8 +292,7 @@ const handInput = document.getElementById('hand-input') as HTMLInputElement;
 )
 
 // Function to get abjad value
-// eslint-disable-next-line
-function getAbjadIME(): void {
+function getAbjadIME (): void {
   // Take input and set two new versions of it
   // One has all whitespace stripped for calculating abjad value
   // The other is cleaned up for re-display
@@ -460,3 +459,19 @@ function getAbjadIME(): void {
   // Remove focus from input field
   handInput.blur()
 }
+
+//
+// NEW MISCELLANY
+//
+
+function submitOnEnterIME (event: KeyboardEvent): void {
+  if (event.key === 'Enter' && !event.shiftKey) {
+    getAbjadIME()
+    event.preventDefault()
+  }
+}
+
+handInput.addEventListener('keydown', submitOnEnterIME)
+
+const goButton = document.getElementById('go-btn') as HTMLInputElement
+goButton.addEventListener('click', getAbjadIME)

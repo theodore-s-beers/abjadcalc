@@ -32,50 +32,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <style>
-      a {
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      h1 {
-        font-size: 210%;
-      }
-      h2 {
-        font-size: 160%;
-      }
-      li,
-      p {
-        hyphens: auto;
-      }
-      .btn-info {
-        background-color: #24828f;
-        border-color: #24828f;
-        color: #fff;
-      }
-      .btn.scheh {
-        font-family: Scheherazade, serif;
-        font-size: x-large;
-        width: 1.8em;
-        line-height: 1em;
-      }
-      .container {
-        max-width: 1100px;
-      }
-      #hand-input {
-        font-family: Scheherazade, serif;
-        font-size: xx-large;
-        text-align: center;
-      }
-      #result {
-        font-size: large;
-        word-wrap: break-word;
-      }
-      #top-label {
-        hyphens: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/styles-ime.css" />
     <link href="https://www.abjadcalc.com/ime/" rel="canonical" />
     <link href="../manifest.json" rel="manifest" />
     <link href="../img/icon.png" rel="icon" type="image/png" />
@@ -83,17 +40,10 @@
     <title>Abjad Calculator (Manual Input)</title>
   </head>
   <body>
-    <div class="container" style="margin-top: 0.6rem">
+    <div class="container">
       <h1>Abjad Calculator (Manual Input)</h1>
-      <script>
-        // Register service worker
-        if ("serviceWorker" in navigator) {
-          window.addEventListener("load", () => {
-            navigator.serviceWorker.register("../sw.js");
-          });
-        }
-      </script>
-      <form action="JavaScript:getAbjadIME();">
+      <script src="js/registerSW.js"></script>
+      <form>
         <div class="form-group mb-2">
           <label class="form-label mb-3" id="top-label" for="hand-input"
             >This is intended as a fallback option to the
@@ -141,26 +91,11 @@
             >Ignore lone <em>hamzah</em></label
           >
         </div>
-        <br /><button
-          class="btn btn-primary mb-3"
-          id="go-btn"
-          type="submit"
-          style="margin-right: 1em"
-        >
+        <br /><button class="btn btn-primary mb-3" id="go-btn" type="button">
           Go!</button
-        ><button
-          class="btn btn-secondary mb-3"
-          id="reset-btn"
-          type="reset"
-          style="margin-right: 1em"
-        >
+        ><button class="btn btn-secondary mb-3" id="reset-btn" type="reset">
           Reset</button
-        ><button
-          class="btn btn-info mb-3"
-          id="space-btn"
-          type="button"
-          style="margin-right: 1em"
-        >
+        ><button class="btn btn-info mb-3" id="space-btn" type="button">
           Add space</button
         ><button class="btn btn-dark mb-3" id="back-btn" type="button">
           ⌫
@@ -178,7 +113,7 @@
         The 28 primary letters, in “Eastern” <em>abjad</em> order (right to
         left, row by row):
       </p>
-      <div class="table-responsive" style="max-width: 28rem">
+      <div class="table-responsive">
         <table class="table table-sm table-borderless">
           <tr>
             <td></td>
@@ -339,7 +274,7 @@
         </table>
       </div>
       <p>Arabic secondary letters:</p>
-      <div class="table-responsive" style="max-width: 28rem">
+      <div class="table-responsive">
         <table class="table table-sm table-borderless">
           <tr>
             <td>
@@ -418,7 +353,7 @@
         </table>
       </div>
       <p>Persian-specific letters:</p>
-      <div class="table-responsive" style="max-width: 28rem">
+      <div class="table-responsive">
         <table class="table table-sm table-borderless">
           <tr>
             <td>
@@ -559,17 +494,5 @@
     </div>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
-    <script>
-      function submitOnEnter(event) {
-        if (event.key === "Enter" && !event.shiftKey) {
-          getAbjadIME();
-          event.preventDefault();
-        }
-      }
-
-      document
-        .getElementById("hand-input")
-        .addEventListener("keydown", submitOnEnter);
-    </script>
   </body>
 </html>
