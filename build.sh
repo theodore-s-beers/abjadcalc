@@ -13,4 +13,9 @@ npm run compile-ime &&
 mv ./typescript/index-ime.js ./ime/js/index.js &&
 
 npm run prettify-js &&
-npm run standardize-js
+npm run standardize-js &&
+
+npm run prettify-sw &&
+npm run standardize-sw &&
+
+npm run lint-css

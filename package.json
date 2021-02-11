@@ -16,15 +16,20 @@
   "scripts": {
     "compile-ime": "tsc -t 'ESNext' ./typescript/index-ime.ts",
     "compile-main": "tsc -t 'ESNext' ./typescript/index-main.ts",
+    "lint-css": "find . -name 'styles*.css' -exec stylelint --fix {} ';'",
     "prettify-js": "find . -name 'index*.js' ! -path './node_modules/*' -exec prettier --write {} ';'",
+    "prettify-sw": "find . -name 'registerSW.js' -exec prettier --write {} ';'",
     "prettify-ts": "find . -name '*.ts' ! -path './node_modules/*' -exec prettier --write {} ';'",
     "standardize-js": "find . -name 'index*.js' ! -path './node_modules/*' -exec standard --fix {} ';'",
+    "standardize-sw": "find . -name 'registerSW.js' -exec standard --fix {} ';'",
     "standardize-ts": "find . -name '*.ts' ! -path './node_modules/*' -exec ts-standard --fix {} ';'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "prettier": "^2.2.1",
     "standard": "^16.0.3",
+    "stylelint": "^13.10.0",
+    "stylelint-config-standard": "^20.0.0",
     "ts-standard": "^10.0.0",
     "typescript": "^4.1.3"
   }
