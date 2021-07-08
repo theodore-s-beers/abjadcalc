@@ -184,9 +184,9 @@ const handInput = document.getElementById('hand-input') as HTMLInputElement;
     handInput.value = handInput.value.concat('أ')
   }
 );
-(document.getElementById(
-  'bottom-ham-btn'
-) as HTMLInputElement).addEventListener('click', function () {
+(
+  document.getElementById('bottom-ham-btn') as HTMLInputElement
+).addEventListener('click', function () {
   handInput.value = handInput.value.concat('إ')
 });
 (document.getElementById('maddah-btn') as HTMLInputElement).addEventListener(
