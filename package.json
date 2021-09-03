@@ -17,6 +17,7 @@
     "compile-ime": "tsc -t 'ESNext' typescript/index-ime.ts",
     "compile-main": "tsc -t 'ESNext' typescript/index-main.ts",
     "lint-css": "fd -e css styles --exec stylelint --fix {}",
+    "prettify-html": "fd -e html --exec prettier --write {}",
     "prettify-js": "fd -e js index --exec prettier --write {}",
     "prettify-sw": "fd registerSW.js --exec prettier --write {}",
     "prettify-ts": "fd -e ts --exec prettier --write {}",

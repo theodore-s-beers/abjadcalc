@@ -10,13 +10,13 @@ h1 {
   font-size: 210%;
 }
 
-h2 {
-  font-size: 160%;
-}
-
 li,
 p {
   hyphens: auto;
+}
+
+.accordion-button {
+  font-size: 80%;
 }
 
 .container {
@@ -26,12 +26,12 @@ p {
 
 #abjad-text {
   font-family: Scheherazade, serif;
-  font-size: xx-large;
+  font-size: 200%;
   text-align: center;
 }
 
 #result {
-  font-size: large;
+  font-size: 110%;
   word-wrap: break-word;
 }
 

@@ -14,4 +14,5 @@ sort-package-json &&
 	npm run standardize-js &&
 	npm run prettify-sw &&
 	npm run standardize-sw &&
+	npm run prettify-html &&
 	npm run lint-css
