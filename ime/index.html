@@ -412,61 +412,70 @@
         </table>
       </div>
       <hr />
-      <div class="accordion" id="notes-accordion">
+      <div class="accordion" id="usage-accordion">
         <div class="accordion-item">
-          <h2>
-            <a
-              aria-controls="notes"
-              aria-expanded="false"
-              data-bs-parent="#notes-accordion"
+          <h2 class="accordion-header" id="usage-heading">
+            <button
+              class="accordion-button collapsed"
+              type="button"
               data-bs-toggle="collapse"
-              href="#notes"
-              >Usage Notes</a
+              data-bs-target="#usage-content"
+              aria-expanded="false"
+              aria-controls="usage-content"
             >
+              Usage Notes
+            </button>
           </h2>
-          <div class="collapse" id="notes">
-            <ul class="list-group">
-              <li class="list-group-item">
-                If you’re viewing this on a mobile device, you may find that the
-                text entry buttons are easier to work with in landscape
-                orientation.
-              </li>
-              <li class="list-group-item">
-                The <a href="../">main page</a> contains much more information
-                about the ruleset that the program follows.
-              </li>
-              <li class="list-group-item">
-                Generally speaking, use of the “secondary” and Persian-specific
-                letters is optional. They are provided for convenience, but
-                Persian <em>pe</em> (پ), for example, will be treated the same
-                as Arabic <em>bā’</em> (ب); <em>tā’ marbūṭah</em> (ة) is
-                considered equivalent to <em>hā’</em> (ه); and so forth. Please
-                refer to the
-                <a
-                  href="https://en.wikipedia.org/wiki/Abjad_numerals"
-                  rel="noopener"
-                  target="_blank"
-                  >Wikipedia entry</a
-                >
-                on <em>abjad</em> numerals, which lists (most of) the letter
-                values. I have also posted a
-                <a href="../table/">table</a> highlighting the differences
-                between the Mashriqi and Maghribi systems.
-              </li>
-              <li class="list-group-item">
-                You may notice that two of the buttons above are practically
-                indistinguishable. One of them is for Arabic
-                <a
-                  href="https://en.wikibooks.org/wiki/Arabic/LearnRW/alif_Maksoorah"
-                  rel="noopener"
-                  target="_blank"
-                  ><em>alif maqṣūrah</em></a
-                >
-                (ى), the other for Persian <em>ye</em> (ی). Trust me, they’re
-                different characters! Both will receive the same
-                <em>abjad</em> value as Arabic <em>yā’</em> (ي), in any case.
-              </li>
-            </ul>
+          <div
+            id="usage-content"
+            class="accordion-collapse collapse"
+            aria-labelledby="usage-heading"
+            data-bs-parent="#usage-accordion"
+          >
+            <div class="accordion-body">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  If you’re viewing this on a mobile device, you may find that
+                  the text entry buttons are easier to work with in landscape
+                  orientation.
+                </li>
+                <li class="list-group-item">
+                  The <a href="../">main page</a> contains much more information
+                  about the ruleset that the program follows.
+                </li>
+                <li class="list-group-item">
+                  Generally speaking, use of the “secondary” and
+                  Persian-specific letters is optional. They are provided for
+                  convenience, but Persian <em>pe</em> (پ), for example, will be
+                  treated the same as Arabic <em>bā’</em> (ب);
+                  <em>tā’ marbūṭah</em> (ة) is considered equivalent to
+                  <em>hā’</em> (ه); and so forth. Please refer to the
+                  <a
+                    href="https://en.wikipedia.org/wiki/Abjad_numerals"
+                    rel="noopener"
+                    target="_blank"
+                    >Wikipedia entry</a
+                  >
+                  on <em>abjad</em> numerals, which lists (most of) the letter
+                  values. I have also posted a
+                  <a href="../table/">table</a> highlighting the differences
+                  between the Mashriqi and Maghribi systems.
+                </li>
+                <li class="list-group-item">
+                  You may notice that two of the buttons above are practically
+                  indistinguishable. One of them is for Arabic
+                  <a
+                    href="https://en.wikibooks.org/wiki/Arabic/LearnRW/alif_Maksoorah"
+                    rel="noopener"
+                    target="_blank"
+                    ><em>alif maqṣūrah</em></a
+                  >
+                  (ى), the other for Persian <em>ye</em> (ی). Trust me, they’re
+                  different characters! Both will receive the same
+                  <em>abjad</em> value as Arabic <em>yā’</em> (ي), in any case.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
