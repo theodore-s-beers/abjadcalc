@@ -11,9 +11,9 @@ name: Lint Codebase
 # https://help.github.com/en/articles/workflow-syntax-for-github-actions
 #
 
-###########################################
-# Start the job on pull request to master #
-###########################################
+#######################################
+# Start job on pull request to master #
+#######################################
 on:
   pull_request:
     branches: [master]
