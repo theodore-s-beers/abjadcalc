@@ -17,23 +17,19 @@
     "check": "tsc --noEmit --skipLibCheck typescript/index-main.ts typescript/index-ime.ts",
     "compile-ime": "esbuild typescript/index-ime.ts --minify --sourcemap --outfile=ime/js/index.min.js",
     "compile-main": "esbuild typescript/index-main.ts --minify --sourcemap --outfile=js/index.min.js",
-    "lint-css": "fd -e css styles --exec stylelint --fix {}",
+    "lint-css": "stylelint --fix css/styles-ime.css css/styles-main.css css/styles-table.css",
     "prettify": "prettier --write --plugin-search-dir=. .",
-    "standardize": "ts-standard --fix",
+    "standardize": "eslint --fix --ignore-path .prettierignore .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
     "esbuild": "^0.12.29",
+    "eslint": "^7.32.0",
     "prettier": "^2.4.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
-    "ts-standard": "^10.0.0",
     "typescript": "^4.4.3"
-  },
-  "ts-standard": {
-    "ignore": [
-      "sw.js",
-      "workbox-*.js"
-    ]
   }
 }
