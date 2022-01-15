@@ -42,7 +42,7 @@ jobs:
       # Run linter against codebase #
       ###############################
       - name: Lint Codebase
-        uses: github/super-linter@v3
+        uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: true
           FILTER_REGEX_EXCLUDE: .*(\.min\.|sw\.js|workbox).*
