@@ -37,6 +37,9 @@ jobs:
       #########################
       - name: Checkout Code
         uses: actions/checkout@v2
+        with:
+          # Full history needed for list of changed files within `super-linter`
+          fetch-depth: 0
 
       ###############################
       # Run linter against codebase #
