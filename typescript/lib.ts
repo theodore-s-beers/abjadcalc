@@ -1,4 +1,4 @@
-export function getAbjad (
+function getAbjad (
   input: string,
   maghribiOrder: boolean,
   ignoreHamzah: boolean
@@ -143,4 +143,36 @@ export function getAbjad (
   }
 
   return [total, unrecognizedChars]
+}
+
+export function getResult (
+  inputField: HTMLInputElement,
+  resultField: HTMLElement,
+  maghribiCheckbox: HTMLInputElement,
+  hamzahCheckbox: HTMLInputElement
+) {
+  const input = inputField.value
+  const maghribiOrder = maghribiCheckbox.checked
+  const ignoreHamzah = hamzahCheckbox.checked
+
+  const [total, unrecognizedChars] = getAbjad(
+    input,
+    maghribiOrder,
+    ignoreHamzah
+  )
+
+  const inputForDisplay = input.replace(/\s+/g, ' ').trim()
+
+  let resultText = unrecognizedChars
+    ? "At least one of the characters entered was not recognized and has been ignored.<br>That said, the computed <em>abjad</em> value of <span class='replay-input' dir='rtl' lang='ar'>«" +
+      inputForDisplay +
+      '»</span> is'
+    : "The total <em>abjad</em> value of <span class='replay-input' dir='rtl' lang='ar'>«" +
+      inputForDisplay +
+      '»</span> is'
+
+  resultText += ' ' + total + '.'
+
+  resultField.innerHTML = resultText
+  inputField.blur()
 }
