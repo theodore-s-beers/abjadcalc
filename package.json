@@ -14,9 +14,9 @@
   "author": "Theo Beers",
   "main": "index.html",
   "scripts": {
-    "check": "tsc --noEmit --skipLibCheck typescript/index-main.ts typescript/index-ime.ts",
-    "compile-ime": "esbuild typescript/index-ime.ts --bundle --minify --sourcemap --outfile=ime/js/index.min.js",
-    "compile-main": "esbuild typescript/index-main.ts --bundle --minify --sourcemap --outfile=js/index.min.js",
+    "check": "tsc --noEmit --skipLibCheck ts/index-main.ts ts/index-ime.ts",
+    "compile-ime": "esbuild ts/index-ime.ts --bundle --minify --sourcemap --outfile=ime/index.min.js",
+    "compile-main": "esbuild ts/index-main.ts --bundle --minify --sourcemap --outfile=js/index.min.js",
     "lint-css": "stylelint --fix css/styles-ime.css css/styles-main.css css/styles-table.css",
     "prettify": "prettier --write --plugin-search-dir=. .",
     "standardize": "eslint --fix --ignore-path .prettierignore .",
