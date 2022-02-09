@@ -16,7 +16,7 @@
   "scripts": {
     "check": "tsc --noEmit --skipLibCheck typescript/index-main.ts typescript/index-ime.ts",
     "compile-ime": "esbuild typescript/index-ime.ts --minify --sourcemap --outfile=ime/js/index.min.js",
-    "compile-main": "esbuild typescript/index-main.ts --minify --sourcemap --outfile=js/index.min.js",
+    "compile-main": "esbuild typescript/index-main.ts --bundle --minify --sourcemap --outfile=js/index.min.js",
     "lint-css": "stylelint --fix css/styles-ime.css css/styles-main.css css/styles-table.css",
     "prettify": "prettier --write --plugin-search-dir=. .",
     "standardize": "eslint --fix --ignore-path .prettierignore .",
