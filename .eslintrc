@@ -7,8 +7,10 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended"
   ],
+  "env": {
+    "browser": true
+  },
   "rules": {
     "space-before-function-paren": ["error", "always"]
-  },
-  "globals": { "navigator": true, "window": true }
+  }
 }

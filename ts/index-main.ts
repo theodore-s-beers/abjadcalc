@@ -6,7 +6,7 @@ import { getResult } from './lib'
 
 // Input and result fields
 const inputField = document.getElementById('abjad-text') as HTMLInputElement
-const resultField = document.getElementById('result')
+const resultField = document.getElementById('result') as HTMLElement
 
 // Checkboxes
 const maghribiCheckbox = document.getElementById(
@@ -17,8 +17,10 @@ const hamzahCheckbox = document.getElementById(
 ) as HTMLInputElement
 
 // Buttons
-const submitButton = document.getElementById('submit-button')
-const resetButton = document.getElementById('reset-button')
+const submitButton = document.getElementById(
+  'submit-button'
+) as HTMLButtonElement
+const resetButton = document.getElementById('reset-button') as HTMLButtonElement
 
 //
 // EVENT HANDLING
