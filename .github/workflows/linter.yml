@@ -48,6 +48,7 @@ jobs:
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: true
+          VALIDATE_TYPESCRIPT_STANDARD: false
           FILTER_REGEX_EXCLUDE: .*(\.min\.|sw\.js|workbox).*
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
