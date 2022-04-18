@@ -1,4 +1,6 @@
 *.min.css
 *.min.js
+package-lock.json
+pnpm-lock.yaml
 sw.js
 workbox-*.js
