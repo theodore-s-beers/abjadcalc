@@ -1,36 +1,8 @@
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-h1 {
-  font-size: 210%;
-}
-
-h2 {
-  font-size: 160%;
-}
-
-li,
-p {
-  hyphens: auto;
-}
-
-.accordion-button {
-  font-size: 80%;
-}
-
-.container {
-  margin-top: 0.6rem;
-  max-width: 1100px;
-}
-
 #abjad-text {
-  font-family: Scheherazade, serif;
-  font-size: 200%;
+  font-family: "Scheherazade New", serif;
+  font-size: 145%;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
   text-align: center;
 }
 
