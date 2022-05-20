@@ -22,9 +22,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.22.0",
-    "@typescript-eslint/parser": "^5.22.0",
-    "esbuild": "^0.14.38",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "esbuild": "^0.14.39",
     "eslint": "^8.15.0",
     "prettier": "^2.6.2",
     "stylelint": "^14.8.2",
