@@ -22,13 +22,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.45.0",
-    "@typescript-eslint/parser": "^5.45.0",
-    "esbuild": "^0.15.16",
-    "eslint": "^8.29.0",
-    "prettier": "^2.8.0",
-    "stylelint": "^14.15.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "esbuild": "^0.16.16",
+    "eslint": "^8.31.0",
+    "prettier": "^2.8.2",
+    "stylelint": "^14.16.1",
     "stylelint-config-standard": "^29.0.0",
-    "typescript": "^4.9.3"
+    "typescript": "^4.9.4"
   }
 }
