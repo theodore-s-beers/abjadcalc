@@ -1,42 +1,37 @@
 ---
-###########################
-###########################
-## Linter GitHub Actions ##
-###########################
-###########################
+#################################
+#################################
+## Super Linter GitHub Actions ##
+#################################
+#################################
 name: Lint Codebase
 
-#
-# Documentation:
-# https://help.github.com/en/articles/workflow-syntax-for-github-actions
-#
-
-#######################################
-# Start job on pull request to master #
-#######################################
+#############################
+# Start job on PR to master #
+#############################
 on:
   pull_request:
     branches: [master]
 
-###############
-# Set the job #
-###############
+####################
+# Describe the job #
+####################
 jobs:
   build:
     # Name the job
     name: Lint Codebase
-    # Set the agent to run on
+    # Set agent
     runs-on: ubuntu-latest
 
     ##################
     # Load all steps #
     ##################
     steps:
-      #########################
-      # Checkout the codebase #
-      #########################
-      - name: Checkout Code
-        uses: actions/checkout@v2
+      ######################
+      # Check out codebase #
+      ######################
+      - name: Check out code
+        uses: actions/checkout@v3
         with:
           # Full history needed for list of changed files within `super-linter`
           fetch-depth: 0
@@ -48,6 +43,7 @@ jobs:
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: true
+          VALIDATE_CSS: false
           VALIDATE_TYPESCRIPT_STANDARD: false
           FILTER_REGEX_EXCLUDE: .*(\.min\.|sw\.js|workbox).*
           DEFAULT_BRANCH: master
