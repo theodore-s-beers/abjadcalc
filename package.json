@@ -27,7 +27,7 @@
     "esbuild": "^0.17.18",
     "eslint": "^8.39.0",
     "prettier": "^2.8.8",
-    "stylelint": "^15.6.1",
+    "stylelint": "^15.6.2",
     "stylelint-config-standard": "^33.0.0",
     "typescript": "^5.0.4"
   }
