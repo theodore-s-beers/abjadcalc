@@ -1,7 +1,7 @@
 function getAbjad (
   input: string,
   maghribiOrder: boolean,
-  ignoreHamzah: boolean
+  ignoreHamzah: boolean,
 ): [number, boolean] {
   // Strip whitespace from input
   const inputCleaned = input.replace(/\s+/g, '')
@@ -149,7 +149,7 @@ export function getResult (
   inputField: HTMLInputElement,
   resultField: HTMLElement,
   maghribiCheckbox: HTMLInputElement,
-  hamzahCheckbox: HTMLInputElement
+  hamzahCheckbox: HTMLInputElement,
 ) {
   const input = inputField.value
   const maghribiOrder = maghribiCheckbox.checked
@@ -158,7 +158,7 @@ export function getResult (
   const [total, unrecognizedChars] = getAbjad(
     input,
     maghribiOrder,
-    ignoreHamzah
+    ignoreHamzah,
   )
 
   const inputForDisplay = input.replace(/\s+/g, ' ').trim()

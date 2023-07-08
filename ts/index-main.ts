@@ -10,15 +10,15 @@ const resultField = document.getElementById('result') as HTMLElement
 
 // Checkboxes
 const maghribiCheckbox = document.getElementById(
-  'maghribi-check'
+  'maghribi-check',
 ) as HTMLInputElement
 const hamzahCheckbox = document.getElementById(
-  'hamzah-check'
+  'hamzah-check',
 ) as HTMLInputElement
 
 // Buttons
 const submitButton = document.getElementById(
-  'submit-button'
+  'submit-button',
 ) as HTMLButtonElement
 const resetButton = document.getElementById('reset-button') as HTMLButtonElement
 
