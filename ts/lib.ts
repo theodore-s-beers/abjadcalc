@@ -44,7 +44,8 @@ function getAbjad (
     } else if (
       inputCleaned.charAt(i) === 'ه' ||
       inputCleaned.charAt(i) === 'ة' ||
-      inputCleaned.charAt(i) === 'ۀ'
+      inputCleaned.charAt(i) === 'ۀ' ||
+      inputCleaned.charAt(i) === 'ہ' // U+06C1
     ) {
       total += 5
     } else if (
