@@ -1,46 +1,28 @@
 ---
-#################################
-#################################
-## Super Linter GitHub Actions ##
-#################################
-#################################
 name: Lint Codebase
 
-#############################
-# Start job on PR to master #
-#############################
 on:
   pull_request:
     branches: [master]
 
-####################
-# Describe the job #
-####################
 jobs:
   build:
-    # Name the job
     name: Lint Codebase
-    # Set agent
     runs-on: ubuntu-latest
 
-    ##################
-    # Load all steps #
-    ##################
+    permissions:
+      contents: read
+      packages: read
+      statuses: write
+
     steps:
-      ######################
-      # Check out codebase #
-      ######################
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          # Full history needed for list of changed files within `super-linter`
           fetch-depth: 0
 
-      ###############################
-      # Run linter against codebase #
-      ###############################
-      - name: Lint Codebase
-        uses: github/super-linter@v4
+      - name: Super-Linter
+        uses: super-linter/super-linter@v5
         env:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_CSS: false
