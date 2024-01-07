@@ -3,6 +3,7 @@
   "description": "Calculate the numerical abjad value of Arabic or Persian text",
   "start_url": "./",
   "display": "standalone",
+  "background_color": "#fff",
   "theme_color": "#124ba1",
   "icons": [
     {
