@@ -5,3 +5,7 @@ updates:
     directory: '/' # Location of package manifest
     schedule:
       interval: 'monthly'
+    groups:
+      dev-dependencies: # i.e., all deps of this project
+        patterns:
+          - '*'
