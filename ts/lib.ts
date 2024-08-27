@@ -1,4 +1,4 @@
-function getAbjad (
+function getAbjad(
   input: string,
   maghribiOrder: boolean,
   ignoreHamzah: boolean,
@@ -146,7 +146,7 @@ function getAbjad (
   return [total, unrecognizedChars]
 }
 
-export function getResult (
+export function getResult(
   inputField: HTMLInputElement,
   resultField: HTMLElement,
   maghribiCheckbox: HTMLInputElement,

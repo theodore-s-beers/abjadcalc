@@ -28,7 +28,7 @@ const resetButton = document.getElementById('reset-button') as HTMLButtonElement
 
 // Submit
 
-function submitOnEnter (e: KeyboardEvent) {
+function submitOnEnter(e: KeyboardEvent) {
   if (e.key === 'Enter' && !e.shiftKey) {
     getResult(inputField, resultField, maghribiCheckbox, hamzahCheckbox)
     e.preventDefault()
