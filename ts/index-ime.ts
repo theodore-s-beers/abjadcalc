@@ -179,7 +179,7 @@ document.getElementById('back-btn')?.addEventListener('click', () => {
 // SUBMISSION HANDLING
 //
 
-function submitOnEnter (e: KeyboardEvent) {
+function submitOnEnter(e: KeyboardEvent) {
   if (e.key === 'Enter' && !e.shiftKey) {
     getResult(inputField, resultField, maghribiCheckbox, hamzahCheckbox)
     e.preventDefault()
