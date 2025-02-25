@@ -1,11 +1,11 @@
 ---
 version: 2
 updates:
-  - package-ecosystem: 'npm'
-    directory: '/' # Location of package manifest
+  - package-ecosystem: "npm"
+    directory: "/" # Location of package manifest
     schedule:
-      interval: 'monthly'
+      interval: "monthly"
     groups:
       dev-dependencies: # i.e., all deps of this project
         patterns:
-          - '*'
+          - "*"
