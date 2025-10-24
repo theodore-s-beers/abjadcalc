@@ -8,7 +8,7 @@
 
 #result {
   font-size: 110%;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 #submit-button {
