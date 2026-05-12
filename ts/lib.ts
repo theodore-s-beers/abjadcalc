@@ -1,8 +1,4 @@
-function getAbjad(
-  input: string,
-  maghribiOrder: boolean,
-  ignoreHamzah: boolean,
-): [number, boolean] {
+function getAbjad(input: string, maghribiOrder: boolean, ignoreHamzah: boolean): [number, boolean] {
   // Strip whitespace from input
   const inputCleaned = input.replace(/\s+/g, "");
 
@@ -29,15 +25,9 @@ function getAbjad(
       } else {
         total += 1;
       }
-    } else if (
-      inputCleaned.charAt(i) === "ب" ||
-      inputCleaned.charAt(i) === "پ"
-    ) {
+    } else if (inputCleaned.charAt(i) === "ب" || inputCleaned.charAt(i) === "پ") {
       total += 2;
-    } else if (
-      inputCleaned.charAt(i) === "ج" ||
-      inputCleaned.charAt(i) === "چ"
-    ) {
+    } else if (inputCleaned.charAt(i) === "ج" || inputCleaned.charAt(i) === "چ") {
       total += 3;
     } else if (inputCleaned.charAt(i) === "د") {
       total += 4;
@@ -48,15 +38,9 @@ function getAbjad(
       inputCleaned.charAt(i) === "ہ" // U+06C1
     ) {
       total += 5;
-    } else if (
-      inputCleaned.charAt(i) === "و" ||
-      inputCleaned.charAt(i) === "ؤ"
-    ) {
+    } else if (inputCleaned.charAt(i) === "و" || inputCleaned.charAt(i) === "ؤ") {
       total += 6;
-    } else if (
-      inputCleaned.charAt(i) === "ز" ||
-      inputCleaned.charAt(i) === "ژ"
-    ) {
+    } else if (inputCleaned.charAt(i) === "ز" || inputCleaned.charAt(i) === "ژ") {
       total += 7;
     } else if (inputCleaned.charAt(i) === "ح") {
       total += 8;
@@ -156,11 +140,7 @@ export function getResult(
   const maghribiOrder = maghribiCheckbox.checked;
   const ignoreHamzah = hamzahCheckbox.checked;
 
-  const [total, unrecognizedChars] = getAbjad(
-    input,
-    maghribiOrder,
-    ignoreHamzah,
-  );
+  const [total, unrecognizedChars] = getAbjad(input, maghribiOrder, ignoreHamzah);
 
   const inputForDisplay = input.replace(/\s+/g, " ").trim();
 

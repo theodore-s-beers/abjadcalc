@@ -9,12 +9,8 @@ const inputField = document.getElementById("hand-input") as HTMLInputElement;
 const resultField = document.getElementById("result") as HTMLElement;
 
 // Checkboxes
-const maghribiCheckbox = document.getElementById(
-  "maghribi-check",
-) as HTMLInputElement;
-const hamzahCheckbox = document.getElementById(
-  "hamzah-check",
-) as HTMLInputElement;
+const maghribiCheckbox = document.getElementById("maghribi-check") as HTMLInputElement;
+const hamzahCheckbox = document.getElementById("hamzah-check") as HTMLInputElement;
 
 // Submit button
 const goButton = document.getElementById("go-btn") as HTMLButtonElement;

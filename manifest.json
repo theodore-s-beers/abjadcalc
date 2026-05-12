@@ -1,4 +1,5 @@
 {
+  "$schema": "https://www.schemastore.org/web-manifest-combined.json",
   "name": "AbjadCalc",
   "description": "Calculate the numerical abjad value of Arabic or Persian text",
   "start_url": "./",
