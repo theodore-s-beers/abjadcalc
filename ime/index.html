@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1,shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
     <meta content="Theo Beers" name="author" />
     <meta
       content="An alternate tool to calculate the numerical abjad value of Arabic or Persian text, using a virtual keyboard for input"
@@ -15,10 +12,7 @@
     <meta content="Abjad Calculator (Manual Input)" property="og:title" />
     <meta content="website" property="og:type" />
     <meta content="https://www.abjadcalc.com/ime/" property="og:url" />
-    <meta
-      content="https://www.abjadcalc.com/img/abjad-og.jpg"
-      property="og:image"
-    />
+    <meta content="https://www.abjadcalc.com/img/abjad-og.jpg" property="og:image" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="Abjad Calculator (Manual Input)" name="twitter:title" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,16 +37,13 @@
       <form>
         <div class="form-group mb-2">
           <label class="form-label mb-3" id="top-label" for="hand-input"
-            >This is intended as a fallback option to the
-            <a href="../">primary tool</a>, which requires typing directly in
-            Arabic or Persian. Use the green buttons below to add text to the
-            box. Then click “Go!” when you’re ready to calculate the
-            <em>abjad</em> value of your input. You can also reset the form, add
-            a space between words, or delete the last character entered. The
-            checkboxes allow you to switch to the Maghribi system, or to specify
-            that value <em>not</em> be assigned to the pseudo-letter
-            <em>hamzah</em> in its isolated state (ء). Further details are
-            provided at the bottom of the page.</label
+            >This is intended as a fallback option to the <a href="../">primary tool</a>, which
+            requires typing directly in Arabic or Persian. Use the green buttons below to add text
+            to the box. Then click “Go!” when you’re ready to calculate the <em>abjad</em> value of
+            your input. You can also reset the form, add a space between words, or delete the last
+            character entered. The checkboxes allow you to switch to the Maghribi system, or to
+            specify that value <em>not</em> be assigned to the pseudo-letter <em>hamzah</em> in its
+            isolated state (ء). Further details are provided at the bottom of the page.</label
           ><textarea
             autocapitalize="none"
             autocomplete="off"
@@ -65,9 +56,7 @@
             spellcheck="false"
             value=""
           ></textarea
-          ><small class="form-text text-muted"
-            >Text submitted here is not logged in any way.</small
-          >
+          ><small class="form-text text-muted">Text submitted here is not logged in any way.</small>
         </div>
         <div class="form-check form-check-inline mb-3">
           <input
@@ -75,9 +64,7 @@
             class="form-check-input"
             id="maghribi-check"
             type="checkbox"
-          /><label class="form-check-label" id="maghribi-label"
-            >Maghribi order</label
-          >
+          /><label class="form-check-label" id="maghribi-label">Maghribi order</label>
         </div>
         <div class="form-check form-check-inline mb-3">
           <input
@@ -85,188 +72,116 @@
             class="form-check-input"
             id="hamzah-check"
             type="checkbox"
-          /><label class="form-check-label" id="hamzah-label"
-            >Ignore lone <em>hamzah</em></label
-          >
+          /><label class="form-check-label" id="hamzah-label">Ignore lone <em>hamzah</em></label>
         </div>
-        <br /><button class="btn btn-primary mb-3" id="go-btn" type="button">
-          Go!</button
-        ><button class="btn btn-secondary mb-3" id="reset-btn" type="reset">
-          Reset</button
-        ><button class="btn btn-info mb-3" id="space-btn" type="button">
-          Add space</button
-        ><button class="btn btn-dark mb-3" id="back-btn" type="button">
-          ⌫
-        </button>
+        <br /><button class="btn btn-primary mb-3" id="go-btn" type="button">Go!</button
+        ><button class="btn btn-secondary mb-3" id="reset-btn" type="reset">Reset</button
+        ><button class="btn btn-info mb-3" id="space-btn" type="button">Add space</button
+        ><button class="btn btn-dark mb-3" id="back-btn" type="button">⌫</button>
       </form>
       <div class="card border-success mb-3">
         <div class="card-body text-success">
-          <p class="card-text" id="result">
-            The total <em>abjad</em> value of … is …
-          </p>
+          <p class="card-text" id="result">The total <em>abjad</em> value of … is …</p>
         </div>
       </div>
       <hr />
-      <p>
-        The 28 primary letters, in “Eastern” <em>abjad</em> order (right to
-        left, row by row):
-      </p>
+      <p>The 28 primary letters, in “Eastern” <em>abjad</em> order (right to left, row by row):</p>
       <div class="table-responsive">
         <table class="table table-sm table-borderless">
           <tr>
             <td></td>
             <td>
-              <button class="btn btn-success scheh" id="za-btn" type="button">
-                ز
-              </button>
+              <button class="btn btn-success scheh" id="za-btn" type="button">ز</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="waw-btn" type="button">
-                و
-              </button>
+              <button class="btn btn-success scheh" id="waw-btn" type="button">و</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="ha-btn" type="button">
-                ه
-              </button>
+              <button class="btn btn-success scheh" id="ha-btn" type="button">ه</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="dal-btn" type="button">
-                د
-              </button>
+              <button class="btn btn-success scheh" id="dal-btn" type="button">د</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="jim-btn" type="button">
-                ج
-              </button>
+              <button class="btn btn-success scheh" id="jim-btn" type="button">ج</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="ba-btn" type="button">
-                ب
-              </button>
+              <button class="btn btn-success scheh" id="ba-btn" type="button">ب</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="alif-btn" type="button">
-                ا
-              </button>
+              <button class="btn btn-success scheh" id="alif-btn" type="button">ا</button>
             </td>
           </tr>
           <tr>
             <td></td>
             <td>
-              <button class="btn btn-success scheh" id="nun-btn" type="button">
-                ن
-              </button>
+              <button class="btn btn-success scheh" id="nun-btn" type="button">ن</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="mim-btn" type="button">
-                م
-              </button>
+              <button class="btn btn-success scheh" id="mim-btn" type="button">م</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="lam-btn" type="button">
-                ل
-              </button>
+              <button class="btn btn-success scheh" id="lam-btn" type="button">ل</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="kaf-btn" type="button">
-                ك
-              </button>
+              <button class="btn btn-success scheh" id="kaf-btn" type="button">ك</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="ya-btn" type="button">
-                ي
-              </button>
+              <button class="btn btn-success scheh" id="ya-btn" type="button">ي</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="taw-btn" type="button">
-                ط
-              </button>
+              <button class="btn btn-success scheh" id="taw-btn" type="button">ط</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="5a-btn" type="button">
-                ح
-              </button>
+              <button class="btn btn-success scheh" id="5a-btn" type="button">ح</button>
             </td>
           </tr>
           <tr>
             <td>
-              <button class="btn btn-success scheh" id="ta-btn" type="button">
-                ت
-              </button>
+              <button class="btn btn-success scheh" id="ta-btn" type="button">ت</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="shin-btn" type="button">
-                ش
-              </button>
+              <button class="btn btn-success scheh" id="shin-btn" type="button">ش</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="ra-btn" type="button">
-                ر
-              </button>
+              <button class="btn btn-success scheh" id="ra-btn" type="button">ر</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="qaf-btn" type="button">
-                ق
-              </button>
+              <button class="btn btn-success scheh" id="qaf-btn" type="button">ق</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="sad-btn" type="button">
-                ص
-              </button>
+              <button class="btn btn-success scheh" id="sad-btn" type="button">ص</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="fa-btn" type="button">
-                ف
-              </button>
+              <button class="btn btn-success scheh" id="fa-btn" type="button">ف</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="ayn-btn" type="button">
-                ع
-              </button>
+              <button class="btn btn-success scheh" id="ayn-btn" type="button">ع</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="sin-btn" type="button">
-                س
-              </button>
+              <button class="btn btn-success scheh" id="sin-btn" type="button">س</button>
             </td>
           </tr>
           <tr>
             <td></td>
             <td></td>
             <td>
-              <button
-                class="btn btn-success scheh"
-                id="ghayn-btn"
-                type="button"
-              >
-                غ
-              </button>
+              <button class="btn btn-success scheh" id="ghayn-btn" type="button">غ</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="zaw-btn" type="button">
-                ظ
-              </button>
+              <button class="btn btn-success scheh" id="zaw-btn" type="button">ظ</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="dad-btn" type="button">
-                ض
-              </button>
+              <button class="btn btn-success scheh" id="dad-btn" type="button">ض</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="dhal-btn" type="button">
-                ذ
-              </button>
+              <button class="btn btn-success scheh" id="dhal-btn" type="button">ذ</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="kha-btn" type="button">
-                خ
-              </button>
+              <button class="btn btn-success scheh" id="kha-btn" type="button">خ</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="tha-btn" type="button">
-                ث
-              </button>
+              <button class="btn btn-success scheh" id="tha-btn" type="button">ث</button>
             </td>
           </tr>
         </table>
@@ -276,76 +191,28 @@
         <table class="table table-sm table-borderless">
           <tr>
             <td>
-              <button
-                class="btn btn-success scheh"
-                id="ya-ham-btn"
-                type="button"
-              >
-                ئ
-              </button>
+              <button class="btn btn-success scheh" id="ya-ham-btn" type="button">ئ</button>
             </td>
             <td>
-              <button
-                class="btn btn-success scheh"
-                id="maqsurah-btn"
-                type="button"
-              >
-                ى
-              </button>
+              <button class="btn btn-success scheh" id="maqsurah-btn" type="button">ى</button>
             </td>
             <td>
-              <button
-                class="btn btn-success scheh"
-                id="waw-ham-btn"
-                type="button"
-              >
-                ؤ
-              </button>
+              <button class="btn btn-success scheh" id="waw-ham-btn" type="button">ؤ</button>
             </td>
             <td>
-              <button
-                class="btn btn-success scheh"
-                id="marbutah-btn"
-                type="button"
-              >
-                ة
-              </button>
+              <button class="btn btn-success scheh" id="marbutah-btn" type="button">ة</button>
             </td>
             <td>
-              <button
-                class="btn btn-success scheh"
-                id="hamzah-btn"
-                type="button"
-              >
-                ء
-              </button>
+              <button class="btn btn-success scheh" id="hamzah-btn" type="button">ء</button>
             </td>
             <td>
-              <button
-                class="btn btn-success scheh"
-                id="maddah-btn"
-                type="button"
-              >
-                آ
-              </button>
+              <button class="btn btn-success scheh" id="maddah-btn" type="button">آ</button>
             </td>
             <td>
-              <button
-                class="btn btn-success scheh"
-                id="bottom-ham-btn"
-                type="button"
-              >
-                إ
-              </button>
+              <button class="btn btn-success scheh" id="bottom-ham-btn" type="button">إ</button>
             </td>
             <td>
-              <button
-                class="btn btn-success scheh"
-                id="top-ham-btn"
-                type="button"
-              >
-                أ
-              </button>
+              <button class="btn btn-success scheh" id="top-ham-btn" type="button">أ</button>
             </td>
           </tr>
         </table>
@@ -355,56 +222,28 @@
         <table class="table table-sm table-borderless">
           <tr>
             <td>
-              <button class="btn btn-success scheh invisible" type="button">
-                X
-              </button>
+              <button class="btn btn-success scheh invisible" type="button">X</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="gaf-btn" type="button">
-                گ
-              </button>
+              <button class="btn btn-success scheh" id="gaf-btn" type="button">گ</button>
             </td>
             <td>
-              <button
-                class="btn btn-success scheh"
-                id="pers-kaf-btn"
-                type="button"
-              >
-                ک
-              </button>
+              <button class="btn btn-success scheh" id="pers-kaf-btn" type="button">ک</button>
             </td>
             <td>
-              <button
-                class="btn btn-success scheh"
-                id="pers-ya-btn"
-                type="button"
-              >
-                ی
-              </button>
+              <button class="btn btn-success scheh" id="pers-ya-btn" type="button">ی</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="zhe-btn" type="button">
-                ژ
-              </button>
+              <button class="btn btn-success scheh" id="zhe-btn" type="button">ژ</button>
             </td>
             <td>
-              <button
-                class="btn btn-success scheh"
-                id="ha-izafah-btn"
-                type="button"
-              >
-                ۀ
-              </button>
+              <button class="btn btn-success scheh" id="ha-izafah-btn" type="button">ۀ</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="che-btn" type="button">
-                چ
-              </button>
+              <button class="btn btn-success scheh" id="che-btn" type="button">چ</button>
             </td>
             <td>
-              <button class="btn btn-success scheh" id="pe-btn" type="button">
-                پ
-              </button>
+              <button class="btn btn-success scheh" id="pe-btn" type="button">پ</button>
             </td>
           </tr>
         </table>
@@ -433,44 +272,41 @@
             <div class="accordion-body">
               <ul class="list-group">
                 <li class="list-group-item">
-                  If you’re viewing this on a mobile device, you may find that
-                  the text entry buttons are easier to work with in landscape
-                  orientation.
+                  If you’re viewing this on a mobile device, you may find that the text entry
+                  buttons are easier to work with in landscape orientation.
                 </li>
                 <li class="list-group-item">
-                  The <a href="../">main page</a> contains much more information
-                  about the ruleset that the program follows.
+                  The <a href="../">main page</a> contains much more information about the ruleset
+                  that the program follows.
                 </li>
                 <li class="list-group-item">
-                  Generally speaking, use of the “secondary” and
-                  Persian-specific letters is optional. They are provided for
-                  convenience, but Persian <em>pe</em> (پ), for example, will be
-                  treated the same as Arabic <em>bā’</em> (ب);
-                  <em>tā’ marbūṭah</em> (ة) is considered equivalent to
-                  <em>hā’</em> (ه); and so forth. Please refer to the
+                  Generally speaking, use of the “secondary” and Persian-specific letters is
+                  optional. They are provided for convenience, but Persian <em>pe</em> (پ), for
+                  example, will be treated the same as Arabic <em>bā’</em> (ب);
+                  <em>tā’ marbūṭah</em> (ة) is considered equivalent to <em>hā’</em> (ه); and so
+                  forth. Please refer to the
                   <a
                     href="https://en.wikipedia.org/wiki/Abjad_numerals"
                     rel="noopener"
                     target="_blank"
                     >Wikipedia entry</a
                   >
-                  on <em>abjad</em> numerals, which lists (most of) the letter
-                  values. I have also posted a
-                  <a href="../table/">table</a> highlighting the differences
-                  between the Mashriqi and Maghribi systems.
+                  on <em>abjad</em> numerals, which lists (most of) the letter values. I have also
+                  posted a <a href="../table/">table</a> highlighting the differences between the
+                  Mashriqi and Maghribi systems.
                 </li>
                 <li class="list-group-item">
-                  You may notice that two of the buttons above are practically
-                  indistinguishable. One of them is for Arabic
+                  You may notice that two of the buttons above are practically indistinguishable.
+                  One of them is for Arabic
                   <a
                     href="https://en.wikibooks.org/wiki/Arabic/LearnRW/alif_Maksoorah"
                     rel="noopener"
                     target="_blank"
                     ><em>alif maqṣūrah</em></a
                   >
-                  (ى), the other for Persian <em>ye</em> (ی). Trust me, they’re
-                  different characters! Both will receive the same
-                  <em>abjad</em> value as Arabic <em>yā’</em> (ي), in any case.
+                  (ى), the other for Persian <em>ye</em> (ی). Trust me, they’re different
+                  characters! Both will receive the same <em>abjad</em> value as Arabic
+                  <em>yā’</em> (ي), in any case.
                 </li>
               </ul>
             </div>
@@ -480,23 +316,16 @@
       <hr />
       <p>
         &copy; 2017–22
-        <a href="https://www.theobeers.com/" rel="noopener" target="_blank"
-          >T. S. Beers</a
-        ><br />The source files for this page are available
-        <a
-          href="https://github.com/theodore-s-beers/abjadcalc/"
-          rel="noopener"
-          target="_blank"
+        <a href="https://www.theobeers.com/" rel="noopener" target="_blank">T. S. Beers</a><br />The
+        source files for this page are available
+        <a href="https://github.com/theodore-s-beers/abjadcalc/" rel="noopener" target="_blank"
           >on GitHub</a
         >
         under the
-        <a
-          href="https://en.wikipedia.org/wiki/MIT_License"
-          rel="noopener"
-          target="_blank"
+        <a href="https://en.wikipedia.org/wiki/MIT_License" rel="noopener" target="_blank"
           >MIT License</a
-        >.<br />I’m not much of a developer. If anything is messed up, please
-        let me know <a href="mailto:tbeers@uchicago.edu">by email</a>!
+        >.<br />I’m not much of a developer. If anything is messed up, please let me know
+        <a href="mailto:tbeers@uchicago.edu">by email</a>!
       </p>
     </div>
     <script src="../js/bootstrap.bundle.min.js"></script>

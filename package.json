@@ -6,35 +6,29 @@
   "bugs": {
     "url": "https://github.com/theodore-s-beers/abjadcalc/issues"
   },
+  "license": "MIT",
+  "author": "Theo Beers",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/theodore-s-beers/abjadcalc.git"
   },
-  "license": "MIT",
-  "author": "Theo Beers",
   "type": "module",
   "main": "index.html",
   "scripts": {
     "check": "tsc",
     "compile-ime": "esbuild ts/index-ime.ts --bundle --minify --sourcemap --outfile=ime/index.min.js",
     "compile-main": "esbuild ts/index-main.ts --bundle --minify --sourcemap --outfile=js/index.min.js",
-    "format": "prettier --write .",
-    "lint": "eslint --fix . && stylelint --fix css/styles-*.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "oxfmt",
+    "lint": "oxfmt --check && oxlint && stylelint css/styles-*.css",
+    "lint:fix": "oxfmt && oxlint --fix && stylelint --fix css/styles-*.css",
+    "test": "echo 'Error: no test specified' && exit 1"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "esbuild": "^0.27.4",
-    "eslint": "^10.0.3",
-    "prettier": "3.8.1",
-    "stylelint": "^17.4.0",
+    "esbuild": "^0.28.0",
+    "oxfmt": "^0.49.0",
+    "oxlint": "^1.64.0",
+    "stylelint": "^17.11.0",
     "stylelint-config-standard": "^40.0.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.57.1"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
+    "typescript": "^6.0.3"
   }
 }
