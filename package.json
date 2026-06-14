@@ -15,19 +15,20 @@
   "type": "module",
   "main": "index.html",
   "scripts": {
-    "check": "tsc",
+    "check": "tsgo",
     "compile-ime": "esbuild ts/index-ime.ts --bundle --minify --sourcemap --outfile=ime/index.min.js",
     "compile-main": "esbuild ts/index-main.ts --bundle --minify --sourcemap --outfile=js/index.min.js",
     "format": "oxfmt",
-    "lint": "oxfmt --check && oxlint && stylelint css/styles-*.css",
-    "lint:fix": "oxfmt && oxlint --fix && stylelint --fix css/styles-*.css",
+    "lint": "oxfmt --check && oxlint && stylelint 'css/styles-*.css'",
+    "lint:fix": "oxfmt && oxlint --fix && stylelint --fix 'css/styles-*.css'",
     "test": "echo 'Error: no test specified' && exit 1"
   },
   "devDependencies": {
-    "esbuild": "^0.28.0",
-    "oxfmt": "^0.49.0",
-    "oxlint": "^1.64.0",
-    "stylelint": "^17.11.0",
+    "@typescript/native-preview": "7.0.0-dev.20260613.1",
+    "esbuild": "^0.28.1",
+    "oxfmt": "^0.54.0",
+    "oxlint": "^1.69.0",
+    "stylelint": "^17.13.0",
     "stylelint-config-standard": "^40.0.0",
     "typescript": "^6.0.3"
   }
